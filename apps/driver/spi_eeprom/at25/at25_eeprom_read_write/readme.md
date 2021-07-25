@@ -1,0 +1,77 @@
+---
+parent: Harmony 3 driver and system service application examples for SAM A7G5 family
+title: SPI EEPROM AT25 driver - EEPROM Read Write 
+has_children: false
+has_toc: false
+---
+
+[![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
+
+# SPI EEPROM AT25 driver - EEPROM Read Write
+
+This example application shows how to use the AT25 driver to perform read and write operations on AT25 series of EEPROM.
+
+## Description
+
+This example uses the AT25 driver to communicate with the SPI based AT25 series of external EEPROMs to perform write and read operations in Bare-Metal environment.
+
+## Downloading and building the application
+
+To clone or download this application from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/core_apps_sam_a7g5) and then click Clone button to clone this repository or download as zip file.
+This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
+
+Path of the application within the repository is **apps/driver/spi_eeprom/at25/at25_eeprom_read_write/firmware** .
+
+To build the application, refer to the following table and open the project using its IDE.
+
+| Project Name      | Description                                    |
+| ----------------- | ---------------------------------------------- |
+| sam_a7g5_ek.X | MPLABX project for [SAMA7G5 Evaluation Kit]() |
+|||
+
+## Setting up AT91Bootstrap loader
+
+To load the application binary onto the target device, we need to use at91bootstrap loader. Refer to the [at91bootstrap loader documentation](../../../../docs/readme_bootstrap.md) for details on how to configure, build and run bootstrap loader project and use it to bootstrap the application binaries.
+
+## Setting up the hardware
+
+The following table shows the target hardware for the application projects.
+
+| Project Name| Board|
+|:---------|:---------:|
+| sam_a7g5_ek.X | [SAMA7G5 Evaluation Kit]() |
+|||
+
+### Setting up [SAMA7G5 Evaluation Kit]()
+
+#### Addtional hardware required
+
+- SD Card with FAT32 file system
+- [EEPROM 4 Click](https://www.mikroe.com/eeprom-4-click) board
+
+#### Setting up the SD Card
+
+- Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a7g5_ek.X/binaries/boot.bin)
+- Copy the downloaded boot loader binary( boot.bin) onto the SD card
+
+#### Setting up the board
+
+- Install an [EEPROM 4 Click](https://www.mikroe.com/eeprom-4-click) board on to the mikroBUS1 connector
+- SDMMC slot used for bootloading the application is SDMMC1 (J4)
+- Connect the USB port J7 on board to the computer using a micro USB cable (to power the board)
+- Connect the USB port J24 on board to the computer using a micro USB cable (to enable debug com port)
+
+## Running the Application
+
+1. Build the application using its IDE
+2. Copy the output binary (named 'harmony.bin') onto the SD Card (Refer to the 'Setting up hardware' section above for setting up the SD card)
+3. Insert the SD card into SDMMC slot on the board (Refer to the 'Setting up hardware' section for the correct SDMMC slot)
+4. Reset the board to run the application
+5. The LED is turned ON when the value read from EEPROM matches with the written data
+
+Refer to the following table for LED name:
+
+| Board | LED Name |
+| ----- | -------- |
+|  [SAMA7G5 Evaluation Kit]()  | RGB_LED(Blue) |
+|||
