@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T13:20:15Z */
+/* file generated from device description version 2021-07-26T12:51:16Z */
 #ifndef _SAMA7G_ACC_INSTANCE_
 #define _SAMA7G_ACC_INSTANCE_
 

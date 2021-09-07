@@ -108,6 +108,41 @@ children:
       children:
       - type: Dynamic
         attributes: {id: flexcom9, value: '3'}
+  - type: Integer
+    attributes: {id: FLEXCOM_SPI_CSR0_SCBR_VALUE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom9, value: '200'}
+  - type: Integer
+    attributes: {id: FLEXCOM_SPI_CSR1_SCBR_VALUE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom9, value: '200'}
+  - type: Integer
+    attributes: {id: FLEXCOM_SPI_CSR2_SCBR_VALUE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom9, value: '200'}
+  - type: Integer
+    attributes: {id: FLEXCOM_SPI_CSR3_SCBR_VALUE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom9, value: '200'}
+  - type: Integer
+    attributes: {id: FLEXCOM_SPI_PERIPHERAL_CLOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom9, value: '200000000'}
   - type: File
     attributes: {id: FLEXCOM_SYS_DEF}
     children:
@@ -150,6 +185,13 @@ children:
         attributes: {id: type}
         children:
         - {type: Value, value: STRING}
+  - type: Integer
+    attributes: {id: FLEXCOM_TWI_CLK_SRC_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom9, value: '200000000'}
   - type: KeyValueSet
     attributes: {id: FLEXCOM_TWI_CWGR_BRSRCCLK}
     children:
@@ -198,6 +240,20 @@ children:
       - type: Dynamic
         attributes: {id: flexcom9, value: MASTER}
   - type: Integer
+    attributes: {id: FLEX_USART_CLOCK_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom9, value: '200000000'}
+  - type: Integer
+    attributes: {id: FLEX_USART_IRDA_FILTER_VAL}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom9, value: '278'}
+  - type: Integer
     attributes: {id: I2C_CLOCK_SPEED}
     children:
     - type: Attributes
@@ -206,6 +262,13 @@ children:
         attributes: {id: visible}
         children:
         - {type: Value, value: 'true'}
+  - type: Integer
+    attributes: {id: I2C_CLOCK_SPEED_HZ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom9, value: '400000'}
   - type: String
     attributes: {id: RECEIVE_DATA_REGISTER}
     children:
