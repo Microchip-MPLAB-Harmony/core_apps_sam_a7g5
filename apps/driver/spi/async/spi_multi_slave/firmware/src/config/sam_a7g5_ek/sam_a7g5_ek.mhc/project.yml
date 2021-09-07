@@ -34,13 +34,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 70FE7C733642B55D5AC95E3A8BFCD930
-- generatedChecksum: 9D8A3FC641F38A3D063B7D6369F93A5D
+- generatedChecksum: 856B98676DD272552DEA2D3D85D0AF0E
   logicalPath: config/sam_a7g5_ek/driver/spi
   name: drv_spi.c
   physicalPath: driver/spi/src
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 9D8A3FC641F38A3D063B7D6369F93A5D
+  userChecksum: 856B98676DD272552DEA2D3D85D0AF0E
 - generatedChecksum: 1A3114C81CBD825CABE09B3AA41908C0
   logicalPath: config/sam_a7g5_ek/driver/spi
   name: drv_spi_local.h
@@ -55,13 +55,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: A4A82BF95281026C9591A9D6C9BB0D35
-- generatedChecksum: 57A8F78398DFC7C98576CF4CB798070E
+- generatedChecksum: F79E418E439CD7E988595CE10531A0E3
   logicalPath: config/sam_a7g5_ek
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 57A8F78398DFC7C98576CF4CB798070E
+  userChecksum: F79E418E439CD7E988595CE10531A0E3
 - generatedChecksum: 01DB25B1EF6CCB63D3A537CD319B3C9C
   logicalPath: config/sam_a7g5_ek
   name: interrupts.c
@@ -405,13 +405,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: F454D5E0E6162B53958549B1D524C549
-- generatedChecksum: 8CBE7ECA7AD929CFB98585C2CE50C169
+- generatedChecksum: 05A15437D96080BB0A84D3102EB2137C
   logicalPath: config/sam_a7g5_ek/driver/spi
   name: drv_spi_definitions.h
   physicalPath: driver/spi
   security: NON_SECURE
   type: HEADER
-  userChecksum: 8CBE7ECA7AD929CFB98585C2CE50C169
+  userChecksum: 05A15437D96080BB0A84D3102EB2137C
 - generatedChecksum: 24BA6CBAB0BB37C1573FE75FA99AB56C
   logicalPath: packs/SAMA7G54_DFP/component
   name: dwdt.h
@@ -1294,13 +1294,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 393969C1DC7BFC8CCCF8C1386E248EAB
-- generatedChecksum: C4D7AB2877290964206A00A252098D82
+- generatedChecksum: A728555C3A6B2E26B175246489701C70
   logicalPath: config/sam_a7g5_ek
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: C4D7AB2877290964206A00A252098D82
+  userChecksum: A728555C3A6B2E26B175246489701C70
 - generatedChecksum: 45DF9E8F178E0DE281A4E1202BED792E
   logicalPath: packs/SAMA7G54_DFP/component
   name: trng.h
