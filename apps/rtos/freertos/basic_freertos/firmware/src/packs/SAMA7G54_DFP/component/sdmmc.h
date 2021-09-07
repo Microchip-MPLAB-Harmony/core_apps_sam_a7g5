@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T13:20:15Z */
+/* file generated from device description version 2021-07-26T12:51:16Z */
 #ifndef _SAMA7G_SDMMC_COMPONENT_H_
 #define _SAMA7G_SDMMC_COMPONENT_H_
 
@@ -34,16 +34,10 @@
 #define SDMMC_SSAR_ADDR_Pos                   _U_(0)                                               /**< (SDMMC_SSAR) SDMA System Address Position */
 #define SDMMC_SSAR_ADDR_Msk                   (_U_(0xFFFFFFFF) << SDMMC_SSAR_ADDR_Pos)             /**< (SDMMC_SSAR) SDMA System Address Mask */
 #define SDMMC_SSAR_ADDR(value)                (SDMMC_SSAR_ADDR_Msk & ((value) << SDMMC_SSAR_ADDR_Pos))
+#define SDMMC_SSAR_ARG2_Pos                   _U_(0)                                               /**< (SDMMC_SSAR) Argument 2 Position */
+#define SDMMC_SSAR_ARG2_Msk                   (_U_(0xFFFFFFFF) << SDMMC_SSAR_ARG2_Pos)             /**< (SDMMC_SSAR) Argument 2 Mask */
+#define SDMMC_SSAR_ARG2(value)                (SDMMC_SSAR_ARG2_Msk & ((value) << SDMMC_SSAR_ARG2_Pos))
 #define SDMMC_SSAR_Msk                        _U_(0xFFFFFFFF)                                      /**< (SDMMC_SSAR) Register Mask  */
-
-/* M_ARG2 mode */
-#define SDMMC_SSAR_M_ARG2_ADDR_Pos            _U_(0)                                               /**< (SDMMC_SSAR)  Position */
-#define SDMMC_SSAR_M_ARG2_ADDR_Msk            (_U_(0xFFFFFFFF) << SDMMC_SSAR_M_ARG2_ADDR_Pos)      /**< (SDMMC_SSAR)  Mask */
-#define SDMMC_SSAR_M_ARG2_ADDR(value)         (SDMMC_SSAR_M_ARG2_ADDR_Msk & ((value) << SDMMC_SSAR_M_ARG2_ADDR_Pos))
-#define SDMMC_SSAR_M_ARG2_ARG2_Pos            _U_(0)                                               /**< (SDMMC_SSAR) Argument 2 Position */
-#define SDMMC_SSAR_M_ARG2_ARG2_Msk            (_U_(0xFFFFFFFF) << SDMMC_SSAR_M_ARG2_ARG2_Pos)      /**< (SDMMC_SSAR) Argument 2 Mask */
-#define SDMMC_SSAR_M_ARG2_ARG2(value)         (SDMMC_SSAR_M_ARG2_ARG2_Msk & ((value) << SDMMC_SSAR_M_ARG2_ARG2_Pos))
-#define SDMMC_SSAR_M_ARG2_Msk                 _U_(0xFFFFFFFF)                                       /**< (SDMMC_SSAR_M_ARG2) Register Mask  */
 
 
 /* -------- SDMMC_BSR : (SDMMC Offset: 0x04) (R/W 16) Block Size Register -------- */
@@ -271,34 +265,34 @@
 /* -------- SDMMC_HC1R : (SDMMC Offset: 0x28) (R/W 8) Host Control 1 Register -------- */
 #define SDMMC_HC1R_RESETVALUE                 _U_(0x00)                                            /**<  (SDMMC_HC1R) Host Control 1 Register  Reset Value */
 
-#define SDMMC_HC1R_DW_Pos                     _U_(1)                                               /**< (SDMMC_HC1R) Data Width Position */
-#define SDMMC_HC1R_DW_Msk                     (_U_(0x1) << SDMMC_HC1R_DW_Pos)                      /**< (SDMMC_HC1R) Data Width Mask */
-#define SDMMC_HC1R_DW(value)                  (SDMMC_HC1R_DW_Msk & ((value) << SDMMC_HC1R_DW_Pos))
-#define   SDMMC_HC1R_DW_1_BIT_Val             _U_(0x0)                                             /**< (SDMMC_HC1R) 1-bit mode.  */
-#define   SDMMC_HC1R_DW_4_BIT_Val             _U_(0x1)                                             /**< (SDMMC_HC1R) 4-bit mode.  */
-#define SDMMC_HC1R_DW_1_BIT                   (SDMMC_HC1R_DW_1_BIT_Val << SDMMC_HC1R_DW_Pos)       /**< (SDMMC_HC1R) 1-bit mode. Position  */
-#define SDMMC_HC1R_DW_4_BIT                   (SDMMC_HC1R_DW_4_BIT_Val << SDMMC_HC1R_DW_Pos)       /**< (SDMMC_HC1R) 4-bit mode. Position  */
-#define SDMMC_HC1R_HSEN_Pos                   _U_(2)                                               /**< (SDMMC_HC1R) High Speed Enable Position */
-#define SDMMC_HC1R_HSEN_Msk                   (_U_(0x1) << SDMMC_HC1R_HSEN_Pos)                    /**< (SDMMC_HC1R) High Speed Enable Mask */
-#define SDMMC_HC1R_HSEN(value)                (SDMMC_HC1R_HSEN_Msk & ((value) << SDMMC_HC1R_HSEN_Pos))
-#define   SDMMC_HC1R_HSEN_0_Val               _U_(0x0)                                             /**< (SDMMC_HC1R) Normal Speed mode.  */
-#define   SDMMC_HC1R_HSEN_1_Val               _U_(0x1)                                             /**< (SDMMC_HC1R) High Speed mode.  */
-#define SDMMC_HC1R_HSEN_0                     (SDMMC_HC1R_HSEN_0_Val << SDMMC_HC1R_HSEN_Pos)       /**< (SDMMC_HC1R) Normal Speed mode. Position  */
-#define SDMMC_HC1R_HSEN_1                     (SDMMC_HC1R_HSEN_1_Val << SDMMC_HC1R_HSEN_Pos)       /**< (SDMMC_HC1R) High Speed mode. Position  */
-#define SDMMC_HC1R_DMASEL_Pos                 _U_(3)                                               /**< (SDMMC_HC1R) DMA Select Position */
-#define SDMMC_HC1R_DMASEL_Msk                 (_U_(0x3) << SDMMC_HC1R_DMASEL_Pos)                  /**< (SDMMC_HC1R) DMA Select Mask */
-#define SDMMC_HC1R_DMASEL(value)              (SDMMC_HC1R_DMASEL_Msk & ((value) << SDMMC_HC1R_DMASEL_Pos))
-#define   SDMMC_HC1R_DMASEL_SDMA_Val          _U_(0x0)                                             /**< (SDMMC_HC1R) SDMA is selected  */
-#define   SDMMC_HC1R_DMASEL_ADMA32_Val        _U_(0x2)                                             /**< (SDMMC_HC1R) 32-bit Address ADMA2 is selected  */
-#define SDMMC_HC1R_DMASEL_SDMA                (SDMMC_HC1R_DMASEL_SDMA_Val << SDMMC_HC1R_DMASEL_Pos) /**< (SDMMC_HC1R) SDMA is selected Position  */
-#define SDMMC_HC1R_DMASEL_ADMA32              (SDMMC_HC1R_DMASEL_ADMA32_Val << SDMMC_HC1R_DMASEL_Pos) /**< (SDMMC_HC1R) 32-bit Address ADMA2 is selected Position  */
-#define SDMMC_HC1R_Msk                        _U_(0x1E)                                            /**< (SDMMC_HC1R) Register Mask  */
+#define SDMMC_HC1R_Msk                        _U_(0x00)                                            /**< (SDMMC_HC1R) Register Mask  */
 
 /* EMMC mode */
+#define SDMMC_HC1R_EMMC_DW_Pos                _U_(1)                                               /**< (SDMMC_HC1R) Data Width Position */
+#define SDMMC_HC1R_EMMC_DW_Msk                (_U_(0x1) << SDMMC_HC1R_EMMC_DW_Pos)                 /**< (SDMMC_HC1R) Data Width Mask */
+#define SDMMC_HC1R_EMMC_DW(value)             (SDMMC_HC1R_EMMC_DW_Msk & ((value) << SDMMC_HC1R_EMMC_DW_Pos))
+#define   SDMMC_HC1R_EMMC_DW_1_BIT_Val        _U_(0x0)                                             /**< (SDMMC_HC1R) 1-bit mode.  */
+#define   SDMMC_HC1R_EMMC_DW_4_BIT_Val        _U_(0x1)                                             /**< (SDMMC_HC1R) 4-bit mode.  */
+#define SDMMC_HC1R_EMMC_DW_1_BIT              (SDMMC_HC1R_EMMC_DW_1_BIT_Val << SDMMC_HC1R_EMMC_DW_Pos) /**< (SDMMC_HC1R) 1-bit mode. Position  */
+#define SDMMC_HC1R_EMMC_DW_4_BIT              (SDMMC_HC1R_EMMC_DW_4_BIT_Val << SDMMC_HC1R_EMMC_DW_Pos) /**< (SDMMC_HC1R) 4-bit mode. Position  */
+#define SDMMC_HC1R_EMMC_HSEN_Pos              _U_(2)                                               /**< (SDMMC_HC1R) High Speed Enable Position */
+#define SDMMC_HC1R_EMMC_HSEN_Msk              (_U_(0x1) << SDMMC_HC1R_EMMC_HSEN_Pos)               /**< (SDMMC_HC1R) High Speed Enable Mask */
+#define SDMMC_HC1R_EMMC_HSEN(value)           (SDMMC_HC1R_EMMC_HSEN_Msk & ((value) << SDMMC_HC1R_EMMC_HSEN_Pos))
+#define   SDMMC_HC1R_EMMC_HSEN_0_Val          _U_(0x0)                                             /**< (SDMMC_HC1R) Normal Speed mode.  */
+#define   SDMMC_HC1R_EMMC_HSEN_1_Val          _U_(0x1)                                             /**< (SDMMC_HC1R) High Speed mode.  */
+#define SDMMC_HC1R_EMMC_HSEN_0                (SDMMC_HC1R_EMMC_HSEN_0_Val << SDMMC_HC1R_EMMC_HSEN_Pos) /**< (SDMMC_HC1R) Normal Speed mode. Position  */
+#define SDMMC_HC1R_EMMC_HSEN_1                (SDMMC_HC1R_EMMC_HSEN_1_Val << SDMMC_HC1R_EMMC_HSEN_Pos) /**< (SDMMC_HC1R) High Speed mode. Position  */
+#define SDMMC_HC1R_EMMC_DMASEL_Pos            _U_(3)                                               /**< (SDMMC_HC1R) DMA Select Position */
+#define SDMMC_HC1R_EMMC_DMASEL_Msk            (_U_(0x3) << SDMMC_HC1R_EMMC_DMASEL_Pos)             /**< (SDMMC_HC1R) DMA Select Mask */
+#define SDMMC_HC1R_EMMC_DMASEL(value)         (SDMMC_HC1R_EMMC_DMASEL_Msk & ((value) << SDMMC_HC1R_EMMC_DMASEL_Pos))
+#define   SDMMC_HC1R_EMMC_DMASEL_SDMA_Val     _U_(0x0)                                             /**< (SDMMC_HC1R) SDMA is selected  */
+#define   SDMMC_HC1R_EMMC_DMASEL_ADMA32_Val   _U_(0x2)                                             /**< (SDMMC_HC1R) 32-bit Address ADMA2 is selected  */
+#define SDMMC_HC1R_EMMC_DMASEL_SDMA           (SDMMC_HC1R_EMMC_DMASEL_SDMA_Val << SDMMC_HC1R_EMMC_DMASEL_Pos) /**< (SDMMC_HC1R) SDMA is selected Position  */
+#define SDMMC_HC1R_EMMC_DMASEL_ADMA32         (SDMMC_HC1R_EMMC_DMASEL_ADMA32_Val << SDMMC_HC1R_EMMC_DMASEL_Pos) /**< (SDMMC_HC1R) 32-bit Address ADMA2 is selected Position  */
 #define SDMMC_HC1R_EMMC_EXTDW_Pos             _U_(5)                                               /**< (SDMMC_HC1R) Extended Data Width Position */
 #define SDMMC_HC1R_EMMC_EXTDW_Msk             (_U_(0x1) << SDMMC_HC1R_EMMC_EXTDW_Pos)              /**< (SDMMC_HC1R) Extended Data Width Mask */
 #define SDMMC_HC1R_EMMC_EXTDW(value)          (SDMMC_HC1R_EMMC_EXTDW_Msk & ((value) << SDMMC_HC1R_EMMC_EXTDW_Pos))
-#define SDMMC_HC1R_EMMC_Msk                   _U_(0x20)                                             /**< (SDMMC_HC1R_EMMC) Register Mask  */
+#define SDMMC_HC1R_EMMC_Msk                   _U_(0x3E)                                             /**< (SDMMC_HC1R_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
 #define SDMMC_HC1R_SD_SDIO_LEDCTRL_Pos        _U_(0)                                               /**< (SDMMC_HC1R) LED Control Position */
@@ -308,6 +302,27 @@
 #define   SDMMC_HC1R_SD_SDIO_LEDCTRL_ON_Val   _U_(0x1)                                             /**< (SDMMC_HC1R) LED on.  */
 #define SDMMC_HC1R_SD_SDIO_LEDCTRL_OFF        (SDMMC_HC1R_SD_SDIO_LEDCTRL_OFF_Val << SDMMC_HC1R_SD_SDIO_LEDCTRL_Pos) /**< (SDMMC_HC1R) LED off. Position  */
 #define SDMMC_HC1R_SD_SDIO_LEDCTRL_ON         (SDMMC_HC1R_SD_SDIO_LEDCTRL_ON_Val << SDMMC_HC1R_SD_SDIO_LEDCTRL_Pos) /**< (SDMMC_HC1R) LED on. Position  */
+#define SDMMC_HC1R_SD_SDIO_DW_Pos             _U_(1)                                               /**< (SDMMC_HC1R) Data Width Position */
+#define SDMMC_HC1R_SD_SDIO_DW_Msk             (_U_(0x1) << SDMMC_HC1R_SD_SDIO_DW_Pos)              /**< (SDMMC_HC1R) Data Width Mask */
+#define SDMMC_HC1R_SD_SDIO_DW(value)          (SDMMC_HC1R_SD_SDIO_DW_Msk & ((value) << SDMMC_HC1R_SD_SDIO_DW_Pos))
+#define   SDMMC_HC1R_SD_SDIO_DW_1_BIT_Val     _U_(0x0)                                             /**< (SDMMC_HC1R) 1-bit mode.  */
+#define   SDMMC_HC1R_SD_SDIO_DW_4_BIT_Val     _U_(0x1)                                             /**< (SDMMC_HC1R) 4-bit mode.  */
+#define SDMMC_HC1R_SD_SDIO_DW_1_BIT           (SDMMC_HC1R_SD_SDIO_DW_1_BIT_Val << SDMMC_HC1R_SD_SDIO_DW_Pos) /**< (SDMMC_HC1R) 1-bit mode. Position  */
+#define SDMMC_HC1R_SD_SDIO_DW_4_BIT           (SDMMC_HC1R_SD_SDIO_DW_4_BIT_Val << SDMMC_HC1R_SD_SDIO_DW_Pos) /**< (SDMMC_HC1R) 4-bit mode. Position  */
+#define SDMMC_HC1R_SD_SDIO_HSEN_Pos           _U_(2)                                               /**< (SDMMC_HC1R) High Speed Enable Position */
+#define SDMMC_HC1R_SD_SDIO_HSEN_Msk           (_U_(0x1) << SDMMC_HC1R_SD_SDIO_HSEN_Pos)            /**< (SDMMC_HC1R) High Speed Enable Mask */
+#define SDMMC_HC1R_SD_SDIO_HSEN(value)        (SDMMC_HC1R_SD_SDIO_HSEN_Msk & ((value) << SDMMC_HC1R_SD_SDIO_HSEN_Pos))
+#define   SDMMC_HC1R_SD_SDIO_HSEN_0_Val       _U_(0x0)                                             /**< (SDMMC_HC1R) Normal Speed mode.  */
+#define   SDMMC_HC1R_SD_SDIO_HSEN_1_Val       _U_(0x1)                                             /**< (SDMMC_HC1R) High Speed mode.  */
+#define SDMMC_HC1R_SD_SDIO_HSEN_0             (SDMMC_HC1R_SD_SDIO_HSEN_0_Val << SDMMC_HC1R_SD_SDIO_HSEN_Pos) /**< (SDMMC_HC1R) Normal Speed mode. Position  */
+#define SDMMC_HC1R_SD_SDIO_HSEN_1             (SDMMC_HC1R_SD_SDIO_HSEN_1_Val << SDMMC_HC1R_SD_SDIO_HSEN_Pos) /**< (SDMMC_HC1R) High Speed mode. Position  */
+#define SDMMC_HC1R_SD_SDIO_DMASEL_Pos         _U_(3)                                               /**< (SDMMC_HC1R) DMA Select Position */
+#define SDMMC_HC1R_SD_SDIO_DMASEL_Msk         (_U_(0x3) << SDMMC_HC1R_SD_SDIO_DMASEL_Pos)          /**< (SDMMC_HC1R) DMA Select Mask */
+#define SDMMC_HC1R_SD_SDIO_DMASEL(value)      (SDMMC_HC1R_SD_SDIO_DMASEL_Msk & ((value) << SDMMC_HC1R_SD_SDIO_DMASEL_Pos))
+#define   SDMMC_HC1R_SD_SDIO_DMASEL_SDMA_Val  _U_(0x0)                                             /**< (SDMMC_HC1R) SDMA is selected  */
+#define   SDMMC_HC1R_SD_SDIO_DMASEL_ADMA32_Val _U_(0x2)                                             /**< (SDMMC_HC1R) 32-bit Address ADMA2 is selected  */
+#define SDMMC_HC1R_SD_SDIO_DMASEL_SDMA        (SDMMC_HC1R_SD_SDIO_DMASEL_SDMA_Val << SDMMC_HC1R_SD_SDIO_DMASEL_Pos) /**< (SDMMC_HC1R) SDMA is selected Position  */
+#define SDMMC_HC1R_SD_SDIO_DMASEL_ADMA32      (SDMMC_HC1R_SD_SDIO_DMASEL_ADMA32_Val << SDMMC_HC1R_SD_SDIO_DMASEL_Pos) /**< (SDMMC_HC1R) 32-bit Address ADMA2 is selected Position  */
 #define SDMMC_HC1R_SD_SDIO_CARDDTL_Pos        _U_(6)                                               /**< (SDMMC_HC1R) Card Detect Test Level Position */
 #define SDMMC_HC1R_SD_SDIO_CARDDTL_Msk        (_U_(0x1) << SDMMC_HC1R_SD_SDIO_CARDDTL_Pos)         /**< (SDMMC_HC1R) Card Detect Test Level Mask */
 #define SDMMC_HC1R_SD_SDIO_CARDDTL(value)     (SDMMC_HC1R_SD_SDIO_CARDDTL_Msk & ((value) << SDMMC_HC1R_SD_SDIO_CARDDTL_Pos))
@@ -322,7 +337,7 @@
 #define   SDMMC_HC1R_SD_SDIO_CARDDSEL_1_Val   _U_(0x1)                                             /**< (SDMMC_HC1R) The Card Detect Test Level (CARDDTL) is selected (for test purpose).  */
 #define SDMMC_HC1R_SD_SDIO_CARDDSEL_0         (SDMMC_HC1R_SD_SDIO_CARDDSEL_0_Val << SDMMC_HC1R_SD_SDIO_CARDDSEL_Pos) /**< (SDMMC_HC1R) The SDMMC_CD pin is selected. Position  */
 #define SDMMC_HC1R_SD_SDIO_CARDDSEL_1         (SDMMC_HC1R_SD_SDIO_CARDDSEL_1_Val << SDMMC_HC1R_SD_SDIO_CARDDSEL_Pos) /**< (SDMMC_HC1R) The Card Detect Test Level (CARDDTL) is selected (for test purpose). Position  */
-#define SDMMC_HC1R_SD_SDIO_Msk                _U_(0xC1)                                             /**< (SDMMC_HC1R_SD_SDIO) Register Mask  */
+#define SDMMC_HC1R_SD_SDIO_Msk                _U_(0xDF)                                             /**< (SDMMC_HC1R_SD_SDIO) Register Mask  */
 
 
 /* -------- SDMMC_PCR : (SDMMC Offset: 0x29) (R/W 8) Power Control Register -------- */
@@ -337,26 +352,40 @@
 /* -------- SDMMC_BGCR : (SDMMC Offset: 0x2A) (R/W 8) Block Gap Control Register -------- */
 #define SDMMC_BGCR_RESETVALUE                 _U_(0x00)                                            /**<  (SDMMC_BGCR) Block Gap Control Register  Reset Value */
 
-#define SDMMC_BGCR_STPBGR_Pos                 _U_(0)                                               /**< (SDMMC_BGCR) Stop At Block Gap Request Position */
-#define SDMMC_BGCR_STPBGR_Msk                 (_U_(0x1) << SDMMC_BGCR_STPBGR_Pos)                  /**< (SDMMC_BGCR) Stop At Block Gap Request Mask */
-#define SDMMC_BGCR_STPBGR(value)              (SDMMC_BGCR_STPBGR_Msk & ((value) << SDMMC_BGCR_STPBGR_Pos))
-#define   SDMMC_BGCR_STPBGR_0_Val             _U_(0x0)                                             /**< (SDMMC_BGCR) Transfer  */
-#define   SDMMC_BGCR_STPBGR_1_Val             _U_(0x1)                                             /**< (SDMMC_BGCR) Stop  */
-#define SDMMC_BGCR_STPBGR_0                   (SDMMC_BGCR_STPBGR_0_Val << SDMMC_BGCR_STPBGR_Pos)   /**< (SDMMC_BGCR) Transfer Position  */
-#define SDMMC_BGCR_STPBGR_1                   (SDMMC_BGCR_STPBGR_1_Val << SDMMC_BGCR_STPBGR_Pos)   /**< (SDMMC_BGCR) Stop Position  */
-#define SDMMC_BGCR_CONTR_Pos                  _U_(1)                                               /**< (SDMMC_BGCR) Continue Request Position */
-#define SDMMC_BGCR_CONTR_Msk                  (_U_(0x1) << SDMMC_BGCR_CONTR_Pos)                   /**< (SDMMC_BGCR) Continue Request Mask */
-#define SDMMC_BGCR_CONTR(value)               (SDMMC_BGCR_CONTR_Msk & ((value) << SDMMC_BGCR_CONTR_Pos))
-#define   SDMMC_BGCR_CONTR_0_Val              _U_(0x0)                                             /**< (SDMMC_BGCR) No effect.  */
-#define   SDMMC_BGCR_CONTR_1_Val              _U_(0x1)                                             /**< (SDMMC_BGCR) Restart.  */
-#define SDMMC_BGCR_CONTR_0                    (SDMMC_BGCR_CONTR_0_Val << SDMMC_BGCR_CONTR_Pos)     /**< (SDMMC_BGCR) No effect. Position  */
-#define SDMMC_BGCR_CONTR_1                    (SDMMC_BGCR_CONTR_1_Val << SDMMC_BGCR_CONTR_Pos)     /**< (SDMMC_BGCR) Restart. Position  */
-#define SDMMC_BGCR_Msk                        _U_(0x03)                                            /**< (SDMMC_BGCR) Register Mask  */
+#define SDMMC_BGCR_Msk                        _U_(0x00)                                            /**< (SDMMC_BGCR) Register Mask  */
 
 /* EMMC mode */
-#define SDMMC_BGCR_EMMC_Msk                   _U_(0x00)                                             /**< (SDMMC_BGCR_EMMC) Register Mask  */
+#define SDMMC_BGCR_EMMC_STPBGR_Pos            _U_(0)                                               /**< (SDMMC_BGCR) Stop At Block Gap Request Position */
+#define SDMMC_BGCR_EMMC_STPBGR_Msk            (_U_(0x1) << SDMMC_BGCR_EMMC_STPBGR_Pos)             /**< (SDMMC_BGCR) Stop At Block Gap Request Mask */
+#define SDMMC_BGCR_EMMC_STPBGR(value)         (SDMMC_BGCR_EMMC_STPBGR_Msk & ((value) << SDMMC_BGCR_EMMC_STPBGR_Pos))
+#define   SDMMC_BGCR_EMMC_STPBGR_0_Val        _U_(0x0)                                             /**< (SDMMC_BGCR) Transfer  */
+#define   SDMMC_BGCR_EMMC_STPBGR_1_Val        _U_(0x1)                                             /**< (SDMMC_BGCR) Stop  */
+#define SDMMC_BGCR_EMMC_STPBGR_0              (SDMMC_BGCR_EMMC_STPBGR_0_Val << SDMMC_BGCR_EMMC_STPBGR_Pos) /**< (SDMMC_BGCR) Transfer Position  */
+#define SDMMC_BGCR_EMMC_STPBGR_1              (SDMMC_BGCR_EMMC_STPBGR_1_Val << SDMMC_BGCR_EMMC_STPBGR_Pos) /**< (SDMMC_BGCR) Stop Position  */
+#define SDMMC_BGCR_EMMC_CONTR_Pos             _U_(1)                                               /**< (SDMMC_BGCR) Continue Request Position */
+#define SDMMC_BGCR_EMMC_CONTR_Msk             (_U_(0x1) << SDMMC_BGCR_EMMC_CONTR_Pos)              /**< (SDMMC_BGCR) Continue Request Mask */
+#define SDMMC_BGCR_EMMC_CONTR(value)          (SDMMC_BGCR_EMMC_CONTR_Msk & ((value) << SDMMC_BGCR_EMMC_CONTR_Pos))
+#define   SDMMC_BGCR_EMMC_CONTR_0_Val         _U_(0x0)                                             /**< (SDMMC_BGCR) No effect.  */
+#define   SDMMC_BGCR_EMMC_CONTR_1_Val         _U_(0x1)                                             /**< (SDMMC_BGCR) Restart.  */
+#define SDMMC_BGCR_EMMC_CONTR_0               (SDMMC_BGCR_EMMC_CONTR_0_Val << SDMMC_BGCR_EMMC_CONTR_Pos) /**< (SDMMC_BGCR) No effect. Position  */
+#define SDMMC_BGCR_EMMC_CONTR_1               (SDMMC_BGCR_EMMC_CONTR_1_Val << SDMMC_BGCR_EMMC_CONTR_Pos) /**< (SDMMC_BGCR) Restart. Position  */
+#define SDMMC_BGCR_EMMC_Msk                   _U_(0x03)                                             /**< (SDMMC_BGCR_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
+#define SDMMC_BGCR_SD_SDIO_STPBGR_Pos         _U_(0)                                               /**< (SDMMC_BGCR) Stop At Block Gap Request Position */
+#define SDMMC_BGCR_SD_SDIO_STPBGR_Msk         (_U_(0x1) << SDMMC_BGCR_SD_SDIO_STPBGR_Pos)          /**< (SDMMC_BGCR) Stop At Block Gap Request Mask */
+#define SDMMC_BGCR_SD_SDIO_STPBGR(value)      (SDMMC_BGCR_SD_SDIO_STPBGR_Msk & ((value) << SDMMC_BGCR_SD_SDIO_STPBGR_Pos))
+#define   SDMMC_BGCR_SD_SDIO_STPBGR_0_Val     _U_(0x0)                                             /**< (SDMMC_BGCR) Transfer  */
+#define   SDMMC_BGCR_SD_SDIO_STPBGR_1_Val     _U_(0x1)                                             /**< (SDMMC_BGCR) Stop  */
+#define SDMMC_BGCR_SD_SDIO_STPBGR_0           (SDMMC_BGCR_SD_SDIO_STPBGR_0_Val << SDMMC_BGCR_SD_SDIO_STPBGR_Pos) /**< (SDMMC_BGCR) Transfer Position  */
+#define SDMMC_BGCR_SD_SDIO_STPBGR_1           (SDMMC_BGCR_SD_SDIO_STPBGR_1_Val << SDMMC_BGCR_SD_SDIO_STPBGR_Pos) /**< (SDMMC_BGCR) Stop Position  */
+#define SDMMC_BGCR_SD_SDIO_CONTR_Pos          _U_(1)                                               /**< (SDMMC_BGCR) Continue Request Position */
+#define SDMMC_BGCR_SD_SDIO_CONTR_Msk          (_U_(0x1) << SDMMC_BGCR_SD_SDIO_CONTR_Pos)           /**< (SDMMC_BGCR) Continue Request Mask */
+#define SDMMC_BGCR_SD_SDIO_CONTR(value)       (SDMMC_BGCR_SD_SDIO_CONTR_Msk & ((value) << SDMMC_BGCR_SD_SDIO_CONTR_Pos))
+#define   SDMMC_BGCR_SD_SDIO_CONTR_0_Val      _U_(0x0)                                             /**< (SDMMC_BGCR) No effect.  */
+#define   SDMMC_BGCR_SD_SDIO_CONTR_1_Val      _U_(0x1)                                             /**< (SDMMC_BGCR) Restart.  */
+#define SDMMC_BGCR_SD_SDIO_CONTR_0            (SDMMC_BGCR_SD_SDIO_CONTR_0_Val << SDMMC_BGCR_SD_SDIO_CONTR_Pos) /**< (SDMMC_BGCR) No effect. Position  */
+#define SDMMC_BGCR_SD_SDIO_CONTR_1            (SDMMC_BGCR_SD_SDIO_CONTR_1_Val << SDMMC_BGCR_SD_SDIO_CONTR_Pos) /**< (SDMMC_BGCR) Restart. Position  */
 #define SDMMC_BGCR_SD_SDIO_RWCTRL_Pos         _U_(2)                                               /**< (SDMMC_BGCR) Read Wait Control Position */
 #define SDMMC_BGCR_SD_SDIO_RWCTRL_Msk         (_U_(0x1) << SDMMC_BGCR_SD_SDIO_RWCTRL_Pos)          /**< (SDMMC_BGCR) Read Wait Control Mask */
 #define SDMMC_BGCR_SD_SDIO_RWCTRL(value)      (SDMMC_BGCR_SD_SDIO_RWCTRL_Msk & ((value) << SDMMC_BGCR_SD_SDIO_RWCTRL_Pos))
@@ -371,7 +400,7 @@
 #define   SDMMC_BGCR_SD_SDIO_INTBG_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_BGCR) Interrupt detection enabled.  */
 #define SDMMC_BGCR_SD_SDIO_INTBG_DISABLED     (SDMMC_BGCR_SD_SDIO_INTBG_DISABLED_Val << SDMMC_BGCR_SD_SDIO_INTBG_Pos) /**< (SDMMC_BGCR) Interrupt detection disabled. Position  */
 #define SDMMC_BGCR_SD_SDIO_INTBG_ENABLED      (SDMMC_BGCR_SD_SDIO_INTBG_ENABLED_Val << SDMMC_BGCR_SD_SDIO_INTBG_Pos) /**< (SDMMC_BGCR) Interrupt detection enabled. Position  */
-#define SDMMC_BGCR_SD_SDIO_Msk                _U_(0x0C)                                             /**< (SDMMC_BGCR_SD_SDIO) Register Mask  */
+#define SDMMC_BGCR_SD_SDIO_Msk                _U_(0x0F)                                             /**< (SDMMC_BGCR_SD_SDIO) Register Mask  */
 
 
 /* -------- SDMMC_WCR : (SDMMC Offset: 0x2B) (R/W 8) Wakeup Control Register -------- */
@@ -480,51 +509,30 @@
 /* -------- SDMMC_NISTR : (SDMMC Offset: 0x30) (R/W 16) Normal Interrupt Status Register -------- */
 #define SDMMC_NISTR_RESETVALUE                _U_(0x00)                                            /**<  (SDMMC_NISTR) Normal Interrupt Status Register  Reset Value */
 
-#define SDMMC_NISTR_CMDC_Pos                  _U_(0)                                               /**< (SDMMC_NISTR) Command Complete Position */
-#define SDMMC_NISTR_CMDC_Msk                  (_U_(0x1) << SDMMC_NISTR_CMDC_Pos)                   /**< (SDMMC_NISTR) Command Complete Mask */
-#define SDMMC_NISTR_CMDC(value)               (SDMMC_NISTR_CMDC_Msk & ((value) << SDMMC_NISTR_CMDC_Pos))
-#define   SDMMC_NISTR_CMDC_0_Val              _U_(0x0)                                             /**< (SDMMC_NISTR) No command complete.  */
-#define   SDMMC_NISTR_CMDC_1_Val              _U_(0x1)                                             /**< (SDMMC_NISTR) Command complete.  */
-#define SDMMC_NISTR_CMDC_0                    (SDMMC_NISTR_CMDC_0_Val << SDMMC_NISTR_CMDC_Pos)     /**< (SDMMC_NISTR) No command complete. Position  */
-#define SDMMC_NISTR_CMDC_1                    (SDMMC_NISTR_CMDC_1_Val << SDMMC_NISTR_CMDC_Pos)     /**< (SDMMC_NISTR) Command complete. Position  */
-#define SDMMC_NISTR_TRFC_Pos                  _U_(1)                                               /**< (SDMMC_NISTR) Transfer Complete Position */
-#define SDMMC_NISTR_TRFC_Msk                  (_U_(0x1) << SDMMC_NISTR_TRFC_Pos)                   /**< (SDMMC_NISTR) Transfer Complete Mask */
-#define SDMMC_NISTR_TRFC(value)               (SDMMC_NISTR_TRFC_Msk & ((value) << SDMMC_NISTR_TRFC_Pos))
-#define   SDMMC_NISTR_TRFC_0_Val              _U_(0x0)                                             /**< (SDMMC_NISTR) Command execution is not complete.  */
-#define   SDMMC_NISTR_TRFC_1_Val              _U_(0x1)                                             /**< (SDMMC_NISTR) Command execution is complete.  */
-#define SDMMC_NISTR_TRFC_0                    (SDMMC_NISTR_TRFC_0_Val << SDMMC_NISTR_TRFC_Pos)     /**< (SDMMC_NISTR) Command execution is not complete. Position  */
-#define SDMMC_NISTR_TRFC_1                    (SDMMC_NISTR_TRFC_1_Val << SDMMC_NISTR_TRFC_Pos)     /**< (SDMMC_NISTR) Command execution is complete. Position  */
-#define SDMMC_NISTR_BLKGE_Pos                 _U_(2)                                               /**< (SDMMC_NISTR) Block Gap Event Position */
-#define SDMMC_NISTR_BLKGE_Msk                 (_U_(0x1) << SDMMC_NISTR_BLKGE_Pos)                  /**< (SDMMC_NISTR) Block Gap Event Mask */
-#define SDMMC_NISTR_BLKGE(value)              (SDMMC_NISTR_BLKGE_Msk & ((value) << SDMMC_NISTR_BLKGE_Pos))
-#define   SDMMC_NISTR_BLKGE_0_Val             _U_(0x0)                                             /**< (SDMMC_NISTR) No block gap event.  */
-#define   SDMMC_NISTR_BLKGE_1_Val             _U_(0x1)                                             /**< (SDMMC_NISTR) Transaction stopped at block gap.  */
-#define SDMMC_NISTR_BLKGE_0                   (SDMMC_NISTR_BLKGE_0_Val << SDMMC_NISTR_BLKGE_Pos)   /**< (SDMMC_NISTR) No block gap event. Position  */
-#define SDMMC_NISTR_BLKGE_1                   (SDMMC_NISTR_BLKGE_1_Val << SDMMC_NISTR_BLKGE_Pos)   /**< (SDMMC_NISTR) Transaction stopped at block gap. Position  */
-#define SDMMC_NISTR_BWRRDY_Pos                _U_(4)                                               /**< (SDMMC_NISTR) Buffer Write Ready Position */
-#define SDMMC_NISTR_BWRRDY_Msk                (_U_(0x1) << SDMMC_NISTR_BWRRDY_Pos)                 /**< (SDMMC_NISTR) Buffer Write Ready Mask */
-#define SDMMC_NISTR_BWRRDY(value)             (SDMMC_NISTR_BWRRDY_Msk & ((value) << SDMMC_NISTR_BWRRDY_Pos))
-#define   SDMMC_NISTR_BWRRDY_0_Val            _U_(0x0)                                             /**< (SDMMC_NISTR) Not ready to write buffer.  */
-#define   SDMMC_NISTR_BWRRDY_1_Val            _U_(0x1)                                             /**< (SDMMC_NISTR) Ready to write buffer.  */
-#define SDMMC_NISTR_BWRRDY_0                  (SDMMC_NISTR_BWRRDY_0_Val << SDMMC_NISTR_BWRRDY_Pos) /**< (SDMMC_NISTR) Not ready to write buffer. Position  */
-#define SDMMC_NISTR_BWRRDY_1                  (SDMMC_NISTR_BWRRDY_1_Val << SDMMC_NISTR_BWRRDY_Pos) /**< (SDMMC_NISTR) Ready to write buffer. Position  */
-#define SDMMC_NISTR_BRDRDY_Pos                _U_(5)                                               /**< (SDMMC_NISTR) Buffer Read Ready Position */
-#define SDMMC_NISTR_BRDRDY_Msk                (_U_(0x1) << SDMMC_NISTR_BRDRDY_Pos)                 /**< (SDMMC_NISTR) Buffer Read Ready Mask */
-#define SDMMC_NISTR_BRDRDY(value)             (SDMMC_NISTR_BRDRDY_Msk & ((value) << SDMMC_NISTR_BRDRDY_Pos))
-#define   SDMMC_NISTR_BRDRDY_0_Val            _U_(0x0)                                             /**< (SDMMC_NISTR) Not ready to read buffer.  */
-#define   SDMMC_NISTR_BRDRDY_1_Val            _U_(0x1)                                             /**< (SDMMC_NISTR) Ready to read buffer.  */
-#define SDMMC_NISTR_BRDRDY_0                  (SDMMC_NISTR_BRDRDY_0_Val << SDMMC_NISTR_BRDRDY_Pos) /**< (SDMMC_NISTR) Not ready to read buffer. Position  */
-#define SDMMC_NISTR_BRDRDY_1                  (SDMMC_NISTR_BRDRDY_1_Val << SDMMC_NISTR_BRDRDY_Pos) /**< (SDMMC_NISTR) Ready to read buffer. Position  */
-#define SDMMC_NISTR_ERRINT_Pos                _U_(15)                                              /**< (SDMMC_NISTR) Error Interrupt Position */
-#define SDMMC_NISTR_ERRINT_Msk                (_U_(0x1) << SDMMC_NISTR_ERRINT_Pos)                 /**< (SDMMC_NISTR) Error Interrupt Mask */
-#define SDMMC_NISTR_ERRINT(value)             (SDMMC_NISTR_ERRINT_Msk & ((value) << SDMMC_NISTR_ERRINT_Pos))
-#define   SDMMC_NISTR_ERRINT_0_Val            _U_(0x0)                                             /**< (SDMMC_NISTR) No error.  */
-#define   SDMMC_NISTR_ERRINT_1_Val            _U_(0x1)                                             /**< (SDMMC_NISTR) Error.  */
-#define SDMMC_NISTR_ERRINT_0                  (SDMMC_NISTR_ERRINT_0_Val << SDMMC_NISTR_ERRINT_Pos) /**< (SDMMC_NISTR) No error. Position  */
-#define SDMMC_NISTR_ERRINT_1                  (SDMMC_NISTR_ERRINT_1_Val << SDMMC_NISTR_ERRINT_Pos) /**< (SDMMC_NISTR) Error. Position  */
-#define SDMMC_NISTR_Msk                       _U_(0x8037)                                          /**< (SDMMC_NISTR) Register Mask  */
+#define SDMMC_NISTR_Msk                       _U_(0x0000)                                          /**< (SDMMC_NISTR) Register Mask  */
 
 /* EMMC mode */
+#define SDMMC_NISTR_EMMC_CMDC_Pos             _U_(0)                                               /**< (SDMMC_NISTR) Command Complete Position */
+#define SDMMC_NISTR_EMMC_CMDC_Msk             (_U_(0x1) << SDMMC_NISTR_EMMC_CMDC_Pos)              /**< (SDMMC_NISTR) Command Complete Mask */
+#define SDMMC_NISTR_EMMC_CMDC(value)          (SDMMC_NISTR_EMMC_CMDC_Msk & ((value) << SDMMC_NISTR_EMMC_CMDC_Pos))
+#define   SDMMC_NISTR_EMMC_CMDC_0_Val         _U_(0x0)                                             /**< (SDMMC_NISTR) No command complete.  */
+#define   SDMMC_NISTR_EMMC_CMDC_1_Val         _U_(0x1)                                             /**< (SDMMC_NISTR) Command complete.  */
+#define SDMMC_NISTR_EMMC_CMDC_0               (SDMMC_NISTR_EMMC_CMDC_0_Val << SDMMC_NISTR_EMMC_CMDC_Pos) /**< (SDMMC_NISTR) No command complete. Position  */
+#define SDMMC_NISTR_EMMC_CMDC_1               (SDMMC_NISTR_EMMC_CMDC_1_Val << SDMMC_NISTR_EMMC_CMDC_Pos) /**< (SDMMC_NISTR) Command complete. Position  */
+#define SDMMC_NISTR_EMMC_TRFC_Pos             _U_(1)                                               /**< (SDMMC_NISTR) Transfer Complete Position */
+#define SDMMC_NISTR_EMMC_TRFC_Msk             (_U_(0x1) << SDMMC_NISTR_EMMC_TRFC_Pos)              /**< (SDMMC_NISTR) Transfer Complete Mask */
+#define SDMMC_NISTR_EMMC_TRFC(value)          (SDMMC_NISTR_EMMC_TRFC_Msk & ((value) << SDMMC_NISTR_EMMC_TRFC_Pos))
+#define   SDMMC_NISTR_EMMC_TRFC_0_Val         _U_(0x0)                                             /**< (SDMMC_NISTR) Command execution is not complete.  */
+#define   SDMMC_NISTR_EMMC_TRFC_1_Val         _U_(0x1)                                             /**< (SDMMC_NISTR) Command execution is complete.  */
+#define SDMMC_NISTR_EMMC_TRFC_0               (SDMMC_NISTR_EMMC_TRFC_0_Val << SDMMC_NISTR_EMMC_TRFC_Pos) /**< (SDMMC_NISTR) Command execution is not complete. Position  */
+#define SDMMC_NISTR_EMMC_TRFC_1               (SDMMC_NISTR_EMMC_TRFC_1_Val << SDMMC_NISTR_EMMC_TRFC_Pos) /**< (SDMMC_NISTR) Command execution is complete. Position  */
+#define SDMMC_NISTR_EMMC_BLKGE_Pos            _U_(2)                                               /**< (SDMMC_NISTR) Block Gap Event Position */
+#define SDMMC_NISTR_EMMC_BLKGE_Msk            (_U_(0x1) << SDMMC_NISTR_EMMC_BLKGE_Pos)             /**< (SDMMC_NISTR) Block Gap Event Mask */
+#define SDMMC_NISTR_EMMC_BLKGE(value)         (SDMMC_NISTR_EMMC_BLKGE_Msk & ((value) << SDMMC_NISTR_EMMC_BLKGE_Pos))
+#define   SDMMC_NISTR_EMMC_BLKGE_0_Val        _U_(0x0)                                             /**< (SDMMC_NISTR) No block gap event.  */
+#define   SDMMC_NISTR_EMMC_BLKGE_1_Val        _U_(0x1)                                             /**< (SDMMC_NISTR) Transaction stopped at block gap.  */
+#define SDMMC_NISTR_EMMC_BLKGE_0              (SDMMC_NISTR_EMMC_BLKGE_0_Val << SDMMC_NISTR_EMMC_BLKGE_Pos) /**< (SDMMC_NISTR) No block gap event. Position  */
+#define SDMMC_NISTR_EMMC_BLKGE_1              (SDMMC_NISTR_EMMC_BLKGE_1_Val << SDMMC_NISTR_EMMC_BLKGE_Pos) /**< (SDMMC_NISTR) Transaction stopped at block gap. Position  */
 #define SDMMC_NISTR_EMMC_DMAINT_Pos           _U_(3)                                               /**< (SDMMC_NISTR) DMA Interrupt Position */
 #define SDMMC_NISTR_EMMC_DMAINT_Msk           (_U_(0x1) << SDMMC_NISTR_EMMC_DMAINT_Pos)            /**< (SDMMC_NISTR) DMA Interrupt Mask */
 #define SDMMC_NISTR_EMMC_DMAINT(value)        (SDMMC_NISTR_EMMC_DMAINT_Msk & ((value) << SDMMC_NISTR_EMMC_DMAINT_Pos))
@@ -532,6 +540,20 @@
 #define   SDMMC_NISTR_EMMC_DMAINT_1_Val       _U_(0x1)                                             /**< (SDMMC_NISTR) DMA interrupt.  */
 #define SDMMC_NISTR_EMMC_DMAINT_0             (SDMMC_NISTR_EMMC_DMAINT_0_Val << SDMMC_NISTR_EMMC_DMAINT_Pos) /**< (SDMMC_NISTR) No DMA interrupt. Position  */
 #define SDMMC_NISTR_EMMC_DMAINT_1             (SDMMC_NISTR_EMMC_DMAINT_1_Val << SDMMC_NISTR_EMMC_DMAINT_Pos) /**< (SDMMC_NISTR) DMA interrupt. Position  */
+#define SDMMC_NISTR_EMMC_BWRRDY_Pos           _U_(4)                                               /**< (SDMMC_NISTR) Buffer Write Ready Position */
+#define SDMMC_NISTR_EMMC_BWRRDY_Msk           (_U_(0x1) << SDMMC_NISTR_EMMC_BWRRDY_Pos)            /**< (SDMMC_NISTR) Buffer Write Ready Mask */
+#define SDMMC_NISTR_EMMC_BWRRDY(value)        (SDMMC_NISTR_EMMC_BWRRDY_Msk & ((value) << SDMMC_NISTR_EMMC_BWRRDY_Pos))
+#define   SDMMC_NISTR_EMMC_BWRRDY_0_Val       _U_(0x0)                                             /**< (SDMMC_NISTR) Not ready to write buffer.  */
+#define   SDMMC_NISTR_EMMC_BWRRDY_1_Val       _U_(0x1)                                             /**< (SDMMC_NISTR) Ready to write buffer.  */
+#define SDMMC_NISTR_EMMC_BWRRDY_0             (SDMMC_NISTR_EMMC_BWRRDY_0_Val << SDMMC_NISTR_EMMC_BWRRDY_Pos) /**< (SDMMC_NISTR) Not ready to write buffer. Position  */
+#define SDMMC_NISTR_EMMC_BWRRDY_1             (SDMMC_NISTR_EMMC_BWRRDY_1_Val << SDMMC_NISTR_EMMC_BWRRDY_Pos) /**< (SDMMC_NISTR) Ready to write buffer. Position  */
+#define SDMMC_NISTR_EMMC_BRDRDY_Pos           _U_(5)                                               /**< (SDMMC_NISTR) Buffer Read Ready Position */
+#define SDMMC_NISTR_EMMC_BRDRDY_Msk           (_U_(0x1) << SDMMC_NISTR_EMMC_BRDRDY_Pos)            /**< (SDMMC_NISTR) Buffer Read Ready Mask */
+#define SDMMC_NISTR_EMMC_BRDRDY(value)        (SDMMC_NISTR_EMMC_BRDRDY_Msk & ((value) << SDMMC_NISTR_EMMC_BRDRDY_Pos))
+#define   SDMMC_NISTR_EMMC_BRDRDY_0_Val       _U_(0x0)                                             /**< (SDMMC_NISTR) Not ready to read buffer.  */
+#define   SDMMC_NISTR_EMMC_BRDRDY_1_Val       _U_(0x1)                                             /**< (SDMMC_NISTR) Ready to read buffer.  */
+#define SDMMC_NISTR_EMMC_BRDRDY_0             (SDMMC_NISTR_EMMC_BRDRDY_0_Val << SDMMC_NISTR_EMMC_BRDRDY_Pos) /**< (SDMMC_NISTR) Not ready to read buffer. Position  */
+#define SDMMC_NISTR_EMMC_BRDRDY_1             (SDMMC_NISTR_EMMC_BRDRDY_1_Val << SDMMC_NISTR_EMMC_BRDRDY_Pos) /**< (SDMMC_NISTR) Ready to read buffer. Position  */
 #define SDMMC_NISTR_EMMC_BOOTAR_Pos           _U_(14)                                              /**< (SDMMC_NISTR) Boot Acknowledge Received Position */
 #define SDMMC_NISTR_EMMC_BOOTAR_Msk           (_U_(0x1) << SDMMC_NISTR_EMMC_BOOTAR_Pos)            /**< (SDMMC_NISTR) Boot Acknowledge Received Mask */
 #define SDMMC_NISTR_EMMC_BOOTAR(value)        (SDMMC_NISTR_EMMC_BOOTAR_Msk & ((value) << SDMMC_NISTR_EMMC_BOOTAR_Pos))
@@ -539,9 +561,37 @@
 #define   SDMMC_NISTR_EMMC_BOOTAR_1_Val       _U_(0x1)                                             /**< (SDMMC_NISTR) Boot Acknowledge pattern received.  */
 #define SDMMC_NISTR_EMMC_BOOTAR_0             (SDMMC_NISTR_EMMC_BOOTAR_0_Val << SDMMC_NISTR_EMMC_BOOTAR_Pos) /**< (SDMMC_NISTR) Boot Acknowledge pattern not received. Position  */
 #define SDMMC_NISTR_EMMC_BOOTAR_1             (SDMMC_NISTR_EMMC_BOOTAR_1_Val << SDMMC_NISTR_EMMC_BOOTAR_Pos) /**< (SDMMC_NISTR) Boot Acknowledge pattern received. Position  */
-#define SDMMC_NISTR_EMMC_Msk                  _U_(0x4008)                                           /**< (SDMMC_NISTR_EMMC) Register Mask  */
+#define SDMMC_NISTR_EMMC_ERRINT_Pos           _U_(15)                                              /**< (SDMMC_NISTR) Error Interrupt Position */
+#define SDMMC_NISTR_EMMC_ERRINT_Msk           (_U_(0x1) << SDMMC_NISTR_EMMC_ERRINT_Pos)            /**< (SDMMC_NISTR) Error Interrupt Mask */
+#define SDMMC_NISTR_EMMC_ERRINT(value)        (SDMMC_NISTR_EMMC_ERRINT_Msk & ((value) << SDMMC_NISTR_EMMC_ERRINT_Pos))
+#define   SDMMC_NISTR_EMMC_ERRINT_0_Val       _U_(0x0)                                             /**< (SDMMC_NISTR) No error.  */
+#define   SDMMC_NISTR_EMMC_ERRINT_1_Val       _U_(0x1)                                             /**< (SDMMC_NISTR) Error.  */
+#define SDMMC_NISTR_EMMC_ERRINT_0             (SDMMC_NISTR_EMMC_ERRINT_0_Val << SDMMC_NISTR_EMMC_ERRINT_Pos) /**< (SDMMC_NISTR) No error. Position  */
+#define SDMMC_NISTR_EMMC_ERRINT_1             (SDMMC_NISTR_EMMC_ERRINT_1_Val << SDMMC_NISTR_EMMC_ERRINT_Pos) /**< (SDMMC_NISTR) Error. Position  */
+#define SDMMC_NISTR_EMMC_Msk                  _U_(0xC03F)                                           /**< (SDMMC_NISTR_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
+#define SDMMC_NISTR_SD_SDIO_CMDC_Pos          _U_(0)                                               /**< (SDMMC_NISTR) Command Complete Position */
+#define SDMMC_NISTR_SD_SDIO_CMDC_Msk          (_U_(0x1) << SDMMC_NISTR_SD_SDIO_CMDC_Pos)           /**< (SDMMC_NISTR) Command Complete Mask */
+#define SDMMC_NISTR_SD_SDIO_CMDC(value)       (SDMMC_NISTR_SD_SDIO_CMDC_Msk & ((value) << SDMMC_NISTR_SD_SDIO_CMDC_Pos))
+#define   SDMMC_NISTR_SD_SDIO_CMDC_0_Val      _U_(0x0)                                             /**< (SDMMC_NISTR) No command complete.  */
+#define   SDMMC_NISTR_SD_SDIO_CMDC_1_Val      _U_(0x1)                                             /**< (SDMMC_NISTR) Command complete.  */
+#define SDMMC_NISTR_SD_SDIO_CMDC_0            (SDMMC_NISTR_SD_SDIO_CMDC_0_Val << SDMMC_NISTR_SD_SDIO_CMDC_Pos) /**< (SDMMC_NISTR) No command complete. Position  */
+#define SDMMC_NISTR_SD_SDIO_CMDC_1            (SDMMC_NISTR_SD_SDIO_CMDC_1_Val << SDMMC_NISTR_SD_SDIO_CMDC_Pos) /**< (SDMMC_NISTR) Command complete. Position  */
+#define SDMMC_NISTR_SD_SDIO_TRFC_Pos          _U_(1)                                               /**< (SDMMC_NISTR) Transfer Complete Position */
+#define SDMMC_NISTR_SD_SDIO_TRFC_Msk          (_U_(0x1) << SDMMC_NISTR_SD_SDIO_TRFC_Pos)           /**< (SDMMC_NISTR) Transfer Complete Mask */
+#define SDMMC_NISTR_SD_SDIO_TRFC(value)       (SDMMC_NISTR_SD_SDIO_TRFC_Msk & ((value) << SDMMC_NISTR_SD_SDIO_TRFC_Pos))
+#define   SDMMC_NISTR_SD_SDIO_TRFC_0_Val      _U_(0x0)                                             /**< (SDMMC_NISTR) Command execution is not complete.  */
+#define   SDMMC_NISTR_SD_SDIO_TRFC_1_Val      _U_(0x1)                                             /**< (SDMMC_NISTR) Command execution is complete.  */
+#define SDMMC_NISTR_SD_SDIO_TRFC_0            (SDMMC_NISTR_SD_SDIO_TRFC_0_Val << SDMMC_NISTR_SD_SDIO_TRFC_Pos) /**< (SDMMC_NISTR) Command execution is not complete. Position  */
+#define SDMMC_NISTR_SD_SDIO_TRFC_1            (SDMMC_NISTR_SD_SDIO_TRFC_1_Val << SDMMC_NISTR_SD_SDIO_TRFC_Pos) /**< (SDMMC_NISTR) Command execution is complete. Position  */
+#define SDMMC_NISTR_SD_SDIO_BLKGE_Pos         _U_(2)                                               /**< (SDMMC_NISTR) Block Gap Event Position */
+#define SDMMC_NISTR_SD_SDIO_BLKGE_Msk         (_U_(0x1) << SDMMC_NISTR_SD_SDIO_BLKGE_Pos)          /**< (SDMMC_NISTR) Block Gap Event Mask */
+#define SDMMC_NISTR_SD_SDIO_BLKGE(value)      (SDMMC_NISTR_SD_SDIO_BLKGE_Msk & ((value) << SDMMC_NISTR_SD_SDIO_BLKGE_Pos))
+#define   SDMMC_NISTR_SD_SDIO_BLKGE_0_Val     _U_(0x0)                                             /**< (SDMMC_NISTR) No block gap event.  */
+#define   SDMMC_NISTR_SD_SDIO_BLKGE_1_Val     _U_(0x1)                                             /**< (SDMMC_NISTR) Transaction stopped at block gap.  */
+#define SDMMC_NISTR_SD_SDIO_BLKGE_0           (SDMMC_NISTR_SD_SDIO_BLKGE_0_Val << SDMMC_NISTR_SD_SDIO_BLKGE_Pos) /**< (SDMMC_NISTR) No block gap event. Position  */
+#define SDMMC_NISTR_SD_SDIO_BLKGE_1           (SDMMC_NISTR_SD_SDIO_BLKGE_1_Val << SDMMC_NISTR_SD_SDIO_BLKGE_Pos) /**< (SDMMC_NISTR) Transaction stopped at block gap. Position  */
 #define SDMMC_NISTR_SD_SDIO_DMAINT_Pos        _U_(3)                                               /**< (SDMMC_NISTR) DMA Interrupt Position */
 #define SDMMC_NISTR_SD_SDIO_DMAINT_Msk        (_U_(0x1) << SDMMC_NISTR_SD_SDIO_DMAINT_Pos)         /**< (SDMMC_NISTR) DMA Interrupt Mask */
 #define SDMMC_NISTR_SD_SDIO_DMAINT(value)     (SDMMC_NISTR_SD_SDIO_DMAINT_Msk & ((value) << SDMMC_NISTR_SD_SDIO_DMAINT_Pos))
@@ -549,6 +599,20 @@
 #define   SDMMC_NISTR_SD_SDIO_DMAINT_1_Val    _U_(0x1)                                             /**< (SDMMC_NISTR) DMA Interrupt.  */
 #define SDMMC_NISTR_SD_SDIO_DMAINT_0          (SDMMC_NISTR_SD_SDIO_DMAINT_0_Val << SDMMC_NISTR_SD_SDIO_DMAINT_Pos) /**< (SDMMC_NISTR) No DMA Interrupt. Position  */
 #define SDMMC_NISTR_SD_SDIO_DMAINT_1          (SDMMC_NISTR_SD_SDIO_DMAINT_1_Val << SDMMC_NISTR_SD_SDIO_DMAINT_Pos) /**< (SDMMC_NISTR) DMA Interrupt. Position  */
+#define SDMMC_NISTR_SD_SDIO_BWRRDY_Pos        _U_(4)                                               /**< (SDMMC_NISTR) Buffer Write Ready Position */
+#define SDMMC_NISTR_SD_SDIO_BWRRDY_Msk        (_U_(0x1) << SDMMC_NISTR_SD_SDIO_BWRRDY_Pos)         /**< (SDMMC_NISTR) Buffer Write Ready Mask */
+#define SDMMC_NISTR_SD_SDIO_BWRRDY(value)     (SDMMC_NISTR_SD_SDIO_BWRRDY_Msk & ((value) << SDMMC_NISTR_SD_SDIO_BWRRDY_Pos))
+#define   SDMMC_NISTR_SD_SDIO_BWRRDY_0_Val    _U_(0x0)                                             /**< (SDMMC_NISTR) Not ready to write buffer.  */
+#define   SDMMC_NISTR_SD_SDIO_BWRRDY_1_Val    _U_(0x1)                                             /**< (SDMMC_NISTR) Ready to write buffer.  */
+#define SDMMC_NISTR_SD_SDIO_BWRRDY_0          (SDMMC_NISTR_SD_SDIO_BWRRDY_0_Val << SDMMC_NISTR_SD_SDIO_BWRRDY_Pos) /**< (SDMMC_NISTR) Not ready to write buffer. Position  */
+#define SDMMC_NISTR_SD_SDIO_BWRRDY_1          (SDMMC_NISTR_SD_SDIO_BWRRDY_1_Val << SDMMC_NISTR_SD_SDIO_BWRRDY_Pos) /**< (SDMMC_NISTR) Ready to write buffer. Position  */
+#define SDMMC_NISTR_SD_SDIO_BRDRDY_Pos        _U_(5)                                               /**< (SDMMC_NISTR) Buffer Read Ready Position */
+#define SDMMC_NISTR_SD_SDIO_BRDRDY_Msk        (_U_(0x1) << SDMMC_NISTR_SD_SDIO_BRDRDY_Pos)         /**< (SDMMC_NISTR) Buffer Read Ready Mask */
+#define SDMMC_NISTR_SD_SDIO_BRDRDY(value)     (SDMMC_NISTR_SD_SDIO_BRDRDY_Msk & ((value) << SDMMC_NISTR_SD_SDIO_BRDRDY_Pos))
+#define   SDMMC_NISTR_SD_SDIO_BRDRDY_0_Val    _U_(0x0)                                             /**< (SDMMC_NISTR) Not ready to read buffer.  */
+#define   SDMMC_NISTR_SD_SDIO_BRDRDY_1_Val    _U_(0x1)                                             /**< (SDMMC_NISTR) Ready to read buffer.  */
+#define SDMMC_NISTR_SD_SDIO_BRDRDY_0          (SDMMC_NISTR_SD_SDIO_BRDRDY_0_Val << SDMMC_NISTR_SD_SDIO_BRDRDY_Pos) /**< (SDMMC_NISTR) Not ready to read buffer. Position  */
+#define SDMMC_NISTR_SD_SDIO_BRDRDY_1          (SDMMC_NISTR_SD_SDIO_BRDRDY_1_Val << SDMMC_NISTR_SD_SDIO_BRDRDY_Pos) /**< (SDMMC_NISTR) Ready to read buffer. Position  */
 #define SDMMC_NISTR_SD_SDIO_CINS_Pos          _U_(6)                                               /**< (SDMMC_NISTR) Card Insertion Position */
 #define SDMMC_NISTR_SD_SDIO_CINS_Msk          (_U_(0x1) << SDMMC_NISTR_SD_SDIO_CINS_Pos)           /**< (SDMMC_NISTR) Card Insertion Mask */
 #define SDMMC_NISTR_SD_SDIO_CINS(value)       (SDMMC_NISTR_SD_SDIO_CINS_Msk & ((value) << SDMMC_NISTR_SD_SDIO_CINS_Pos))
@@ -570,70 +634,42 @@
 #define   SDMMC_NISTR_SD_SDIO_CINT_1_Val      _U_(0x1)                                             /**< (SDMMC_NISTR) Card interrupt.  */
 #define SDMMC_NISTR_SD_SDIO_CINT_0            (SDMMC_NISTR_SD_SDIO_CINT_0_Val << SDMMC_NISTR_SD_SDIO_CINT_Pos) /**< (SDMMC_NISTR) No card interrupt. Position  */
 #define SDMMC_NISTR_SD_SDIO_CINT_1            (SDMMC_NISTR_SD_SDIO_CINT_1_Val << SDMMC_NISTR_SD_SDIO_CINT_Pos) /**< (SDMMC_NISTR) Card interrupt. Position  */
-#define SDMMC_NISTR_SD_SDIO_Msk               _U_(0x01C8)                                           /**< (SDMMC_NISTR_SD_SDIO) Register Mask  */
+#define SDMMC_NISTR_SD_SDIO_ERRINT_Pos        _U_(15)                                              /**< (SDMMC_NISTR) Error Interrupt Position */
+#define SDMMC_NISTR_SD_SDIO_ERRINT_Msk        (_U_(0x1) << SDMMC_NISTR_SD_SDIO_ERRINT_Pos)         /**< (SDMMC_NISTR) Error Interrupt Mask */
+#define SDMMC_NISTR_SD_SDIO_ERRINT(value)     (SDMMC_NISTR_SD_SDIO_ERRINT_Msk & ((value) << SDMMC_NISTR_SD_SDIO_ERRINT_Pos))
+#define   SDMMC_NISTR_SD_SDIO_ERRINT_0_Val    _U_(0x0)                                             /**< (SDMMC_NISTR) No error.  */
+#define   SDMMC_NISTR_SD_SDIO_ERRINT_1_Val    _U_(0x1)                                             /**< (SDMMC_NISTR) Error.  */
+#define SDMMC_NISTR_SD_SDIO_ERRINT_0          (SDMMC_NISTR_SD_SDIO_ERRINT_0_Val << SDMMC_NISTR_SD_SDIO_ERRINT_Pos) /**< (SDMMC_NISTR) No error. Position  */
+#define SDMMC_NISTR_SD_SDIO_ERRINT_1          (SDMMC_NISTR_SD_SDIO_ERRINT_1_Val << SDMMC_NISTR_SD_SDIO_ERRINT_Pos) /**< (SDMMC_NISTR) Error. Position  */
+#define SDMMC_NISTR_SD_SDIO_Msk               _U_(0x81FF)                                           /**< (SDMMC_NISTR_SD_SDIO) Register Mask  */
 
 
 /* -------- SDMMC_EISTR : (SDMMC Offset: 0x32) (R/W 16) Error Interrupt Status Register -------- */
 #define SDMMC_EISTR_RESETVALUE                _U_(0x00)                                            /**<  (SDMMC_EISTR) Error Interrupt Status Register  Reset Value */
 
-#define SDMMC_EISTR_CMDTEO_Pos                _U_(0)                                               /**< (SDMMC_EISTR) Command Timeout Error Position */
-#define SDMMC_EISTR_CMDTEO_Msk                (_U_(0x1) << SDMMC_EISTR_CMDTEO_Pos)                 /**< (SDMMC_EISTR) Command Timeout Error Mask */
-#define SDMMC_EISTR_CMDTEO(value)             (SDMMC_EISTR_CMDTEO_Msk & ((value) << SDMMC_EISTR_CMDTEO_Pos))
-#define SDMMC_EISTR_CMDCRC_Pos                _U_(1)                                               /**< (SDMMC_EISTR) Command CRC Error Position */
-#define SDMMC_EISTR_CMDCRC_Msk                (_U_(0x1) << SDMMC_EISTR_CMDCRC_Pos)                 /**< (SDMMC_EISTR) Command CRC Error Mask */
-#define SDMMC_EISTR_CMDCRC(value)             (SDMMC_EISTR_CMDCRC_Msk & ((value) << SDMMC_EISTR_CMDCRC_Pos))
-#define SDMMC_EISTR_CMDEND_Pos                _U_(2)                                               /**< (SDMMC_EISTR) Command End Bit Error Position */
-#define SDMMC_EISTR_CMDEND_Msk                (_U_(0x1) << SDMMC_EISTR_CMDEND_Pos)                 /**< (SDMMC_EISTR) Command End Bit Error Mask */
-#define SDMMC_EISTR_CMDEND(value)             (SDMMC_EISTR_CMDEND_Msk & ((value) << SDMMC_EISTR_CMDEND_Pos))
-#define   SDMMC_EISTR_CMDEND_0_Val            _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
-#define   SDMMC_EISTR_CMDEND_1_Val            _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
-#define SDMMC_EISTR_CMDEND_0                  (SDMMC_EISTR_CMDEND_0_Val << SDMMC_EISTR_CMDEND_Pos) /**< (SDMMC_EISTR) No error. Position  */
-#define SDMMC_EISTR_CMDEND_1                  (SDMMC_EISTR_CMDEND_1_Val << SDMMC_EISTR_CMDEND_Pos) /**< (SDMMC_EISTR) Error. Position  */
-#define SDMMC_EISTR_CMDIDX_Pos                _U_(3)                                               /**< (SDMMC_EISTR) Command Index Error Position */
-#define SDMMC_EISTR_CMDIDX_Msk                (_U_(0x1) << SDMMC_EISTR_CMDIDX_Pos)                 /**< (SDMMC_EISTR) Command Index Error Mask */
-#define SDMMC_EISTR_CMDIDX(value)             (SDMMC_EISTR_CMDIDX_Msk & ((value) << SDMMC_EISTR_CMDIDX_Pos))
-#define   SDMMC_EISTR_CMDIDX_0_Val            _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
-#define   SDMMC_EISTR_CMDIDX_1_Val            _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
-#define SDMMC_EISTR_CMDIDX_0                  (SDMMC_EISTR_CMDIDX_0_Val << SDMMC_EISTR_CMDIDX_Pos) /**< (SDMMC_EISTR) No error. Position  */
-#define SDMMC_EISTR_CMDIDX_1                  (SDMMC_EISTR_CMDIDX_1_Val << SDMMC_EISTR_CMDIDX_Pos) /**< (SDMMC_EISTR) Error. Position  */
-#define SDMMC_EISTR_DATEND_Pos                _U_(6)                                               /**< (SDMMC_EISTR) Data End Bit Error Position */
-#define SDMMC_EISTR_DATEND_Msk                (_U_(0x1) << SDMMC_EISTR_DATEND_Pos)                 /**< (SDMMC_EISTR) Data End Bit Error Mask */
-#define SDMMC_EISTR_DATEND(value)             (SDMMC_EISTR_DATEND_Msk & ((value) << SDMMC_EISTR_DATEND_Pos))
-#define   SDMMC_EISTR_DATEND_0_Val            _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
-#define   SDMMC_EISTR_DATEND_1_Val            _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
-#define SDMMC_EISTR_DATEND_0                  (SDMMC_EISTR_DATEND_0_Val << SDMMC_EISTR_DATEND_Pos) /**< (SDMMC_EISTR) No error. Position  */
-#define SDMMC_EISTR_DATEND_1                  (SDMMC_EISTR_DATEND_1_Val << SDMMC_EISTR_DATEND_Pos) /**< (SDMMC_EISTR) Error. Position  */
-#define SDMMC_EISTR_CURLIM_Pos                _U_(7)                                               /**< (SDMMC_EISTR) Current Limit Error Position */
-#define SDMMC_EISTR_CURLIM_Msk                (_U_(0x1) << SDMMC_EISTR_CURLIM_Pos)                 /**< (SDMMC_EISTR) Current Limit Error Mask */
-#define SDMMC_EISTR_CURLIM(value)             (SDMMC_EISTR_CURLIM_Msk & ((value) << SDMMC_EISTR_CURLIM_Pos))
-#define   SDMMC_EISTR_CURLIM_0_Val            _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
-#define   SDMMC_EISTR_CURLIM_1_Val            _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
-#define SDMMC_EISTR_CURLIM_0                  (SDMMC_EISTR_CURLIM_0_Val << SDMMC_EISTR_CURLIM_Pos) /**< (SDMMC_EISTR) No error. Position  */
-#define SDMMC_EISTR_CURLIM_1                  (SDMMC_EISTR_CURLIM_1_Val << SDMMC_EISTR_CURLIM_Pos) /**< (SDMMC_EISTR) Error. Position  */
-#define SDMMC_EISTR_ACMD_Pos                  _U_(8)                                               /**< (SDMMC_EISTR) Auto CMD Error Position */
-#define SDMMC_EISTR_ACMD_Msk                  (_U_(0x1) << SDMMC_EISTR_ACMD_Pos)                   /**< (SDMMC_EISTR) Auto CMD Error Mask */
-#define SDMMC_EISTR_ACMD(value)               (SDMMC_EISTR_ACMD_Msk & ((value) << SDMMC_EISTR_ACMD_Pos))
-#define   SDMMC_EISTR_ACMD_0_Val              _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
-#define   SDMMC_EISTR_ACMD_1_Val              _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
-#define SDMMC_EISTR_ACMD_0                    (SDMMC_EISTR_ACMD_0_Val << SDMMC_EISTR_ACMD_Pos)     /**< (SDMMC_EISTR) No error. Position  */
-#define SDMMC_EISTR_ACMD_1                    (SDMMC_EISTR_ACMD_1_Val << SDMMC_EISTR_ACMD_Pos)     /**< (SDMMC_EISTR) Error. Position  */
-#define SDMMC_EISTR_ADMA_Pos                  _U_(9)                                               /**< (SDMMC_EISTR) ADMA Error Position */
-#define SDMMC_EISTR_ADMA_Msk                  (_U_(0x1) << SDMMC_EISTR_ADMA_Pos)                   /**< (SDMMC_EISTR) ADMA Error Mask */
-#define SDMMC_EISTR_ADMA(value)               (SDMMC_EISTR_ADMA_Msk & ((value) << SDMMC_EISTR_ADMA_Pos))
-#define   SDMMC_EISTR_ADMA_0_Val              _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
-#define   SDMMC_EISTR_ADMA_1_Val              _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
-#define SDMMC_EISTR_ADMA_0                    (SDMMC_EISTR_ADMA_0_Val << SDMMC_EISTR_ADMA_Pos)     /**< (SDMMC_EISTR) No error. Position  */
-#define SDMMC_EISTR_ADMA_1                    (SDMMC_EISTR_ADMA_1_Val << SDMMC_EISTR_ADMA_Pos)     /**< (SDMMC_EISTR) Error. Position  */
-#define SDMMC_EISTR_TUNING_Pos                _U_(10)                                              /**< (SDMMC_EISTR) Tuning Error Position */
-#define SDMMC_EISTR_TUNING_Msk                (_U_(0x1) << SDMMC_EISTR_TUNING_Pos)                 /**< (SDMMC_EISTR) Tuning Error Mask */
-#define SDMMC_EISTR_TUNING(value)             (SDMMC_EISTR_TUNING_Msk & ((value) << SDMMC_EISTR_TUNING_Pos))
-#define   SDMMC_EISTR_TUNING_0_Val            _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
-#define   SDMMC_EISTR_TUNING_1_Val            _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
-#define SDMMC_EISTR_TUNING_0                  (SDMMC_EISTR_TUNING_0_Val << SDMMC_EISTR_TUNING_Pos) /**< (SDMMC_EISTR) No error. Position  */
-#define SDMMC_EISTR_TUNING_1                  (SDMMC_EISTR_TUNING_1_Val << SDMMC_EISTR_TUNING_Pos) /**< (SDMMC_EISTR) Error. Position  */
-#define SDMMC_EISTR_Msk                       _U_(0x07CF)                                          /**< (SDMMC_EISTR) Register Mask  */
+#define SDMMC_EISTR_Msk                       _U_(0x0000)                                          /**< (SDMMC_EISTR) Register Mask  */
 
 /* EMMC mode */
+#define SDMMC_EISTR_EMMC_CMDTEO_Pos           _U_(0)                                               /**< (SDMMC_EISTR) Command Timeout Error Position */
+#define SDMMC_EISTR_EMMC_CMDTEO_Msk           (_U_(0x1) << SDMMC_EISTR_EMMC_CMDTEO_Pos)            /**< (SDMMC_EISTR) Command Timeout Error Mask */
+#define SDMMC_EISTR_EMMC_CMDTEO(value)        (SDMMC_EISTR_EMMC_CMDTEO_Msk & ((value) << SDMMC_EISTR_EMMC_CMDTEO_Pos))
+#define SDMMC_EISTR_EMMC_CMDCRC_Pos           _U_(1)                                               /**< (SDMMC_EISTR) Command CRC Error Position */
+#define SDMMC_EISTR_EMMC_CMDCRC_Msk           (_U_(0x1) << SDMMC_EISTR_EMMC_CMDCRC_Pos)            /**< (SDMMC_EISTR) Command CRC Error Mask */
+#define SDMMC_EISTR_EMMC_CMDCRC(value)        (SDMMC_EISTR_EMMC_CMDCRC_Msk & ((value) << SDMMC_EISTR_EMMC_CMDCRC_Pos))
+#define SDMMC_EISTR_EMMC_CMDEND_Pos           _U_(2)                                               /**< (SDMMC_EISTR) Command End Bit Error Position */
+#define SDMMC_EISTR_EMMC_CMDEND_Msk           (_U_(0x1) << SDMMC_EISTR_EMMC_CMDEND_Pos)            /**< (SDMMC_EISTR) Command End Bit Error Mask */
+#define SDMMC_EISTR_EMMC_CMDEND(value)        (SDMMC_EISTR_EMMC_CMDEND_Msk & ((value) << SDMMC_EISTR_EMMC_CMDEND_Pos))
+#define   SDMMC_EISTR_EMMC_CMDEND_0_Val       _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_EMMC_CMDEND_1_Val       _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_EMMC_CMDEND_0             (SDMMC_EISTR_EMMC_CMDEND_0_Val << SDMMC_EISTR_EMMC_CMDEND_Pos) /**< (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_EMMC_CMDEND_1             (SDMMC_EISTR_EMMC_CMDEND_1_Val << SDMMC_EISTR_EMMC_CMDEND_Pos) /**< (SDMMC_EISTR) Error. Position  */
+#define SDMMC_EISTR_EMMC_CMDIDX_Pos           _U_(3)                                               /**< (SDMMC_EISTR) Command Index Error Position */
+#define SDMMC_EISTR_EMMC_CMDIDX_Msk           (_U_(0x1) << SDMMC_EISTR_EMMC_CMDIDX_Pos)            /**< (SDMMC_EISTR) Command Index Error Mask */
+#define SDMMC_EISTR_EMMC_CMDIDX(value)        (SDMMC_EISTR_EMMC_CMDIDX_Msk & ((value) << SDMMC_EISTR_EMMC_CMDIDX_Pos))
+#define   SDMMC_EISTR_EMMC_CMDIDX_0_Val       _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_EMMC_CMDIDX_1_Val       _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_EMMC_CMDIDX_0             (SDMMC_EISTR_EMMC_CMDIDX_0_Val << SDMMC_EISTR_EMMC_CMDIDX_Pos) /**< (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_EMMC_CMDIDX_1             (SDMMC_EISTR_EMMC_CMDIDX_1_Val << SDMMC_EISTR_EMMC_CMDIDX_Pos) /**< (SDMMC_EISTR) Error. Position  */
 #define SDMMC_EISTR_EMMC_DATTEO_Pos           _U_(4)                                               /**< (SDMMC_EISTR) Data Timeout error Position */
 #define SDMMC_EISTR_EMMC_DATTEO_Msk           (_U_(0x1) << SDMMC_EISTR_EMMC_DATTEO_Pos)            /**< (SDMMC_EISTR) Data Timeout error Mask */
 #define SDMMC_EISTR_EMMC_DATTEO(value)        (SDMMC_EISTR_EMMC_DATTEO_Msk & ((value) << SDMMC_EISTR_EMMC_DATTEO_Pos))
@@ -648,6 +684,41 @@
 #define   SDMMC_EISTR_EMMC_DATCRC_1_Val       _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
 #define SDMMC_EISTR_EMMC_DATCRC_0             (SDMMC_EISTR_EMMC_DATCRC_0_Val << SDMMC_EISTR_EMMC_DATCRC_Pos) /**< (SDMMC_EISTR) No error. Position  */
 #define SDMMC_EISTR_EMMC_DATCRC_1             (SDMMC_EISTR_EMMC_DATCRC_1_Val << SDMMC_EISTR_EMMC_DATCRC_Pos) /**< (SDMMC_EISTR) Error. Position  */
+#define SDMMC_EISTR_EMMC_DATEND_Pos           _U_(6)                                               /**< (SDMMC_EISTR) Data End Bit Error Position */
+#define SDMMC_EISTR_EMMC_DATEND_Msk           (_U_(0x1) << SDMMC_EISTR_EMMC_DATEND_Pos)            /**< (SDMMC_EISTR) Data End Bit Error Mask */
+#define SDMMC_EISTR_EMMC_DATEND(value)        (SDMMC_EISTR_EMMC_DATEND_Msk & ((value) << SDMMC_EISTR_EMMC_DATEND_Pos))
+#define   SDMMC_EISTR_EMMC_DATEND_0_Val       _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_EMMC_DATEND_1_Val       _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_EMMC_DATEND_0             (SDMMC_EISTR_EMMC_DATEND_0_Val << SDMMC_EISTR_EMMC_DATEND_Pos) /**< (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_EMMC_DATEND_1             (SDMMC_EISTR_EMMC_DATEND_1_Val << SDMMC_EISTR_EMMC_DATEND_Pos) /**< (SDMMC_EISTR) Error. Position  */
+#define SDMMC_EISTR_EMMC_CURLIM_Pos           _U_(7)                                               /**< (SDMMC_EISTR) Current Limit Error Position */
+#define SDMMC_EISTR_EMMC_CURLIM_Msk           (_U_(0x1) << SDMMC_EISTR_EMMC_CURLIM_Pos)            /**< (SDMMC_EISTR) Current Limit Error Mask */
+#define SDMMC_EISTR_EMMC_CURLIM(value)        (SDMMC_EISTR_EMMC_CURLIM_Msk & ((value) << SDMMC_EISTR_EMMC_CURLIM_Pos))
+#define   SDMMC_EISTR_EMMC_CURLIM_0_Val       _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_EMMC_CURLIM_1_Val       _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_EMMC_CURLIM_0             (SDMMC_EISTR_EMMC_CURLIM_0_Val << SDMMC_EISTR_EMMC_CURLIM_Pos) /**< (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_EMMC_CURLIM_1             (SDMMC_EISTR_EMMC_CURLIM_1_Val << SDMMC_EISTR_EMMC_CURLIM_Pos) /**< (SDMMC_EISTR) Error. Position  */
+#define SDMMC_EISTR_EMMC_ACMD_Pos             _U_(8)                                               /**< (SDMMC_EISTR) Auto CMD Error Position */
+#define SDMMC_EISTR_EMMC_ACMD_Msk             (_U_(0x1) << SDMMC_EISTR_EMMC_ACMD_Pos)              /**< (SDMMC_EISTR) Auto CMD Error Mask */
+#define SDMMC_EISTR_EMMC_ACMD(value)          (SDMMC_EISTR_EMMC_ACMD_Msk & ((value) << SDMMC_EISTR_EMMC_ACMD_Pos))
+#define   SDMMC_EISTR_EMMC_ACMD_0_Val         _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_EMMC_ACMD_1_Val         _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_EMMC_ACMD_0               (SDMMC_EISTR_EMMC_ACMD_0_Val << SDMMC_EISTR_EMMC_ACMD_Pos) /**< (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_EMMC_ACMD_1               (SDMMC_EISTR_EMMC_ACMD_1_Val << SDMMC_EISTR_EMMC_ACMD_Pos) /**< (SDMMC_EISTR) Error. Position  */
+#define SDMMC_EISTR_EMMC_ADMA_Pos             _U_(9)                                               /**< (SDMMC_EISTR) ADMA Error Position */
+#define SDMMC_EISTR_EMMC_ADMA_Msk             (_U_(0x1) << SDMMC_EISTR_EMMC_ADMA_Pos)              /**< (SDMMC_EISTR) ADMA Error Mask */
+#define SDMMC_EISTR_EMMC_ADMA(value)          (SDMMC_EISTR_EMMC_ADMA_Msk & ((value) << SDMMC_EISTR_EMMC_ADMA_Pos))
+#define   SDMMC_EISTR_EMMC_ADMA_0_Val         _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_EMMC_ADMA_1_Val         _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_EMMC_ADMA_0               (SDMMC_EISTR_EMMC_ADMA_0_Val << SDMMC_EISTR_EMMC_ADMA_Pos) /**< (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_EMMC_ADMA_1               (SDMMC_EISTR_EMMC_ADMA_1_Val << SDMMC_EISTR_EMMC_ADMA_Pos) /**< (SDMMC_EISTR) Error. Position  */
+#define SDMMC_EISTR_EMMC_TUNING_Pos           _U_(10)                                              /**< (SDMMC_EISTR) Tuning Error Position */
+#define SDMMC_EISTR_EMMC_TUNING_Msk           (_U_(0x1) << SDMMC_EISTR_EMMC_TUNING_Pos)            /**< (SDMMC_EISTR) Tuning Error Mask */
+#define SDMMC_EISTR_EMMC_TUNING(value)        (SDMMC_EISTR_EMMC_TUNING_Msk & ((value) << SDMMC_EISTR_EMMC_TUNING_Pos))
+#define   SDMMC_EISTR_EMMC_TUNING_0_Val       _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_EMMC_TUNING_1_Val       _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_EMMC_TUNING_0             (SDMMC_EISTR_EMMC_TUNING_0_Val << SDMMC_EISTR_EMMC_TUNING_Pos) /**< (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_EMMC_TUNING_1             (SDMMC_EISTR_EMMC_TUNING_1_Val << SDMMC_EISTR_EMMC_TUNING_Pos) /**< (SDMMC_EISTR) Error. Position  */
 #define SDMMC_EISTR_EMMC_BOOTAE_Pos           _U_(12)                                              /**< (SDMMC_EISTR) Boot Acknowledge Error Position */
 #define SDMMC_EISTR_EMMC_BOOTAE_Msk           (_U_(0x1) << SDMMC_EISTR_EMMC_BOOTAE_Pos)            /**< (SDMMC_EISTR) Boot Acknowledge Error Mask */
 #define SDMMC_EISTR_EMMC_BOOTAE(value)        (SDMMC_EISTR_EMMC_BOOTAE_Msk & ((value) << SDMMC_EISTR_EMMC_BOOTAE_Pos))
@@ -655,9 +726,29 @@
 #define   SDMMC_EISTR_EMMC_BOOTAE_1_Val       _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
 #define SDMMC_EISTR_EMMC_BOOTAE_0             (SDMMC_EISTR_EMMC_BOOTAE_0_Val << SDMMC_EISTR_EMMC_BOOTAE_Pos) /**< (SDMMC_EISTR) No error. Position  */
 #define SDMMC_EISTR_EMMC_BOOTAE_1             (SDMMC_EISTR_EMMC_BOOTAE_1_Val << SDMMC_EISTR_EMMC_BOOTAE_Pos) /**< (SDMMC_EISTR) Error. Position  */
-#define SDMMC_EISTR_EMMC_Msk                  _U_(0x1030)                                           /**< (SDMMC_EISTR_EMMC) Register Mask  */
+#define SDMMC_EISTR_EMMC_Msk                  _U_(0x17FF)                                           /**< (SDMMC_EISTR_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
+#define SDMMC_EISTR_SD_SDIO_CMDTEO_Pos        _U_(0)                                               /**< (SDMMC_EISTR) Command Timeout Error Position */
+#define SDMMC_EISTR_SD_SDIO_CMDTEO_Msk        (_U_(0x1) << SDMMC_EISTR_SD_SDIO_CMDTEO_Pos)         /**< (SDMMC_EISTR) Command Timeout Error Mask */
+#define SDMMC_EISTR_SD_SDIO_CMDTEO(value)     (SDMMC_EISTR_SD_SDIO_CMDTEO_Msk & ((value) << SDMMC_EISTR_SD_SDIO_CMDTEO_Pos))
+#define SDMMC_EISTR_SD_SDIO_CMDCRC_Pos        _U_(1)                                               /**< (SDMMC_EISTR) Command CRC Error Position */
+#define SDMMC_EISTR_SD_SDIO_CMDCRC_Msk        (_U_(0x1) << SDMMC_EISTR_SD_SDIO_CMDCRC_Pos)         /**< (SDMMC_EISTR) Command CRC Error Mask */
+#define SDMMC_EISTR_SD_SDIO_CMDCRC(value)     (SDMMC_EISTR_SD_SDIO_CMDCRC_Msk & ((value) << SDMMC_EISTR_SD_SDIO_CMDCRC_Pos))
+#define SDMMC_EISTR_SD_SDIO_CMDEND_Pos        _U_(2)                                               /**< (SDMMC_EISTR) Command End Bit Error Position */
+#define SDMMC_EISTR_SD_SDIO_CMDEND_Msk        (_U_(0x1) << SDMMC_EISTR_SD_SDIO_CMDEND_Pos)         /**< (SDMMC_EISTR) Command End Bit Error Mask */
+#define SDMMC_EISTR_SD_SDIO_CMDEND(value)     (SDMMC_EISTR_SD_SDIO_CMDEND_Msk & ((value) << SDMMC_EISTR_SD_SDIO_CMDEND_Pos))
+#define   SDMMC_EISTR_SD_SDIO_CMDEND_0_Val    _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_SD_SDIO_CMDEND_1_Val    _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_SD_SDIO_CMDEND_0          (SDMMC_EISTR_SD_SDIO_CMDEND_0_Val << SDMMC_EISTR_SD_SDIO_CMDEND_Pos) /**< (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_SD_SDIO_CMDEND_1          (SDMMC_EISTR_SD_SDIO_CMDEND_1_Val << SDMMC_EISTR_SD_SDIO_CMDEND_Pos) /**< (SDMMC_EISTR) Error. Position  */
+#define SDMMC_EISTR_SD_SDIO_CMDIDX_Pos        _U_(3)                                               /**< (SDMMC_EISTR) Command Index Error Position */
+#define SDMMC_EISTR_SD_SDIO_CMDIDX_Msk        (_U_(0x1) << SDMMC_EISTR_SD_SDIO_CMDIDX_Pos)         /**< (SDMMC_EISTR) Command Index Error Mask */
+#define SDMMC_EISTR_SD_SDIO_CMDIDX(value)     (SDMMC_EISTR_SD_SDIO_CMDIDX_Msk & ((value) << SDMMC_EISTR_SD_SDIO_CMDIDX_Pos))
+#define   SDMMC_EISTR_SD_SDIO_CMDIDX_0_Val    _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_SD_SDIO_CMDIDX_1_Val    _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_SD_SDIO_CMDIDX_0          (SDMMC_EISTR_SD_SDIO_CMDIDX_0_Val << SDMMC_EISTR_SD_SDIO_CMDIDX_Pos) /**< (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_SD_SDIO_CMDIDX_1          (SDMMC_EISTR_SD_SDIO_CMDIDX_1_Val << SDMMC_EISTR_SD_SDIO_CMDIDX_Pos) /**< (SDMMC_EISTR) Error. Position  */
 #define SDMMC_EISTR_SD_SDIO_DATTEO_Pos        _U_(4)                                               /**< (SDMMC_EISTR) Data Timeout Error Position */
 #define SDMMC_EISTR_SD_SDIO_DATTEO_Msk        (_U_(0x1) << SDMMC_EISTR_SD_SDIO_DATTEO_Pos)         /**< (SDMMC_EISTR) Data Timeout Error Mask */
 #define SDMMC_EISTR_SD_SDIO_DATTEO(value)     (SDMMC_EISTR_SD_SDIO_DATTEO_Msk & ((value) << SDMMC_EISTR_SD_SDIO_DATTEO_Pos))
@@ -672,57 +763,92 @@
 #define   SDMMC_EISTR_SD_SDIO_DATCRC_1_Val    _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
 #define SDMMC_EISTR_SD_SDIO_DATCRC_0          (SDMMC_EISTR_SD_SDIO_DATCRC_0_Val << SDMMC_EISTR_SD_SDIO_DATCRC_Pos) /**< (SDMMC_EISTR) No error. Position  */
 #define SDMMC_EISTR_SD_SDIO_DATCRC_1          (SDMMC_EISTR_SD_SDIO_DATCRC_1_Val << SDMMC_EISTR_SD_SDIO_DATCRC_Pos) /**< (SDMMC_EISTR) Error. Position  */
-#define SDMMC_EISTR_SD_SDIO_Msk               _U_(0x0030)                                           /**< (SDMMC_EISTR_SD_SDIO) Register Mask  */
+#define SDMMC_EISTR_SD_SDIO_DATEND_Pos        _U_(6)                                               /**< (SDMMC_EISTR) Data End Bit Error Position */
+#define SDMMC_EISTR_SD_SDIO_DATEND_Msk        (_U_(0x1) << SDMMC_EISTR_SD_SDIO_DATEND_Pos)         /**< (SDMMC_EISTR) Data End Bit Error Mask */
+#define SDMMC_EISTR_SD_SDIO_DATEND(value)     (SDMMC_EISTR_SD_SDIO_DATEND_Msk & ((value) << SDMMC_EISTR_SD_SDIO_DATEND_Pos))
+#define   SDMMC_EISTR_SD_SDIO_DATEND_0_Val    _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_SD_SDIO_DATEND_1_Val    _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_SD_SDIO_DATEND_0          (SDMMC_EISTR_SD_SDIO_DATEND_0_Val << SDMMC_EISTR_SD_SDIO_DATEND_Pos) /**< (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_SD_SDIO_DATEND_1          (SDMMC_EISTR_SD_SDIO_DATEND_1_Val << SDMMC_EISTR_SD_SDIO_DATEND_Pos) /**< (SDMMC_EISTR) Error. Position  */
+#define SDMMC_EISTR_SD_SDIO_CURLIM_Pos        _U_(7)                                               /**< (SDMMC_EISTR) Current Limit Error Position */
+#define SDMMC_EISTR_SD_SDIO_CURLIM_Msk        (_U_(0x1) << SDMMC_EISTR_SD_SDIO_CURLIM_Pos)         /**< (SDMMC_EISTR) Current Limit Error Mask */
+#define SDMMC_EISTR_SD_SDIO_CURLIM(value)     (SDMMC_EISTR_SD_SDIO_CURLIM_Msk & ((value) << SDMMC_EISTR_SD_SDIO_CURLIM_Pos))
+#define   SDMMC_EISTR_SD_SDIO_CURLIM_0_Val    _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_SD_SDIO_CURLIM_1_Val    _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_SD_SDIO_CURLIM_0          (SDMMC_EISTR_SD_SDIO_CURLIM_0_Val << SDMMC_EISTR_SD_SDIO_CURLIM_Pos) /**< (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_SD_SDIO_CURLIM_1          (SDMMC_EISTR_SD_SDIO_CURLIM_1_Val << SDMMC_EISTR_SD_SDIO_CURLIM_Pos) /**< (SDMMC_EISTR) Error. Position  */
+#define SDMMC_EISTR_SD_SDIO_ACMD_Pos          _U_(8)                                               /**< (SDMMC_EISTR) Auto CMD Error Position */
+#define SDMMC_EISTR_SD_SDIO_ACMD_Msk          (_U_(0x1) << SDMMC_EISTR_SD_SDIO_ACMD_Pos)           /**< (SDMMC_EISTR) Auto CMD Error Mask */
+#define SDMMC_EISTR_SD_SDIO_ACMD(value)       (SDMMC_EISTR_SD_SDIO_ACMD_Msk & ((value) << SDMMC_EISTR_SD_SDIO_ACMD_Pos))
+#define   SDMMC_EISTR_SD_SDIO_ACMD_0_Val      _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_SD_SDIO_ACMD_1_Val      _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_SD_SDIO_ACMD_0            (SDMMC_EISTR_SD_SDIO_ACMD_0_Val << SDMMC_EISTR_SD_SDIO_ACMD_Pos) /**< (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_SD_SDIO_ACMD_1            (SDMMC_EISTR_SD_SDIO_ACMD_1_Val << SDMMC_EISTR_SD_SDIO_ACMD_Pos) /**< (SDMMC_EISTR) Error. Position  */
+#define SDMMC_EISTR_SD_SDIO_ADMA_Pos          _U_(9)                                               /**< (SDMMC_EISTR) ADMA Error Position */
+#define SDMMC_EISTR_SD_SDIO_ADMA_Msk          (_U_(0x1) << SDMMC_EISTR_SD_SDIO_ADMA_Pos)           /**< (SDMMC_EISTR) ADMA Error Mask */
+#define SDMMC_EISTR_SD_SDIO_ADMA(value)       (SDMMC_EISTR_SD_SDIO_ADMA_Msk & ((value) << SDMMC_EISTR_SD_SDIO_ADMA_Pos))
+#define   SDMMC_EISTR_SD_SDIO_ADMA_0_Val      _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_SD_SDIO_ADMA_1_Val      _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_SD_SDIO_ADMA_0            (SDMMC_EISTR_SD_SDIO_ADMA_0_Val << SDMMC_EISTR_SD_SDIO_ADMA_Pos) /**< (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_SD_SDIO_ADMA_1            (SDMMC_EISTR_SD_SDIO_ADMA_1_Val << SDMMC_EISTR_SD_SDIO_ADMA_Pos) /**< (SDMMC_EISTR) Error. Position  */
+#define SDMMC_EISTR_SD_SDIO_TUNING_Pos        _U_(10)                                              /**< (SDMMC_EISTR) Tuning Error Position */
+#define SDMMC_EISTR_SD_SDIO_TUNING_Msk        (_U_(0x1) << SDMMC_EISTR_SD_SDIO_TUNING_Pos)         /**< (SDMMC_EISTR) Tuning Error Mask */
+#define SDMMC_EISTR_SD_SDIO_TUNING(value)     (SDMMC_EISTR_SD_SDIO_TUNING_Msk & ((value) << SDMMC_EISTR_SD_SDIO_TUNING_Pos))
+#define   SDMMC_EISTR_SD_SDIO_TUNING_0_Val    _U_(0x0)                                             /**< (SDMMC_EISTR) No error.  */
+#define   SDMMC_EISTR_SD_SDIO_TUNING_1_Val    _U_(0x1)                                             /**< (SDMMC_EISTR) Error.  */
+#define SDMMC_EISTR_SD_SDIO_TUNING_0          (SDMMC_EISTR_SD_SDIO_TUNING_0_Val << SDMMC_EISTR_SD_SDIO_TUNING_Pos) /**< (SDMMC_EISTR) No error. Position  */
+#define SDMMC_EISTR_SD_SDIO_TUNING_1          (SDMMC_EISTR_SD_SDIO_TUNING_1_Val << SDMMC_EISTR_SD_SDIO_TUNING_Pos) /**< (SDMMC_EISTR) Error. Position  */
+#define SDMMC_EISTR_SD_SDIO_Msk               _U_(0x07FF)                                           /**< (SDMMC_EISTR_SD_SDIO) Register Mask  */
 
 
 /* -------- SDMMC_NISTER : (SDMMC Offset: 0x34) (R/W 16) Normal Interrupt Status Enable Register -------- */
 #define SDMMC_NISTER_RESETVALUE               _U_(0x00)                                            /**<  (SDMMC_NISTER) Normal Interrupt Status Enable Register  Reset Value */
 
-#define SDMMC_NISTER_CMDC_Pos                 _U_(0)                                               /**< (SDMMC_NISTER) Command Complete Status Enable Position */
-#define SDMMC_NISTER_CMDC_Msk                 (_U_(0x1) << SDMMC_NISTER_CMDC_Pos)                  /**< (SDMMC_NISTER) Command Complete Status Enable Mask */
-#define SDMMC_NISTER_CMDC(value)              (SDMMC_NISTER_CMDC_Msk & ((value) << SDMMC_NISTER_CMDC_Pos))
-#define   SDMMC_NISTER_CMDC_MASKED_Val        _U_(0x0)                                             /**< (SDMMC_NISTER) The CMDC status flag in SDMMC_NISTR is masked.  */
-#define   SDMMC_NISTER_CMDC_ENABLED_Val       _U_(0x1)                                             /**< (SDMMC_NISTER) The CMDC status flag in SDMMC_NISTR is enabled.  */
-#define SDMMC_NISTER_CMDC_MASKED              (SDMMC_NISTER_CMDC_MASKED_Val << SDMMC_NISTER_CMDC_Pos) /**< (SDMMC_NISTER) The CMDC status flag in SDMMC_NISTR is masked. Position  */
-#define SDMMC_NISTER_CMDC_ENABLED             (SDMMC_NISTER_CMDC_ENABLED_Val << SDMMC_NISTER_CMDC_Pos) /**< (SDMMC_NISTER) The CMDC status flag in SDMMC_NISTR is enabled. Position  */
-#define SDMMC_NISTER_TRFC_Pos                 _U_(1)                                               /**< (SDMMC_NISTER) Transfer Complete Status Enable Position */
-#define SDMMC_NISTER_TRFC_Msk                 (_U_(0x1) << SDMMC_NISTER_TRFC_Pos)                  /**< (SDMMC_NISTER) Transfer Complete Status Enable Mask */
-#define SDMMC_NISTER_TRFC(value)              (SDMMC_NISTER_TRFC_Msk & ((value) << SDMMC_NISTER_TRFC_Pos))
-#define   SDMMC_NISTER_TRFC_MASKED_Val        _U_(0x0)                                             /**< (SDMMC_NISTER) The TRFC status flag in SDMMC_NISTR is masked.  */
-#define   SDMMC_NISTER_TRFC_ENABLED_Val       _U_(0x1)                                             /**< (SDMMC_NISTER) The TRFC status flag in SDMMC_NISTR is enabled.  */
-#define SDMMC_NISTER_TRFC_MASKED              (SDMMC_NISTER_TRFC_MASKED_Val << SDMMC_NISTER_TRFC_Pos) /**< (SDMMC_NISTER) The TRFC status flag in SDMMC_NISTR is masked. Position  */
-#define SDMMC_NISTER_TRFC_ENABLED             (SDMMC_NISTER_TRFC_ENABLED_Val << SDMMC_NISTER_TRFC_Pos) /**< (SDMMC_NISTER) The TRFC status flag in SDMMC_NISTR is enabled. Position  */
-#define SDMMC_NISTER_BLKGE_Pos                _U_(2)                                               /**< (SDMMC_NISTER) Block Gap Event Status Enable Position */
-#define SDMMC_NISTER_BLKGE_Msk                (_U_(0x1) << SDMMC_NISTER_BLKGE_Pos)                 /**< (SDMMC_NISTER) Block Gap Event Status Enable Mask */
-#define SDMMC_NISTER_BLKGE(value)             (SDMMC_NISTER_BLKGE_Msk & ((value) << SDMMC_NISTER_BLKGE_Pos))
-#define   SDMMC_NISTER_BLKGE_MASKED_Val       _U_(0x0)                                             /**< (SDMMC_NISTER) The BLKGE status flag in SDMMC_NISTR is masked.  */
-#define   SDMMC_NISTER_BLKGE_ENABLED_Val      _U_(0x1)                                             /**< (SDMMC_NISTER) The BLKGE status flag in SDMMC_NISTR is enabled.  */
-#define SDMMC_NISTER_BLKGE_MASKED             (SDMMC_NISTER_BLKGE_MASKED_Val << SDMMC_NISTER_BLKGE_Pos) /**< (SDMMC_NISTER) The BLKGE status flag in SDMMC_NISTR is masked. Position  */
-#define SDMMC_NISTER_BLKGE_ENABLED            (SDMMC_NISTER_BLKGE_ENABLED_Val << SDMMC_NISTER_BLKGE_Pos) /**< (SDMMC_NISTER) The BLKGE status flag in SDMMC_NISTR is enabled. Position  */
-#define SDMMC_NISTER_DMAINT_Pos               _U_(3)                                               /**< (SDMMC_NISTER) DMA Interrupt Status Enable Position */
-#define SDMMC_NISTER_DMAINT_Msk               (_U_(0x1) << SDMMC_NISTER_DMAINT_Pos)                /**< (SDMMC_NISTER) DMA Interrupt Status Enable Mask */
-#define SDMMC_NISTER_DMAINT(value)            (SDMMC_NISTER_DMAINT_Msk & ((value) << SDMMC_NISTER_DMAINT_Pos))
-#define   SDMMC_NISTER_DMAINT_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_NISTER) The DMAINT status flag in SDMMC_NISTR is masked.  */
-#define   SDMMC_NISTER_DMAINT_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_NISTER) The DMAINT status flag in SDMMC_NISTR is enabled.  */
-#define SDMMC_NISTER_DMAINT_MASKED            (SDMMC_NISTER_DMAINT_MASKED_Val << SDMMC_NISTER_DMAINT_Pos) /**< (SDMMC_NISTER) The DMAINT status flag in SDMMC_NISTR is masked. Position  */
-#define SDMMC_NISTER_DMAINT_ENABLED           (SDMMC_NISTER_DMAINT_ENABLED_Val << SDMMC_NISTER_DMAINT_Pos) /**< (SDMMC_NISTER) The DMAINT status flag in SDMMC_NISTR is enabled. Position  */
-#define SDMMC_NISTER_BWRRDY_Pos               _U_(4)                                               /**< (SDMMC_NISTER) Buffer Write Ready Status Enable Position */
-#define SDMMC_NISTER_BWRRDY_Msk               (_U_(0x1) << SDMMC_NISTER_BWRRDY_Pos)                /**< (SDMMC_NISTER) Buffer Write Ready Status Enable Mask */
-#define SDMMC_NISTER_BWRRDY(value)            (SDMMC_NISTER_BWRRDY_Msk & ((value) << SDMMC_NISTER_BWRRDY_Pos))
-#define   SDMMC_NISTER_BWRRDY_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_NISTER) The BWRRDY status flag in SDMMC_NISTR is masked.  */
-#define   SDMMC_NISTER_BWRRDY_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_NISTER) The BWRRDY status flag in SDMMC_NISTR is enabled.  */
-#define SDMMC_NISTER_BWRRDY_MASKED            (SDMMC_NISTER_BWRRDY_MASKED_Val << SDMMC_NISTER_BWRRDY_Pos) /**< (SDMMC_NISTER) The BWRRDY status flag in SDMMC_NISTR is masked. Position  */
-#define SDMMC_NISTER_BWRRDY_ENABLED           (SDMMC_NISTER_BWRRDY_ENABLED_Val << SDMMC_NISTER_BWRRDY_Pos) /**< (SDMMC_NISTER) The BWRRDY status flag in SDMMC_NISTR is enabled. Position  */
-#define SDMMC_NISTER_BRDRDY_Pos               _U_(5)                                               /**< (SDMMC_NISTER) Buffer Read Ready Status Enable Position */
-#define SDMMC_NISTER_BRDRDY_Msk               (_U_(0x1) << SDMMC_NISTER_BRDRDY_Pos)                /**< (SDMMC_NISTER) Buffer Read Ready Status Enable Mask */
-#define SDMMC_NISTER_BRDRDY(value)            (SDMMC_NISTER_BRDRDY_Msk & ((value) << SDMMC_NISTER_BRDRDY_Pos))
-#define   SDMMC_NISTER_BRDRDY_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is masked.  */
-#define   SDMMC_NISTER_BRDRDY_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is enabled.  */
-#define SDMMC_NISTER_BRDRDY_MASKED            (SDMMC_NISTER_BRDRDY_MASKED_Val << SDMMC_NISTER_BRDRDY_Pos) /**< (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is masked. Position  */
-#define SDMMC_NISTER_BRDRDY_ENABLED           (SDMMC_NISTER_BRDRDY_ENABLED_Val << SDMMC_NISTER_BRDRDY_Pos) /**< (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is enabled. Position  */
-#define SDMMC_NISTER_Msk                      _U_(0x003F)                                          /**< (SDMMC_NISTER) Register Mask  */
+#define SDMMC_NISTER_Msk                      _U_(0x0000)                                          /**< (SDMMC_NISTER) Register Mask  */
 
 /* EMMC mode */
+#define SDMMC_NISTER_EMMC_CMDC_Pos            _U_(0)                                               /**< (SDMMC_NISTER) Command Complete Status Enable Position */
+#define SDMMC_NISTER_EMMC_CMDC_Msk            (_U_(0x1) << SDMMC_NISTER_EMMC_CMDC_Pos)             /**< (SDMMC_NISTER) Command Complete Status Enable Mask */
+#define SDMMC_NISTER_EMMC_CMDC(value)         (SDMMC_NISTER_EMMC_CMDC_Msk & ((value) << SDMMC_NISTER_EMMC_CMDC_Pos))
+#define   SDMMC_NISTER_EMMC_CMDC_MASKED_Val   _U_(0x0)                                             /**< (SDMMC_NISTER) The CMDC status flag in SDMMC_NISTR is masked.  */
+#define   SDMMC_NISTER_EMMC_CMDC_ENABLED_Val  _U_(0x1)                                             /**< (SDMMC_NISTER) The CMDC status flag in SDMMC_NISTR is enabled.  */
+#define SDMMC_NISTER_EMMC_CMDC_MASKED         (SDMMC_NISTER_EMMC_CMDC_MASKED_Val << SDMMC_NISTER_EMMC_CMDC_Pos) /**< (SDMMC_NISTER) The CMDC status flag in SDMMC_NISTR is masked. Position  */
+#define SDMMC_NISTER_EMMC_CMDC_ENABLED        (SDMMC_NISTER_EMMC_CMDC_ENABLED_Val << SDMMC_NISTER_EMMC_CMDC_Pos) /**< (SDMMC_NISTER) The CMDC status flag in SDMMC_NISTR is enabled. Position  */
+#define SDMMC_NISTER_EMMC_TRFC_Pos            _U_(1)                                               /**< (SDMMC_NISTER) Transfer Complete Status Enable Position */
+#define SDMMC_NISTER_EMMC_TRFC_Msk            (_U_(0x1) << SDMMC_NISTER_EMMC_TRFC_Pos)             /**< (SDMMC_NISTER) Transfer Complete Status Enable Mask */
+#define SDMMC_NISTER_EMMC_TRFC(value)         (SDMMC_NISTER_EMMC_TRFC_Msk & ((value) << SDMMC_NISTER_EMMC_TRFC_Pos))
+#define   SDMMC_NISTER_EMMC_TRFC_MASKED_Val   _U_(0x0)                                             /**< (SDMMC_NISTER) The TRFC status flag in SDMMC_NISTR is masked.  */
+#define   SDMMC_NISTER_EMMC_TRFC_ENABLED_Val  _U_(0x1)                                             /**< (SDMMC_NISTER) The TRFC status flag in SDMMC_NISTR is enabled.  */
+#define SDMMC_NISTER_EMMC_TRFC_MASKED         (SDMMC_NISTER_EMMC_TRFC_MASKED_Val << SDMMC_NISTER_EMMC_TRFC_Pos) /**< (SDMMC_NISTER) The TRFC status flag in SDMMC_NISTR is masked. Position  */
+#define SDMMC_NISTER_EMMC_TRFC_ENABLED        (SDMMC_NISTER_EMMC_TRFC_ENABLED_Val << SDMMC_NISTER_EMMC_TRFC_Pos) /**< (SDMMC_NISTER) The TRFC status flag in SDMMC_NISTR is enabled. Position  */
+#define SDMMC_NISTER_EMMC_BLKGE_Pos           _U_(2)                                               /**< (SDMMC_NISTER) Block Gap Event Status Enable Position */
+#define SDMMC_NISTER_EMMC_BLKGE_Msk           (_U_(0x1) << SDMMC_NISTER_EMMC_BLKGE_Pos)            /**< (SDMMC_NISTER) Block Gap Event Status Enable Mask */
+#define SDMMC_NISTER_EMMC_BLKGE(value)        (SDMMC_NISTER_EMMC_BLKGE_Msk & ((value) << SDMMC_NISTER_EMMC_BLKGE_Pos))
+#define   SDMMC_NISTER_EMMC_BLKGE_MASKED_Val  _U_(0x0)                                             /**< (SDMMC_NISTER) The BLKGE status flag in SDMMC_NISTR is masked.  */
+#define   SDMMC_NISTER_EMMC_BLKGE_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISTER) The BLKGE status flag in SDMMC_NISTR is enabled.  */
+#define SDMMC_NISTER_EMMC_BLKGE_MASKED        (SDMMC_NISTER_EMMC_BLKGE_MASKED_Val << SDMMC_NISTER_EMMC_BLKGE_Pos) /**< (SDMMC_NISTER) The BLKGE status flag in SDMMC_NISTR is masked. Position  */
+#define SDMMC_NISTER_EMMC_BLKGE_ENABLED       (SDMMC_NISTER_EMMC_BLKGE_ENABLED_Val << SDMMC_NISTER_EMMC_BLKGE_Pos) /**< (SDMMC_NISTER) The BLKGE status flag in SDMMC_NISTR is enabled. Position  */
+#define SDMMC_NISTER_EMMC_DMAINT_Pos          _U_(3)                                               /**< (SDMMC_NISTER) DMA Interrupt Status Enable Position */
+#define SDMMC_NISTER_EMMC_DMAINT_Msk          (_U_(0x1) << SDMMC_NISTER_EMMC_DMAINT_Pos)           /**< (SDMMC_NISTER) DMA Interrupt Status Enable Mask */
+#define SDMMC_NISTER_EMMC_DMAINT(value)       (SDMMC_NISTER_EMMC_DMAINT_Msk & ((value) << SDMMC_NISTER_EMMC_DMAINT_Pos))
+#define   SDMMC_NISTER_EMMC_DMAINT_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISTER) The DMAINT status flag in SDMMC_NISTR is masked.  */
+#define   SDMMC_NISTER_EMMC_DMAINT_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISTER) The DMAINT status flag in SDMMC_NISTR is enabled.  */
+#define SDMMC_NISTER_EMMC_DMAINT_MASKED       (SDMMC_NISTER_EMMC_DMAINT_MASKED_Val << SDMMC_NISTER_EMMC_DMAINT_Pos) /**< (SDMMC_NISTER) The DMAINT status flag in SDMMC_NISTR is masked. Position  */
+#define SDMMC_NISTER_EMMC_DMAINT_ENABLED      (SDMMC_NISTER_EMMC_DMAINT_ENABLED_Val << SDMMC_NISTER_EMMC_DMAINT_Pos) /**< (SDMMC_NISTER) The DMAINT status flag in SDMMC_NISTR is enabled. Position  */
+#define SDMMC_NISTER_EMMC_BWRRDY_Pos          _U_(4)                                               /**< (SDMMC_NISTER) Buffer Write Ready Status Enable Position */
+#define SDMMC_NISTER_EMMC_BWRRDY_Msk          (_U_(0x1) << SDMMC_NISTER_EMMC_BWRRDY_Pos)           /**< (SDMMC_NISTER) Buffer Write Ready Status Enable Mask */
+#define SDMMC_NISTER_EMMC_BWRRDY(value)       (SDMMC_NISTER_EMMC_BWRRDY_Msk & ((value) << SDMMC_NISTER_EMMC_BWRRDY_Pos))
+#define   SDMMC_NISTER_EMMC_BWRRDY_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISTER) The BWRRDY status flag in SDMMC_NISTR is masked.  */
+#define   SDMMC_NISTER_EMMC_BWRRDY_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISTER) The BWRRDY status flag in SDMMC_NISTR is enabled.  */
+#define SDMMC_NISTER_EMMC_BWRRDY_MASKED       (SDMMC_NISTER_EMMC_BWRRDY_MASKED_Val << SDMMC_NISTER_EMMC_BWRRDY_Pos) /**< (SDMMC_NISTER) The BWRRDY status flag in SDMMC_NISTR is masked. Position  */
+#define SDMMC_NISTER_EMMC_BWRRDY_ENABLED      (SDMMC_NISTER_EMMC_BWRRDY_ENABLED_Val << SDMMC_NISTER_EMMC_BWRRDY_Pos) /**< (SDMMC_NISTER) The BWRRDY status flag in SDMMC_NISTR is enabled. Position  */
+#define SDMMC_NISTER_EMMC_BRDRDY_Pos          _U_(5)                                               /**< (SDMMC_NISTER) Buffer Read Ready Status Enable Position */
+#define SDMMC_NISTER_EMMC_BRDRDY_Msk          (_U_(0x1) << SDMMC_NISTER_EMMC_BRDRDY_Pos)           /**< (SDMMC_NISTER) Buffer Read Ready Status Enable Mask */
+#define SDMMC_NISTER_EMMC_BRDRDY(value)       (SDMMC_NISTER_EMMC_BRDRDY_Msk & ((value) << SDMMC_NISTER_EMMC_BRDRDY_Pos))
+#define   SDMMC_NISTER_EMMC_BRDRDY_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is masked.  */
+#define   SDMMC_NISTER_EMMC_BRDRDY_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is enabled.  */
+#define SDMMC_NISTER_EMMC_BRDRDY_MASKED       (SDMMC_NISTER_EMMC_BRDRDY_MASKED_Val << SDMMC_NISTER_EMMC_BRDRDY_Pos) /**< (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is masked. Position  */
+#define SDMMC_NISTER_EMMC_BRDRDY_ENABLED      (SDMMC_NISTER_EMMC_BRDRDY_ENABLED_Val << SDMMC_NISTER_EMMC_BRDRDY_Pos) /**< (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is enabled. Position  */
 #define SDMMC_NISTER_EMMC_BOOTAR_Pos          _U_(14)                                              /**< (SDMMC_NISTER) Boot Acknowledge Received Status Enable Position */
 #define SDMMC_NISTER_EMMC_BOOTAR_Msk          (_U_(0x1) << SDMMC_NISTER_EMMC_BOOTAR_Pos)           /**< (SDMMC_NISTER) Boot Acknowledge Received Status Enable Mask */
 #define SDMMC_NISTER_EMMC_BOOTAR(value)       (SDMMC_NISTER_EMMC_BOOTAR_Msk & ((value) << SDMMC_NISTER_EMMC_BOOTAR_Pos))
@@ -730,9 +856,51 @@
 #define   SDMMC_NISTER_EMMC_BOOTAR_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISTER) The BOOTAR status flag in SDMMC_NISTR is enabled.  */
 #define SDMMC_NISTER_EMMC_BOOTAR_MASKED       (SDMMC_NISTER_EMMC_BOOTAR_MASKED_Val << SDMMC_NISTER_EMMC_BOOTAR_Pos) /**< (SDMMC_NISTER) The BOOTAR status flag in SDMMC_NISTR is masked. Position  */
 #define SDMMC_NISTER_EMMC_BOOTAR_ENABLED      (SDMMC_NISTER_EMMC_BOOTAR_ENABLED_Val << SDMMC_NISTER_EMMC_BOOTAR_Pos) /**< (SDMMC_NISTER) The BOOTAR status flag in SDMMC_NISTR is enabled. Position  */
-#define SDMMC_NISTER_EMMC_Msk                 _U_(0x4000)                                           /**< (SDMMC_NISTER_EMMC) Register Mask  */
+#define SDMMC_NISTER_EMMC_Msk                 _U_(0x403F)                                           /**< (SDMMC_NISTER_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
+#define SDMMC_NISTER_SD_SDIO_CMDC_Pos         _U_(0)                                               /**< (SDMMC_NISTER) Command Complete Status Enable Position */
+#define SDMMC_NISTER_SD_SDIO_CMDC_Msk         (_U_(0x1) << SDMMC_NISTER_SD_SDIO_CMDC_Pos)          /**< (SDMMC_NISTER) Command Complete Status Enable Mask */
+#define SDMMC_NISTER_SD_SDIO_CMDC(value)      (SDMMC_NISTER_SD_SDIO_CMDC_Msk & ((value) << SDMMC_NISTER_SD_SDIO_CMDC_Pos))
+#define   SDMMC_NISTER_SD_SDIO_CMDC_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISTER) The CMDC status flag in SDMMC_NISTR is masked.  */
+#define   SDMMC_NISTER_SD_SDIO_CMDC_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISTER) The CMDC status flag in SDMMC_NISTR is enabled.  */
+#define SDMMC_NISTER_SD_SDIO_CMDC_MASKED      (SDMMC_NISTER_SD_SDIO_CMDC_MASKED_Val << SDMMC_NISTER_SD_SDIO_CMDC_Pos) /**< (SDMMC_NISTER) The CMDC status flag in SDMMC_NISTR is masked. Position  */
+#define SDMMC_NISTER_SD_SDIO_CMDC_ENABLED     (SDMMC_NISTER_SD_SDIO_CMDC_ENABLED_Val << SDMMC_NISTER_SD_SDIO_CMDC_Pos) /**< (SDMMC_NISTER) The CMDC status flag in SDMMC_NISTR is enabled. Position  */
+#define SDMMC_NISTER_SD_SDIO_TRFC_Pos         _U_(1)                                               /**< (SDMMC_NISTER) Transfer Complete Status Enable Position */
+#define SDMMC_NISTER_SD_SDIO_TRFC_Msk         (_U_(0x1) << SDMMC_NISTER_SD_SDIO_TRFC_Pos)          /**< (SDMMC_NISTER) Transfer Complete Status Enable Mask */
+#define SDMMC_NISTER_SD_SDIO_TRFC(value)      (SDMMC_NISTER_SD_SDIO_TRFC_Msk & ((value) << SDMMC_NISTER_SD_SDIO_TRFC_Pos))
+#define   SDMMC_NISTER_SD_SDIO_TRFC_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISTER) The TRFC status flag in SDMMC_NISTR is masked.  */
+#define   SDMMC_NISTER_SD_SDIO_TRFC_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISTER) The TRFC status flag in SDMMC_NISTR is enabled.  */
+#define SDMMC_NISTER_SD_SDIO_TRFC_MASKED      (SDMMC_NISTER_SD_SDIO_TRFC_MASKED_Val << SDMMC_NISTER_SD_SDIO_TRFC_Pos) /**< (SDMMC_NISTER) The TRFC status flag in SDMMC_NISTR is masked. Position  */
+#define SDMMC_NISTER_SD_SDIO_TRFC_ENABLED     (SDMMC_NISTER_SD_SDIO_TRFC_ENABLED_Val << SDMMC_NISTER_SD_SDIO_TRFC_Pos) /**< (SDMMC_NISTER) The TRFC status flag in SDMMC_NISTR is enabled. Position  */
+#define SDMMC_NISTER_SD_SDIO_BLKGE_Pos        _U_(2)                                               /**< (SDMMC_NISTER) Block Gap Event Status Enable Position */
+#define SDMMC_NISTER_SD_SDIO_BLKGE_Msk        (_U_(0x1) << SDMMC_NISTER_SD_SDIO_BLKGE_Pos)         /**< (SDMMC_NISTER) Block Gap Event Status Enable Mask */
+#define SDMMC_NISTER_SD_SDIO_BLKGE(value)     (SDMMC_NISTER_SD_SDIO_BLKGE_Msk & ((value) << SDMMC_NISTER_SD_SDIO_BLKGE_Pos))
+#define   SDMMC_NISTER_SD_SDIO_BLKGE_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISTER) The BLKGE status flag in SDMMC_NISTR is masked.  */
+#define   SDMMC_NISTER_SD_SDIO_BLKGE_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISTER) The BLKGE status flag in SDMMC_NISTR is enabled.  */
+#define SDMMC_NISTER_SD_SDIO_BLKGE_MASKED     (SDMMC_NISTER_SD_SDIO_BLKGE_MASKED_Val << SDMMC_NISTER_SD_SDIO_BLKGE_Pos) /**< (SDMMC_NISTER) The BLKGE status flag in SDMMC_NISTR is masked. Position  */
+#define SDMMC_NISTER_SD_SDIO_BLKGE_ENABLED    (SDMMC_NISTER_SD_SDIO_BLKGE_ENABLED_Val << SDMMC_NISTER_SD_SDIO_BLKGE_Pos) /**< (SDMMC_NISTER) The BLKGE status flag in SDMMC_NISTR is enabled. Position  */
+#define SDMMC_NISTER_SD_SDIO_DMAINT_Pos       _U_(3)                                               /**< (SDMMC_NISTER) DMA Interrupt Status Enable Position */
+#define SDMMC_NISTER_SD_SDIO_DMAINT_Msk       (_U_(0x1) << SDMMC_NISTER_SD_SDIO_DMAINT_Pos)        /**< (SDMMC_NISTER) DMA Interrupt Status Enable Mask */
+#define SDMMC_NISTER_SD_SDIO_DMAINT(value)    (SDMMC_NISTER_SD_SDIO_DMAINT_Msk & ((value) << SDMMC_NISTER_SD_SDIO_DMAINT_Pos))
+#define   SDMMC_NISTER_SD_SDIO_DMAINT_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISTER) The DMAINT status flag in SDMMC_NISTR is masked.  */
+#define   SDMMC_NISTER_SD_SDIO_DMAINT_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISTER) The DMAINT status flag in SDMMC_NISTR is enabled.  */
+#define SDMMC_NISTER_SD_SDIO_DMAINT_MASKED    (SDMMC_NISTER_SD_SDIO_DMAINT_MASKED_Val << SDMMC_NISTER_SD_SDIO_DMAINT_Pos) /**< (SDMMC_NISTER) The DMAINT status flag in SDMMC_NISTR is masked. Position  */
+#define SDMMC_NISTER_SD_SDIO_DMAINT_ENABLED   (SDMMC_NISTER_SD_SDIO_DMAINT_ENABLED_Val << SDMMC_NISTER_SD_SDIO_DMAINT_Pos) /**< (SDMMC_NISTER) The DMAINT status flag in SDMMC_NISTR is enabled. Position  */
+#define SDMMC_NISTER_SD_SDIO_BWRRDY_Pos       _U_(4)                                               /**< (SDMMC_NISTER) Buffer Write Ready Status Enable Position */
+#define SDMMC_NISTER_SD_SDIO_BWRRDY_Msk       (_U_(0x1) << SDMMC_NISTER_SD_SDIO_BWRRDY_Pos)        /**< (SDMMC_NISTER) Buffer Write Ready Status Enable Mask */
+#define SDMMC_NISTER_SD_SDIO_BWRRDY(value)    (SDMMC_NISTER_SD_SDIO_BWRRDY_Msk & ((value) << SDMMC_NISTER_SD_SDIO_BWRRDY_Pos))
+#define   SDMMC_NISTER_SD_SDIO_BWRRDY_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISTER) The BWRRDY status flag in SDMMC_NISTR is masked.  */
+#define   SDMMC_NISTER_SD_SDIO_BWRRDY_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISTER) The BWRRDY status flag in SDMMC_NISTR is enabled.  */
+#define SDMMC_NISTER_SD_SDIO_BWRRDY_MASKED    (SDMMC_NISTER_SD_SDIO_BWRRDY_MASKED_Val << SDMMC_NISTER_SD_SDIO_BWRRDY_Pos) /**< (SDMMC_NISTER) The BWRRDY status flag in SDMMC_NISTR is masked. Position  */
+#define SDMMC_NISTER_SD_SDIO_BWRRDY_ENABLED   (SDMMC_NISTER_SD_SDIO_BWRRDY_ENABLED_Val << SDMMC_NISTER_SD_SDIO_BWRRDY_Pos) /**< (SDMMC_NISTER) The BWRRDY status flag in SDMMC_NISTR is enabled. Position  */
+#define SDMMC_NISTER_SD_SDIO_BRDRDY_Pos       _U_(5)                                               /**< (SDMMC_NISTER) Buffer Read Ready Status Enable Position */
+#define SDMMC_NISTER_SD_SDIO_BRDRDY_Msk       (_U_(0x1) << SDMMC_NISTER_SD_SDIO_BRDRDY_Pos)        /**< (SDMMC_NISTER) Buffer Read Ready Status Enable Mask */
+#define SDMMC_NISTER_SD_SDIO_BRDRDY(value)    (SDMMC_NISTER_SD_SDIO_BRDRDY_Msk & ((value) << SDMMC_NISTER_SD_SDIO_BRDRDY_Pos))
+#define   SDMMC_NISTER_SD_SDIO_BRDRDY_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is masked.  */
+#define   SDMMC_NISTER_SD_SDIO_BRDRDY_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is enabled.  */
+#define SDMMC_NISTER_SD_SDIO_BRDRDY_MASKED    (SDMMC_NISTER_SD_SDIO_BRDRDY_MASKED_Val << SDMMC_NISTER_SD_SDIO_BRDRDY_Pos) /**< (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is masked. Position  */
+#define SDMMC_NISTER_SD_SDIO_BRDRDY_ENABLED   (SDMMC_NISTER_SD_SDIO_BRDRDY_ENABLED_Val << SDMMC_NISTER_SD_SDIO_BRDRDY_Pos) /**< (SDMMC_NISTER) The BRDRDY status flag in SDMMC_NISTR is enabled. Position  */
 #define SDMMC_NISTER_SD_SDIO_CINS_Pos         _U_(6)                                               /**< (SDMMC_NISTER) Card Insertion Status Enable Position */
 #define SDMMC_NISTER_SD_SDIO_CINS_Msk         (_U_(0x1) << SDMMC_NISTER_SD_SDIO_CINS_Pos)          /**< (SDMMC_NISTER) Card Insertion Status Enable Mask */
 #define SDMMC_NISTER_SD_SDIO_CINS(value)      (SDMMC_NISTER_SD_SDIO_CINS_Msk & ((value) << SDMMC_NISTER_SD_SDIO_CINS_Pos))
@@ -754,92 +922,92 @@
 #define   SDMMC_NISTER_SD_SDIO_CINT_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISTER) The CINT status flag in SDMMC_NISTR is enabled.  */
 #define SDMMC_NISTER_SD_SDIO_CINT_MASKED      (SDMMC_NISTER_SD_SDIO_CINT_MASKED_Val << SDMMC_NISTER_SD_SDIO_CINT_Pos) /**< (SDMMC_NISTER) The CINT status flag in SDMMC_NISTR is masked. Position  */
 #define SDMMC_NISTER_SD_SDIO_CINT_ENABLED     (SDMMC_NISTER_SD_SDIO_CINT_ENABLED_Val << SDMMC_NISTER_SD_SDIO_CINT_Pos) /**< (SDMMC_NISTER) The CINT status flag in SDMMC_NISTR is enabled. Position  */
-#define SDMMC_NISTER_SD_SDIO_Msk              _U_(0x01C0)                                           /**< (SDMMC_NISTER_SD_SDIO) Register Mask  */
+#define SDMMC_NISTER_SD_SDIO_Msk              _U_(0x01FF)                                           /**< (SDMMC_NISTER_SD_SDIO) Register Mask  */
 
 
 /* -------- SDMMC_EISTER : (SDMMC Offset: 0x36) (R/W 16) Error Interrupt Status Enable Register -------- */
 #define SDMMC_EISTER_RESETVALUE               _U_(0x00)                                            /**<  (SDMMC_EISTER) Error Interrupt Status Enable Register  Reset Value */
 
-#define SDMMC_EISTER_CMDTEO_Pos               _U_(0)                                               /**< (SDMMC_EISTER) Command Timeout Error Status Enable Position */
-#define SDMMC_EISTER_CMDTEO_Msk               (_U_(0x1) << SDMMC_EISTER_CMDTEO_Pos)                /**< (SDMMC_EISTER) Command Timeout Error Status Enable Mask */
-#define SDMMC_EISTER_CMDTEO(value)            (SDMMC_EISTER_CMDTEO_Msk & ((value) << SDMMC_EISTER_CMDTEO_Pos))
-#define   SDMMC_EISTER_CMDTEO_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISTER) The CMDTEO status flag in SDMMC_EISTR is masked.  */
-#define   SDMMC_EISTER_CMDTEO_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISTER) The CMDTEO status flag in SDMMC_EISTR is enabled.  */
-#define SDMMC_EISTER_CMDTEO_MASKED            (SDMMC_EISTER_CMDTEO_MASKED_Val << SDMMC_EISTER_CMDTEO_Pos) /**< (SDMMC_EISTER) The CMDTEO status flag in SDMMC_EISTR is masked. Position  */
-#define SDMMC_EISTER_CMDTEO_ENABLED           (SDMMC_EISTER_CMDTEO_ENABLED_Val << SDMMC_EISTER_CMDTEO_Pos) /**< (SDMMC_EISTER) The CMDTEO status flag in SDMMC_EISTR is enabled. Position  */
-#define SDMMC_EISTER_CMDCRC_Pos               _U_(1)                                               /**< (SDMMC_EISTER) Command CRC Error Status Enable Position */
-#define SDMMC_EISTER_CMDCRC_Msk               (_U_(0x1) << SDMMC_EISTER_CMDCRC_Pos)                /**< (SDMMC_EISTER) Command CRC Error Status Enable Mask */
-#define SDMMC_EISTER_CMDCRC(value)            (SDMMC_EISTER_CMDCRC_Msk & ((value) << SDMMC_EISTER_CMDCRC_Pos))
-#define   SDMMC_EISTER_CMDCRC_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISTER) The CMDCRC status flag in SDMMC_EISTR is masked.  */
-#define   SDMMC_EISTER_CMDCRC_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISTER) The CMDCRC status flag in SDMMC_EISTR is enabled.  */
-#define SDMMC_EISTER_CMDCRC_MASKED            (SDMMC_EISTER_CMDCRC_MASKED_Val << SDMMC_EISTER_CMDCRC_Pos) /**< (SDMMC_EISTER) The CMDCRC status flag in SDMMC_EISTR is masked. Position  */
-#define SDMMC_EISTER_CMDCRC_ENABLED           (SDMMC_EISTER_CMDCRC_ENABLED_Val << SDMMC_EISTER_CMDCRC_Pos) /**< (SDMMC_EISTER) The CMDCRC status flag in SDMMC_EISTR is enabled. Position  */
-#define SDMMC_EISTER_CMDEND_Pos               _U_(2)                                               /**< (SDMMC_EISTER) Command End Bit Error Status Enable Position */
-#define SDMMC_EISTER_CMDEND_Msk               (_U_(0x1) << SDMMC_EISTER_CMDEND_Pos)                /**< (SDMMC_EISTER) Command End Bit Error Status Enable Mask */
-#define SDMMC_EISTER_CMDEND(value)            (SDMMC_EISTER_CMDEND_Msk & ((value) << SDMMC_EISTER_CMDEND_Pos))
-#define   SDMMC_EISTER_CMDEND_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISTER) The CMDEND status flag in SDMMC_EISTR is masked.  */
-#define   SDMMC_EISTER_CMDEND_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISTER) The CMDEND status flag in SDMMC_EISTR is enabled.  */
-#define SDMMC_EISTER_CMDEND_MASKED            (SDMMC_EISTER_CMDEND_MASKED_Val << SDMMC_EISTER_CMDEND_Pos) /**< (SDMMC_EISTER) The CMDEND status flag in SDMMC_EISTR is masked. Position  */
-#define SDMMC_EISTER_CMDEND_ENABLED           (SDMMC_EISTER_CMDEND_ENABLED_Val << SDMMC_EISTER_CMDEND_Pos) /**< (SDMMC_EISTER) The CMDEND status flag in SDMMC_EISTR is enabled. Position  */
-#define SDMMC_EISTER_CMDIDX_Pos               _U_(3)                                               /**< (SDMMC_EISTER) Command Index Error Status Enable Position */
-#define SDMMC_EISTER_CMDIDX_Msk               (_U_(0x1) << SDMMC_EISTER_CMDIDX_Pos)                /**< (SDMMC_EISTER) Command Index Error Status Enable Mask */
-#define SDMMC_EISTER_CMDIDX(value)            (SDMMC_EISTER_CMDIDX_Msk & ((value) << SDMMC_EISTER_CMDIDX_Pos))
-#define   SDMMC_EISTER_CMDIDX_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISTER) The CMDIDX status flag in SDMMC_EISTR is masked.  */
-#define   SDMMC_EISTER_CMDIDX_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISTER) The CMDIDX status flag in SDMMC_EISTR is enabled.  */
-#define SDMMC_EISTER_CMDIDX_MASKED            (SDMMC_EISTER_CMDIDX_MASKED_Val << SDMMC_EISTER_CMDIDX_Pos) /**< (SDMMC_EISTER) The CMDIDX status flag in SDMMC_EISTR is masked. Position  */
-#define SDMMC_EISTER_CMDIDX_ENABLED           (SDMMC_EISTER_CMDIDX_ENABLED_Val << SDMMC_EISTER_CMDIDX_Pos) /**< (SDMMC_EISTER) The CMDIDX status flag in SDMMC_EISTR is enabled. Position  */
-#define SDMMC_EISTER_DATTEO_Pos               _U_(4)                                               /**< (SDMMC_EISTER) Data Timeout Error Status Enable Position */
-#define SDMMC_EISTER_DATTEO_Msk               (_U_(0x1) << SDMMC_EISTER_DATTEO_Pos)                /**< (SDMMC_EISTER) Data Timeout Error Status Enable Mask */
-#define SDMMC_EISTER_DATTEO(value)            (SDMMC_EISTER_DATTEO_Msk & ((value) << SDMMC_EISTER_DATTEO_Pos))
-#define   SDMMC_EISTER_DATTEO_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISTER) The DATTEO status flag in SDMMC_EISTR is masked.  */
-#define   SDMMC_EISTER_DATTEO_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISTER) The DATTEO status flag in SDMMC_EISTR is enabled.  */
-#define SDMMC_EISTER_DATTEO_MASKED            (SDMMC_EISTER_DATTEO_MASKED_Val << SDMMC_EISTER_DATTEO_Pos) /**< (SDMMC_EISTER) The DATTEO status flag in SDMMC_EISTR is masked. Position  */
-#define SDMMC_EISTER_DATTEO_ENABLED           (SDMMC_EISTER_DATTEO_ENABLED_Val << SDMMC_EISTER_DATTEO_Pos) /**< (SDMMC_EISTER) The DATTEO status flag in SDMMC_EISTR is enabled. Position  */
-#define SDMMC_EISTER_DATCRC_Pos               _U_(5)                                               /**< (SDMMC_EISTER) Data CRC Error Status Enable Position */
-#define SDMMC_EISTER_DATCRC_Msk               (_U_(0x1) << SDMMC_EISTER_DATCRC_Pos)                /**< (SDMMC_EISTER) Data CRC Error Status Enable Mask */
-#define SDMMC_EISTER_DATCRC(value)            (SDMMC_EISTER_DATCRC_Msk & ((value) << SDMMC_EISTER_DATCRC_Pos))
-#define   SDMMC_EISTER_DATCRC_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISTER) The DATCRC status flag in SDMMC_EISTR is masked.  */
-#define   SDMMC_EISTER_DATCRC_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISTER) The DATCRC status flag in SDMMC_EISTR is enabled.  */
-#define SDMMC_EISTER_DATCRC_MASKED            (SDMMC_EISTER_DATCRC_MASKED_Val << SDMMC_EISTER_DATCRC_Pos) /**< (SDMMC_EISTER) The DATCRC status flag in SDMMC_EISTR is masked. Position  */
-#define SDMMC_EISTER_DATCRC_ENABLED           (SDMMC_EISTER_DATCRC_ENABLED_Val << SDMMC_EISTER_DATCRC_Pos) /**< (SDMMC_EISTER) The DATCRC status flag in SDMMC_EISTR is enabled. Position  */
-#define SDMMC_EISTER_DATEND_Pos               _U_(6)                                               /**< (SDMMC_EISTER) Data End Bit Error Status Enable Position */
-#define SDMMC_EISTER_DATEND_Msk               (_U_(0x1) << SDMMC_EISTER_DATEND_Pos)                /**< (SDMMC_EISTER) Data End Bit Error Status Enable Mask */
-#define SDMMC_EISTER_DATEND(value)            (SDMMC_EISTER_DATEND_Msk & ((value) << SDMMC_EISTER_DATEND_Pos))
-#define   SDMMC_EISTER_DATEND_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISTER) The DATEND status flag in SDMMC_EISTR is masked.  */
-#define   SDMMC_EISTER_DATEND_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISTER) The DATEND status flag in SDMMC_EISTR is enabled.  */
-#define SDMMC_EISTER_DATEND_MASKED            (SDMMC_EISTER_DATEND_MASKED_Val << SDMMC_EISTER_DATEND_Pos) /**< (SDMMC_EISTER) The DATEND status flag in SDMMC_EISTR is masked. Position  */
-#define SDMMC_EISTER_DATEND_ENABLED           (SDMMC_EISTER_DATEND_ENABLED_Val << SDMMC_EISTER_DATEND_Pos) /**< (SDMMC_EISTER) The DATEND status flag in SDMMC_EISTR is enabled. Position  */
-#define SDMMC_EISTER_CURLIM_Pos               _U_(7)                                               /**< (SDMMC_EISTER) Current Limit Error Status Enable Position */
-#define SDMMC_EISTER_CURLIM_Msk               (_U_(0x1) << SDMMC_EISTER_CURLIM_Pos)                /**< (SDMMC_EISTER) Current Limit Error Status Enable Mask */
-#define SDMMC_EISTER_CURLIM(value)            (SDMMC_EISTER_CURLIM_Msk & ((value) << SDMMC_EISTER_CURLIM_Pos))
-#define   SDMMC_EISTER_CURLIM_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISTER) The CURLIM status flag in SDMMC_EISTR is masked.  */
-#define   SDMMC_EISTER_CURLIM_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISTER) The CURLIM status flag in SDMMC_EISTR is enabled.  */
-#define SDMMC_EISTER_CURLIM_MASKED            (SDMMC_EISTER_CURLIM_MASKED_Val << SDMMC_EISTER_CURLIM_Pos) /**< (SDMMC_EISTER) The CURLIM status flag in SDMMC_EISTR is masked. Position  */
-#define SDMMC_EISTER_CURLIM_ENABLED           (SDMMC_EISTER_CURLIM_ENABLED_Val << SDMMC_EISTER_CURLIM_Pos) /**< (SDMMC_EISTER) The CURLIM status flag in SDMMC_EISTR is enabled. Position  */
-#define SDMMC_EISTER_ACMD_Pos                 _U_(8)                                               /**< (SDMMC_EISTER) Auto CMD Error Status Enable Position */
-#define SDMMC_EISTER_ACMD_Msk                 (_U_(0x1) << SDMMC_EISTER_ACMD_Pos)                  /**< (SDMMC_EISTER) Auto CMD Error Status Enable Mask */
-#define SDMMC_EISTER_ACMD(value)              (SDMMC_EISTER_ACMD_Msk & ((value) << SDMMC_EISTER_ACMD_Pos))
-#define   SDMMC_EISTER_ACMD_MASKED_Val        _U_(0x0)                                             /**< (SDMMC_EISTER) The ACMD status flag in SDMMC_EISTR is masked.  */
-#define   SDMMC_EISTER_ACMD_ENABLED_Val       _U_(0x1)                                             /**< (SDMMC_EISTER) The ACMD status flag in SDMMC_EISTR is enabled.  */
-#define SDMMC_EISTER_ACMD_MASKED              (SDMMC_EISTER_ACMD_MASKED_Val << SDMMC_EISTER_ACMD_Pos) /**< (SDMMC_EISTER) The ACMD status flag in SDMMC_EISTR is masked. Position  */
-#define SDMMC_EISTER_ACMD_ENABLED             (SDMMC_EISTER_ACMD_ENABLED_Val << SDMMC_EISTER_ACMD_Pos) /**< (SDMMC_EISTER) The ACMD status flag in SDMMC_EISTR is enabled. Position  */
-#define SDMMC_EISTER_ADMA_Pos                 _U_(9)                                               /**< (SDMMC_EISTER) ADMA Error Status Enable Position */
-#define SDMMC_EISTER_ADMA_Msk                 (_U_(0x1) << SDMMC_EISTER_ADMA_Pos)                  /**< (SDMMC_EISTER) ADMA Error Status Enable Mask */
-#define SDMMC_EISTER_ADMA(value)              (SDMMC_EISTER_ADMA_Msk & ((value) << SDMMC_EISTER_ADMA_Pos))
-#define   SDMMC_EISTER_ADMA_MASKED_Val        _U_(0x0)                                             /**< (SDMMC_EISTER) The ADMA status flag in SDMMC_EISTR is masked.  */
-#define   SDMMC_EISTER_ADMA_ENABLED_Val       _U_(0x1)                                             /**< (SDMMC_EISTER) The ADMA status flag in SDMMC_EISTR is enabled.  */
-#define SDMMC_EISTER_ADMA_MASKED              (SDMMC_EISTER_ADMA_MASKED_Val << SDMMC_EISTER_ADMA_Pos) /**< (SDMMC_EISTER) The ADMA status flag in SDMMC_EISTR is masked. Position  */
-#define SDMMC_EISTER_ADMA_ENABLED             (SDMMC_EISTER_ADMA_ENABLED_Val << SDMMC_EISTER_ADMA_Pos) /**< (SDMMC_EISTER) The ADMA status flag in SDMMC_EISTR is enabled. Position  */
-#define SDMMC_EISTER_TUNING_Pos               _U_(10)                                              /**< (SDMMC_EISTER) Tuning Error Status Enable Position */
-#define SDMMC_EISTER_TUNING_Msk               (_U_(0x1) << SDMMC_EISTER_TUNING_Pos)                /**< (SDMMC_EISTER) Tuning Error Status Enable Mask */
-#define SDMMC_EISTER_TUNING(value)            (SDMMC_EISTER_TUNING_Msk & ((value) << SDMMC_EISTER_TUNING_Pos))
-#define   SDMMC_EISTER_TUNING_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is masked.  */
-#define   SDMMC_EISTER_TUNING_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is enabled.  */
-#define SDMMC_EISTER_TUNING_MASKED            (SDMMC_EISTER_TUNING_MASKED_Val << SDMMC_EISTER_TUNING_Pos) /**< (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is masked. Position  */
-#define SDMMC_EISTER_TUNING_ENABLED           (SDMMC_EISTER_TUNING_ENABLED_Val << SDMMC_EISTER_TUNING_Pos) /**< (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is enabled. Position  */
-#define SDMMC_EISTER_Msk                      _U_(0x07FF)                                          /**< (SDMMC_EISTER) Register Mask  */
+#define SDMMC_EISTER_Msk                      _U_(0x0000)                                          /**< (SDMMC_EISTER) Register Mask  */
 
 /* EMMC mode */
+#define SDMMC_EISTER_EMMC_CMDTEO_Pos          _U_(0)                                               /**< (SDMMC_EISTER) Command Timeout Error Status Enable Position */
+#define SDMMC_EISTER_EMMC_CMDTEO_Msk          (_U_(0x1) << SDMMC_EISTER_EMMC_CMDTEO_Pos)           /**< (SDMMC_EISTER) Command Timeout Error Status Enable Mask */
+#define SDMMC_EISTER_EMMC_CMDTEO(value)       (SDMMC_EISTER_EMMC_CMDTEO_Msk & ((value) << SDMMC_EISTER_EMMC_CMDTEO_Pos))
+#define   SDMMC_EISTER_EMMC_CMDTEO_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The CMDTEO status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_EMMC_CMDTEO_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The CMDTEO status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_EMMC_CMDTEO_MASKED       (SDMMC_EISTER_EMMC_CMDTEO_MASKED_Val << SDMMC_EISTER_EMMC_CMDTEO_Pos) /**< (SDMMC_EISTER) The CMDTEO status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_EMMC_CMDTEO_ENABLED      (SDMMC_EISTER_EMMC_CMDTEO_ENABLED_Val << SDMMC_EISTER_EMMC_CMDTEO_Pos) /**< (SDMMC_EISTER) The CMDTEO status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_EMMC_CMDCRC_Pos          _U_(1)                                               /**< (SDMMC_EISTER) Command CRC Error Status Enable Position */
+#define SDMMC_EISTER_EMMC_CMDCRC_Msk          (_U_(0x1) << SDMMC_EISTER_EMMC_CMDCRC_Pos)           /**< (SDMMC_EISTER) Command CRC Error Status Enable Mask */
+#define SDMMC_EISTER_EMMC_CMDCRC(value)       (SDMMC_EISTER_EMMC_CMDCRC_Msk & ((value) << SDMMC_EISTER_EMMC_CMDCRC_Pos))
+#define   SDMMC_EISTER_EMMC_CMDCRC_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The CMDCRC status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_EMMC_CMDCRC_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The CMDCRC status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_EMMC_CMDCRC_MASKED       (SDMMC_EISTER_EMMC_CMDCRC_MASKED_Val << SDMMC_EISTER_EMMC_CMDCRC_Pos) /**< (SDMMC_EISTER) The CMDCRC status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_EMMC_CMDCRC_ENABLED      (SDMMC_EISTER_EMMC_CMDCRC_ENABLED_Val << SDMMC_EISTER_EMMC_CMDCRC_Pos) /**< (SDMMC_EISTER) The CMDCRC status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_EMMC_CMDEND_Pos          _U_(2)                                               /**< (SDMMC_EISTER) Command End Bit Error Status Enable Position */
+#define SDMMC_EISTER_EMMC_CMDEND_Msk          (_U_(0x1) << SDMMC_EISTER_EMMC_CMDEND_Pos)           /**< (SDMMC_EISTER) Command End Bit Error Status Enable Mask */
+#define SDMMC_EISTER_EMMC_CMDEND(value)       (SDMMC_EISTER_EMMC_CMDEND_Msk & ((value) << SDMMC_EISTER_EMMC_CMDEND_Pos))
+#define   SDMMC_EISTER_EMMC_CMDEND_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The CMDEND status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_EMMC_CMDEND_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The CMDEND status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_EMMC_CMDEND_MASKED       (SDMMC_EISTER_EMMC_CMDEND_MASKED_Val << SDMMC_EISTER_EMMC_CMDEND_Pos) /**< (SDMMC_EISTER) The CMDEND status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_EMMC_CMDEND_ENABLED      (SDMMC_EISTER_EMMC_CMDEND_ENABLED_Val << SDMMC_EISTER_EMMC_CMDEND_Pos) /**< (SDMMC_EISTER) The CMDEND status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_EMMC_CMDIDX_Pos          _U_(3)                                               /**< (SDMMC_EISTER) Command Index Error Status Enable Position */
+#define SDMMC_EISTER_EMMC_CMDIDX_Msk          (_U_(0x1) << SDMMC_EISTER_EMMC_CMDIDX_Pos)           /**< (SDMMC_EISTER) Command Index Error Status Enable Mask */
+#define SDMMC_EISTER_EMMC_CMDIDX(value)       (SDMMC_EISTER_EMMC_CMDIDX_Msk & ((value) << SDMMC_EISTER_EMMC_CMDIDX_Pos))
+#define   SDMMC_EISTER_EMMC_CMDIDX_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The CMDIDX status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_EMMC_CMDIDX_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The CMDIDX status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_EMMC_CMDIDX_MASKED       (SDMMC_EISTER_EMMC_CMDIDX_MASKED_Val << SDMMC_EISTER_EMMC_CMDIDX_Pos) /**< (SDMMC_EISTER) The CMDIDX status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_EMMC_CMDIDX_ENABLED      (SDMMC_EISTER_EMMC_CMDIDX_ENABLED_Val << SDMMC_EISTER_EMMC_CMDIDX_Pos) /**< (SDMMC_EISTER) The CMDIDX status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_EMMC_DATTEO_Pos          _U_(4)                                               /**< (SDMMC_EISTER) Data Timeout Error Status Enable Position */
+#define SDMMC_EISTER_EMMC_DATTEO_Msk          (_U_(0x1) << SDMMC_EISTER_EMMC_DATTEO_Pos)           /**< (SDMMC_EISTER) Data Timeout Error Status Enable Mask */
+#define SDMMC_EISTER_EMMC_DATTEO(value)       (SDMMC_EISTER_EMMC_DATTEO_Msk & ((value) << SDMMC_EISTER_EMMC_DATTEO_Pos))
+#define   SDMMC_EISTER_EMMC_DATTEO_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The DATTEO status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_EMMC_DATTEO_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The DATTEO status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_EMMC_DATTEO_MASKED       (SDMMC_EISTER_EMMC_DATTEO_MASKED_Val << SDMMC_EISTER_EMMC_DATTEO_Pos) /**< (SDMMC_EISTER) The DATTEO status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_EMMC_DATTEO_ENABLED      (SDMMC_EISTER_EMMC_DATTEO_ENABLED_Val << SDMMC_EISTER_EMMC_DATTEO_Pos) /**< (SDMMC_EISTER) The DATTEO status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_EMMC_DATCRC_Pos          _U_(5)                                               /**< (SDMMC_EISTER) Data CRC Error Status Enable Position */
+#define SDMMC_EISTER_EMMC_DATCRC_Msk          (_U_(0x1) << SDMMC_EISTER_EMMC_DATCRC_Pos)           /**< (SDMMC_EISTER) Data CRC Error Status Enable Mask */
+#define SDMMC_EISTER_EMMC_DATCRC(value)       (SDMMC_EISTER_EMMC_DATCRC_Msk & ((value) << SDMMC_EISTER_EMMC_DATCRC_Pos))
+#define   SDMMC_EISTER_EMMC_DATCRC_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The DATCRC status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_EMMC_DATCRC_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The DATCRC status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_EMMC_DATCRC_MASKED       (SDMMC_EISTER_EMMC_DATCRC_MASKED_Val << SDMMC_EISTER_EMMC_DATCRC_Pos) /**< (SDMMC_EISTER) The DATCRC status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_EMMC_DATCRC_ENABLED      (SDMMC_EISTER_EMMC_DATCRC_ENABLED_Val << SDMMC_EISTER_EMMC_DATCRC_Pos) /**< (SDMMC_EISTER) The DATCRC status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_EMMC_DATEND_Pos          _U_(6)                                               /**< (SDMMC_EISTER) Data End Bit Error Status Enable Position */
+#define SDMMC_EISTER_EMMC_DATEND_Msk          (_U_(0x1) << SDMMC_EISTER_EMMC_DATEND_Pos)           /**< (SDMMC_EISTER) Data End Bit Error Status Enable Mask */
+#define SDMMC_EISTER_EMMC_DATEND(value)       (SDMMC_EISTER_EMMC_DATEND_Msk & ((value) << SDMMC_EISTER_EMMC_DATEND_Pos))
+#define   SDMMC_EISTER_EMMC_DATEND_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The DATEND status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_EMMC_DATEND_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The DATEND status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_EMMC_DATEND_MASKED       (SDMMC_EISTER_EMMC_DATEND_MASKED_Val << SDMMC_EISTER_EMMC_DATEND_Pos) /**< (SDMMC_EISTER) The DATEND status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_EMMC_DATEND_ENABLED      (SDMMC_EISTER_EMMC_DATEND_ENABLED_Val << SDMMC_EISTER_EMMC_DATEND_Pos) /**< (SDMMC_EISTER) The DATEND status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_EMMC_CURLIM_Pos          _U_(7)                                               /**< (SDMMC_EISTER) Current Limit Error Status Enable Position */
+#define SDMMC_EISTER_EMMC_CURLIM_Msk          (_U_(0x1) << SDMMC_EISTER_EMMC_CURLIM_Pos)           /**< (SDMMC_EISTER) Current Limit Error Status Enable Mask */
+#define SDMMC_EISTER_EMMC_CURLIM(value)       (SDMMC_EISTER_EMMC_CURLIM_Msk & ((value) << SDMMC_EISTER_EMMC_CURLIM_Pos))
+#define   SDMMC_EISTER_EMMC_CURLIM_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The CURLIM status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_EMMC_CURLIM_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The CURLIM status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_EMMC_CURLIM_MASKED       (SDMMC_EISTER_EMMC_CURLIM_MASKED_Val << SDMMC_EISTER_EMMC_CURLIM_Pos) /**< (SDMMC_EISTER) The CURLIM status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_EMMC_CURLIM_ENABLED      (SDMMC_EISTER_EMMC_CURLIM_ENABLED_Val << SDMMC_EISTER_EMMC_CURLIM_Pos) /**< (SDMMC_EISTER) The CURLIM status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_EMMC_ACMD_Pos            _U_(8)                                               /**< (SDMMC_EISTER) Auto CMD Error Status Enable Position */
+#define SDMMC_EISTER_EMMC_ACMD_Msk            (_U_(0x1) << SDMMC_EISTER_EMMC_ACMD_Pos)             /**< (SDMMC_EISTER) Auto CMD Error Status Enable Mask */
+#define SDMMC_EISTER_EMMC_ACMD(value)         (SDMMC_EISTER_EMMC_ACMD_Msk & ((value) << SDMMC_EISTER_EMMC_ACMD_Pos))
+#define   SDMMC_EISTER_EMMC_ACMD_MASKED_Val   _U_(0x0)                                             /**< (SDMMC_EISTER) The ACMD status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_EMMC_ACMD_ENABLED_Val  _U_(0x1)                                             /**< (SDMMC_EISTER) The ACMD status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_EMMC_ACMD_MASKED         (SDMMC_EISTER_EMMC_ACMD_MASKED_Val << SDMMC_EISTER_EMMC_ACMD_Pos) /**< (SDMMC_EISTER) The ACMD status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_EMMC_ACMD_ENABLED        (SDMMC_EISTER_EMMC_ACMD_ENABLED_Val << SDMMC_EISTER_EMMC_ACMD_Pos) /**< (SDMMC_EISTER) The ACMD status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_EMMC_ADMA_Pos            _U_(9)                                               /**< (SDMMC_EISTER) ADMA Error Status Enable Position */
+#define SDMMC_EISTER_EMMC_ADMA_Msk            (_U_(0x1) << SDMMC_EISTER_EMMC_ADMA_Pos)             /**< (SDMMC_EISTER) ADMA Error Status Enable Mask */
+#define SDMMC_EISTER_EMMC_ADMA(value)         (SDMMC_EISTER_EMMC_ADMA_Msk & ((value) << SDMMC_EISTER_EMMC_ADMA_Pos))
+#define   SDMMC_EISTER_EMMC_ADMA_MASKED_Val   _U_(0x0)                                             /**< (SDMMC_EISTER) The ADMA status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_EMMC_ADMA_ENABLED_Val  _U_(0x1)                                             /**< (SDMMC_EISTER) The ADMA status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_EMMC_ADMA_MASKED         (SDMMC_EISTER_EMMC_ADMA_MASKED_Val << SDMMC_EISTER_EMMC_ADMA_Pos) /**< (SDMMC_EISTER) The ADMA status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_EMMC_ADMA_ENABLED        (SDMMC_EISTER_EMMC_ADMA_ENABLED_Val << SDMMC_EISTER_EMMC_ADMA_Pos) /**< (SDMMC_EISTER) The ADMA status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_EMMC_TUNING_Pos          _U_(10)                                              /**< (SDMMC_EISTER) Tuning Error Status Enable Position */
+#define SDMMC_EISTER_EMMC_TUNING_Msk          (_U_(0x1) << SDMMC_EISTER_EMMC_TUNING_Pos)           /**< (SDMMC_EISTER) Tuning Error Status Enable Mask */
+#define SDMMC_EISTER_EMMC_TUNING(value)       (SDMMC_EISTER_EMMC_TUNING_Msk & ((value) << SDMMC_EISTER_EMMC_TUNING_Pos))
+#define   SDMMC_EISTER_EMMC_TUNING_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_EMMC_TUNING_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_EMMC_TUNING_MASKED       (SDMMC_EISTER_EMMC_TUNING_MASKED_Val << SDMMC_EISTER_EMMC_TUNING_Pos) /**< (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_EMMC_TUNING_ENABLED      (SDMMC_EISTER_EMMC_TUNING_ENABLED_Val << SDMMC_EISTER_EMMC_TUNING_Pos) /**< (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is enabled. Position  */
 #define SDMMC_EISTER_EMMC_BOOTAE_Pos          _U_(12)                                              /**< (SDMMC_EISTER) Boot Acknowledge Error Status Enable Position */
 #define SDMMC_EISTER_EMMC_BOOTAE_Msk          (_U_(0x1) << SDMMC_EISTER_EMMC_BOOTAE_Pos)           /**< (SDMMC_EISTER) Boot Acknowledge Error Status Enable Mask */
 #define SDMMC_EISTER_EMMC_BOOTAE(value)       (SDMMC_EISTER_EMMC_BOOTAE_Msk & ((value) << SDMMC_EISTER_EMMC_BOOTAE_Pos))
@@ -847,60 +1015,137 @@
 #define   SDMMC_EISTER_EMMC_BOOTAE_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The BOOTAE status flag in SDMMC_EISTR is enabled.  */
 #define SDMMC_EISTER_EMMC_BOOTAE_MASKED       (SDMMC_EISTER_EMMC_BOOTAE_MASKED_Val << SDMMC_EISTER_EMMC_BOOTAE_Pos) /**< (SDMMC_EISTER) The BOOTAE status flag in SDMMC_EISTR is masked. Position  */
 #define SDMMC_EISTER_EMMC_BOOTAE_ENABLED      (SDMMC_EISTER_EMMC_BOOTAE_ENABLED_Val << SDMMC_EISTER_EMMC_BOOTAE_Pos) /**< (SDMMC_EISTER) The BOOTAE status flag in SDMMC_EISTR is enabled. Position  */
-#define SDMMC_EISTER_EMMC_Msk                 _U_(0x1000)                                           /**< (SDMMC_EISTER_EMMC) Register Mask  */
+#define SDMMC_EISTER_EMMC_Msk                 _U_(0x17FF)                                           /**< (SDMMC_EISTER_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
-#define SDMMC_EISTER_SD_SDIO_Msk              _U_(0x0000)                                           /**< (SDMMC_EISTER_SD_SDIO) Register Mask  */
+#define SDMMC_EISTER_SD_SDIO_CMDTEO_Pos       _U_(0)                                               /**< (SDMMC_EISTER) Command Timeout Error Status Enable Position */
+#define SDMMC_EISTER_SD_SDIO_CMDTEO_Msk       (_U_(0x1) << SDMMC_EISTER_SD_SDIO_CMDTEO_Pos)        /**< (SDMMC_EISTER) Command Timeout Error Status Enable Mask */
+#define SDMMC_EISTER_SD_SDIO_CMDTEO(value)    (SDMMC_EISTER_SD_SDIO_CMDTEO_Msk & ((value) << SDMMC_EISTER_SD_SDIO_CMDTEO_Pos))
+#define   SDMMC_EISTER_SD_SDIO_CMDTEO_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The CMDTEO status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_SD_SDIO_CMDTEO_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The CMDTEO status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_SD_SDIO_CMDTEO_MASKED    (SDMMC_EISTER_SD_SDIO_CMDTEO_MASKED_Val << SDMMC_EISTER_SD_SDIO_CMDTEO_Pos) /**< (SDMMC_EISTER) The CMDTEO status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_SD_SDIO_CMDTEO_ENABLED   (SDMMC_EISTER_SD_SDIO_CMDTEO_ENABLED_Val << SDMMC_EISTER_SD_SDIO_CMDTEO_Pos) /**< (SDMMC_EISTER) The CMDTEO status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_SD_SDIO_CMDCRC_Pos       _U_(1)                                               /**< (SDMMC_EISTER) Command CRC Error Status Enable Position */
+#define SDMMC_EISTER_SD_SDIO_CMDCRC_Msk       (_U_(0x1) << SDMMC_EISTER_SD_SDIO_CMDCRC_Pos)        /**< (SDMMC_EISTER) Command CRC Error Status Enable Mask */
+#define SDMMC_EISTER_SD_SDIO_CMDCRC(value)    (SDMMC_EISTER_SD_SDIO_CMDCRC_Msk & ((value) << SDMMC_EISTER_SD_SDIO_CMDCRC_Pos))
+#define   SDMMC_EISTER_SD_SDIO_CMDCRC_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The CMDCRC status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_SD_SDIO_CMDCRC_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The CMDCRC status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_SD_SDIO_CMDCRC_MASKED    (SDMMC_EISTER_SD_SDIO_CMDCRC_MASKED_Val << SDMMC_EISTER_SD_SDIO_CMDCRC_Pos) /**< (SDMMC_EISTER) The CMDCRC status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_SD_SDIO_CMDCRC_ENABLED   (SDMMC_EISTER_SD_SDIO_CMDCRC_ENABLED_Val << SDMMC_EISTER_SD_SDIO_CMDCRC_Pos) /**< (SDMMC_EISTER) The CMDCRC status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_SD_SDIO_CMDEND_Pos       _U_(2)                                               /**< (SDMMC_EISTER) Command End Bit Error Status Enable Position */
+#define SDMMC_EISTER_SD_SDIO_CMDEND_Msk       (_U_(0x1) << SDMMC_EISTER_SD_SDIO_CMDEND_Pos)        /**< (SDMMC_EISTER) Command End Bit Error Status Enable Mask */
+#define SDMMC_EISTER_SD_SDIO_CMDEND(value)    (SDMMC_EISTER_SD_SDIO_CMDEND_Msk & ((value) << SDMMC_EISTER_SD_SDIO_CMDEND_Pos))
+#define   SDMMC_EISTER_SD_SDIO_CMDEND_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The CMDEND status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_SD_SDIO_CMDEND_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The CMDEND status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_SD_SDIO_CMDEND_MASKED    (SDMMC_EISTER_SD_SDIO_CMDEND_MASKED_Val << SDMMC_EISTER_SD_SDIO_CMDEND_Pos) /**< (SDMMC_EISTER) The CMDEND status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_SD_SDIO_CMDEND_ENABLED   (SDMMC_EISTER_SD_SDIO_CMDEND_ENABLED_Val << SDMMC_EISTER_SD_SDIO_CMDEND_Pos) /**< (SDMMC_EISTER) The CMDEND status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_SD_SDIO_CMDIDX_Pos       _U_(3)                                               /**< (SDMMC_EISTER) Command Index Error Status Enable Position */
+#define SDMMC_EISTER_SD_SDIO_CMDIDX_Msk       (_U_(0x1) << SDMMC_EISTER_SD_SDIO_CMDIDX_Pos)        /**< (SDMMC_EISTER) Command Index Error Status Enable Mask */
+#define SDMMC_EISTER_SD_SDIO_CMDIDX(value)    (SDMMC_EISTER_SD_SDIO_CMDIDX_Msk & ((value) << SDMMC_EISTER_SD_SDIO_CMDIDX_Pos))
+#define   SDMMC_EISTER_SD_SDIO_CMDIDX_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The CMDIDX status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_SD_SDIO_CMDIDX_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The CMDIDX status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_SD_SDIO_CMDIDX_MASKED    (SDMMC_EISTER_SD_SDIO_CMDIDX_MASKED_Val << SDMMC_EISTER_SD_SDIO_CMDIDX_Pos) /**< (SDMMC_EISTER) The CMDIDX status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_SD_SDIO_CMDIDX_ENABLED   (SDMMC_EISTER_SD_SDIO_CMDIDX_ENABLED_Val << SDMMC_EISTER_SD_SDIO_CMDIDX_Pos) /**< (SDMMC_EISTER) The CMDIDX status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_SD_SDIO_DATTEO_Pos       _U_(4)                                               /**< (SDMMC_EISTER) Data Timeout Error Status Enable Position */
+#define SDMMC_EISTER_SD_SDIO_DATTEO_Msk       (_U_(0x1) << SDMMC_EISTER_SD_SDIO_DATTEO_Pos)        /**< (SDMMC_EISTER) Data Timeout Error Status Enable Mask */
+#define SDMMC_EISTER_SD_SDIO_DATTEO(value)    (SDMMC_EISTER_SD_SDIO_DATTEO_Msk & ((value) << SDMMC_EISTER_SD_SDIO_DATTEO_Pos))
+#define   SDMMC_EISTER_SD_SDIO_DATTEO_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The DATTEO status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_SD_SDIO_DATTEO_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The DATTEO status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_SD_SDIO_DATTEO_MASKED    (SDMMC_EISTER_SD_SDIO_DATTEO_MASKED_Val << SDMMC_EISTER_SD_SDIO_DATTEO_Pos) /**< (SDMMC_EISTER) The DATTEO status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_SD_SDIO_DATTEO_ENABLED   (SDMMC_EISTER_SD_SDIO_DATTEO_ENABLED_Val << SDMMC_EISTER_SD_SDIO_DATTEO_Pos) /**< (SDMMC_EISTER) The DATTEO status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_SD_SDIO_DATCRC_Pos       _U_(5)                                               /**< (SDMMC_EISTER) Data CRC Error Status Enable Position */
+#define SDMMC_EISTER_SD_SDIO_DATCRC_Msk       (_U_(0x1) << SDMMC_EISTER_SD_SDIO_DATCRC_Pos)        /**< (SDMMC_EISTER) Data CRC Error Status Enable Mask */
+#define SDMMC_EISTER_SD_SDIO_DATCRC(value)    (SDMMC_EISTER_SD_SDIO_DATCRC_Msk & ((value) << SDMMC_EISTER_SD_SDIO_DATCRC_Pos))
+#define   SDMMC_EISTER_SD_SDIO_DATCRC_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The DATCRC status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_SD_SDIO_DATCRC_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The DATCRC status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_SD_SDIO_DATCRC_MASKED    (SDMMC_EISTER_SD_SDIO_DATCRC_MASKED_Val << SDMMC_EISTER_SD_SDIO_DATCRC_Pos) /**< (SDMMC_EISTER) The DATCRC status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_SD_SDIO_DATCRC_ENABLED   (SDMMC_EISTER_SD_SDIO_DATCRC_ENABLED_Val << SDMMC_EISTER_SD_SDIO_DATCRC_Pos) /**< (SDMMC_EISTER) The DATCRC status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_SD_SDIO_DATEND_Pos       _U_(6)                                               /**< (SDMMC_EISTER) Data End Bit Error Status Enable Position */
+#define SDMMC_EISTER_SD_SDIO_DATEND_Msk       (_U_(0x1) << SDMMC_EISTER_SD_SDIO_DATEND_Pos)        /**< (SDMMC_EISTER) Data End Bit Error Status Enable Mask */
+#define SDMMC_EISTER_SD_SDIO_DATEND(value)    (SDMMC_EISTER_SD_SDIO_DATEND_Msk & ((value) << SDMMC_EISTER_SD_SDIO_DATEND_Pos))
+#define   SDMMC_EISTER_SD_SDIO_DATEND_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The DATEND status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_SD_SDIO_DATEND_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The DATEND status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_SD_SDIO_DATEND_MASKED    (SDMMC_EISTER_SD_SDIO_DATEND_MASKED_Val << SDMMC_EISTER_SD_SDIO_DATEND_Pos) /**< (SDMMC_EISTER) The DATEND status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_SD_SDIO_DATEND_ENABLED   (SDMMC_EISTER_SD_SDIO_DATEND_ENABLED_Val << SDMMC_EISTER_SD_SDIO_DATEND_Pos) /**< (SDMMC_EISTER) The DATEND status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_SD_SDIO_CURLIM_Pos       _U_(7)                                               /**< (SDMMC_EISTER) Current Limit Error Status Enable Position */
+#define SDMMC_EISTER_SD_SDIO_CURLIM_Msk       (_U_(0x1) << SDMMC_EISTER_SD_SDIO_CURLIM_Pos)        /**< (SDMMC_EISTER) Current Limit Error Status Enable Mask */
+#define SDMMC_EISTER_SD_SDIO_CURLIM(value)    (SDMMC_EISTER_SD_SDIO_CURLIM_Msk & ((value) << SDMMC_EISTER_SD_SDIO_CURLIM_Pos))
+#define   SDMMC_EISTER_SD_SDIO_CURLIM_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The CURLIM status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_SD_SDIO_CURLIM_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The CURLIM status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_SD_SDIO_CURLIM_MASKED    (SDMMC_EISTER_SD_SDIO_CURLIM_MASKED_Val << SDMMC_EISTER_SD_SDIO_CURLIM_Pos) /**< (SDMMC_EISTER) The CURLIM status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_SD_SDIO_CURLIM_ENABLED   (SDMMC_EISTER_SD_SDIO_CURLIM_ENABLED_Val << SDMMC_EISTER_SD_SDIO_CURLIM_Pos) /**< (SDMMC_EISTER) The CURLIM status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_SD_SDIO_ACMD_Pos         _U_(8)                                               /**< (SDMMC_EISTER) Auto CMD Error Status Enable Position */
+#define SDMMC_EISTER_SD_SDIO_ACMD_Msk         (_U_(0x1) << SDMMC_EISTER_SD_SDIO_ACMD_Pos)          /**< (SDMMC_EISTER) Auto CMD Error Status Enable Mask */
+#define SDMMC_EISTER_SD_SDIO_ACMD(value)      (SDMMC_EISTER_SD_SDIO_ACMD_Msk & ((value) << SDMMC_EISTER_SD_SDIO_ACMD_Pos))
+#define   SDMMC_EISTER_SD_SDIO_ACMD_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The ACMD status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_SD_SDIO_ACMD_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The ACMD status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_SD_SDIO_ACMD_MASKED      (SDMMC_EISTER_SD_SDIO_ACMD_MASKED_Val << SDMMC_EISTER_SD_SDIO_ACMD_Pos) /**< (SDMMC_EISTER) The ACMD status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_SD_SDIO_ACMD_ENABLED     (SDMMC_EISTER_SD_SDIO_ACMD_ENABLED_Val << SDMMC_EISTER_SD_SDIO_ACMD_Pos) /**< (SDMMC_EISTER) The ACMD status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_SD_SDIO_ADMA_Pos         _U_(9)                                               /**< (SDMMC_EISTER) ADMA Error Status Enable Position */
+#define SDMMC_EISTER_SD_SDIO_ADMA_Msk         (_U_(0x1) << SDMMC_EISTER_SD_SDIO_ADMA_Pos)          /**< (SDMMC_EISTER) ADMA Error Status Enable Mask */
+#define SDMMC_EISTER_SD_SDIO_ADMA(value)      (SDMMC_EISTER_SD_SDIO_ADMA_Msk & ((value) << SDMMC_EISTER_SD_SDIO_ADMA_Pos))
+#define   SDMMC_EISTER_SD_SDIO_ADMA_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The ADMA status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_SD_SDIO_ADMA_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The ADMA status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_SD_SDIO_ADMA_MASKED      (SDMMC_EISTER_SD_SDIO_ADMA_MASKED_Val << SDMMC_EISTER_SD_SDIO_ADMA_Pos) /**< (SDMMC_EISTER) The ADMA status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_SD_SDIO_ADMA_ENABLED     (SDMMC_EISTER_SD_SDIO_ADMA_ENABLED_Val << SDMMC_EISTER_SD_SDIO_ADMA_Pos) /**< (SDMMC_EISTER) The ADMA status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_SD_SDIO_TUNING_Pos       _U_(10)                                              /**< (SDMMC_EISTER) Tuning Error Status Enable Position */
+#define SDMMC_EISTER_SD_SDIO_TUNING_Msk       (_U_(0x1) << SDMMC_EISTER_SD_SDIO_TUNING_Pos)        /**< (SDMMC_EISTER) Tuning Error Status Enable Mask */
+#define SDMMC_EISTER_SD_SDIO_TUNING(value)    (SDMMC_EISTER_SD_SDIO_TUNING_Msk & ((value) << SDMMC_EISTER_SD_SDIO_TUNING_Pos))
+#define   SDMMC_EISTER_SD_SDIO_TUNING_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is masked.  */
+#define   SDMMC_EISTER_SD_SDIO_TUNING_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is enabled.  */
+#define SDMMC_EISTER_SD_SDIO_TUNING_MASKED    (SDMMC_EISTER_SD_SDIO_TUNING_MASKED_Val << SDMMC_EISTER_SD_SDIO_TUNING_Pos) /**< (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is masked. Position  */
+#define SDMMC_EISTER_SD_SDIO_TUNING_ENABLED   (SDMMC_EISTER_SD_SDIO_TUNING_ENABLED_Val << SDMMC_EISTER_SD_SDIO_TUNING_Pos) /**< (SDMMC_EISTER) The TUNING status flag in SDMMC_EISTR is enabled. Position  */
+#define SDMMC_EISTER_SD_SDIO_Msk              _U_(0x07FF)                                           /**< (SDMMC_EISTER_SD_SDIO) Register Mask  */
 
 
 /* -------- SDMMC_NISIER : (SDMMC Offset: 0x38) (R/W 16) Normal Interrupt Signal Enable Register -------- */
 #define SDMMC_NISIER_RESETVALUE               _U_(0x00)                                            /**<  (SDMMC_NISIER) Normal Interrupt Signal Enable Register  Reset Value */
 
-#define SDMMC_NISIER_CMDC_Pos                 _U_(0)                                               /**< (SDMMC_NISIER) Command Complete Signal Enable Position */
-#define SDMMC_NISIER_CMDC_Msk                 (_U_(0x1) << SDMMC_NISIER_CMDC_Pos)                  /**< (SDMMC_NISIER) Command Complete Signal Enable Mask */
-#define SDMMC_NISIER_CMDC(value)              (SDMMC_NISIER_CMDC_Msk & ((value) << SDMMC_NISIER_CMDC_Pos))
-#define   SDMMC_NISIER_CMDC_MASKED_Val        _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the CMDC status rises in SDMMC_NISTR.  */
-#define   SDMMC_NISIER_CMDC_ENABLED_Val       _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the CMDC status rises in SDMMC_NISTR.  */
-#define SDMMC_NISIER_CMDC_MASKED              (SDMMC_NISIER_CMDC_MASKED_Val << SDMMC_NISIER_CMDC_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the CMDC status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_CMDC_ENABLED             (SDMMC_NISIER_CMDC_ENABLED_Val << SDMMC_NISIER_CMDC_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the CMDC status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_TRFC_Pos                 _U_(1)                                               /**< (SDMMC_NISIER) Transfer Complete Signal Enable Position */
-#define SDMMC_NISIER_TRFC_Msk                 (_U_(0x1) << SDMMC_NISIER_TRFC_Pos)                  /**< (SDMMC_NISIER) Transfer Complete Signal Enable Mask */
-#define SDMMC_NISIER_TRFC(value)              (SDMMC_NISIER_TRFC_Msk & ((value) << SDMMC_NISIER_TRFC_Pos))
-#define   SDMMC_NISIER_TRFC_MASKED_Val        _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the TRFC status rises in SDMMC_NISTR.  */
-#define   SDMMC_NISIER_TRFC_ENABLED_Val       _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the TRFC status rises in SDMMC_NISTR.  */
-#define SDMMC_NISIER_TRFC_MASKED              (SDMMC_NISIER_TRFC_MASKED_Val << SDMMC_NISIER_TRFC_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the TRFC status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_TRFC_ENABLED             (SDMMC_NISIER_TRFC_ENABLED_Val << SDMMC_NISIER_TRFC_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the TRFC status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_BLKGE_Pos                _U_(2)                                               /**< (SDMMC_NISIER) Block Gap Event Signal Enable Position */
-#define SDMMC_NISIER_BLKGE_Msk                (_U_(0x1) << SDMMC_NISIER_BLKGE_Pos)                 /**< (SDMMC_NISIER) Block Gap Event Signal Enable Mask */
-#define SDMMC_NISIER_BLKGE(value)             (SDMMC_NISIER_BLKGE_Msk & ((value) << SDMMC_NISIER_BLKGE_Pos))
-#define   SDMMC_NISIER_BLKGE_MASKED_Val       _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the BLKGE status rises in SDMMC_NISTR.  */
-#define   SDMMC_NISIER_BLKGE_ENABLED_Val      _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the BLKGE status rises in SDMMC_NISTR.  */
-#define SDMMC_NISIER_BLKGE_MASKED             (SDMMC_NISIER_BLKGE_MASKED_Val << SDMMC_NISIER_BLKGE_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the BLKGE status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_BLKGE_ENABLED            (SDMMC_NISIER_BLKGE_ENABLED_Val << SDMMC_NISIER_BLKGE_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the BLKGE status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_DMAINT_Pos               _U_(3)                                               /**< (SDMMC_NISIER) DMA Interrupt Signal Enable Position */
-#define SDMMC_NISIER_DMAINT_Msk               (_U_(0x1) << SDMMC_NISIER_DMAINT_Pos)                /**< (SDMMC_NISIER) DMA Interrupt Signal Enable Mask */
-#define SDMMC_NISIER_DMAINT(value)            (SDMMC_NISIER_DMAINT_Msk & ((value) << SDMMC_NISIER_DMAINT_Pos))
-#define   SDMMC_NISIER_DMAINT_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the DMAINT status rises in SDMMC_NISTR.  */
-#define   SDMMC_NISIER_DMAINT_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the DMAINT status rises in SDMMC_NISTR.  */
-#define SDMMC_NISIER_DMAINT_MASKED            (SDMMC_NISIER_DMAINT_MASKED_Val << SDMMC_NISIER_DMAINT_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the DMAINT status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_DMAINT_ENABLED           (SDMMC_NISIER_DMAINT_ENABLED_Val << SDMMC_NISIER_DMAINT_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the DMAINT status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_BWRRDY_Pos               _U_(4)                                               /**< (SDMMC_NISIER) Buffer Write Ready Signal Enable Position */
-#define SDMMC_NISIER_BWRRDY_Msk               (_U_(0x1) << SDMMC_NISIER_BWRRDY_Pos)                /**< (SDMMC_NISIER) Buffer Write Ready Signal Enable Mask */
-#define SDMMC_NISIER_BWRRDY(value)            (SDMMC_NISIER_BWRRDY_Msk & ((value) << SDMMC_NISIER_BWRRDY_Pos))
-#define   SDMMC_NISIER_BWRRDY_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the BWRRDY status rises in SDMMC_NISTR.  */
-#define   SDMMC_NISIER_BWRRDY_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the BWRRDY status rises in SDMMC_NISTR.  */
-#define SDMMC_NISIER_BWRRDY_MASKED            (SDMMC_NISIER_BWRRDY_MASKED_Val << SDMMC_NISIER_BWRRDY_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the BWRRDY status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_BWRRDY_ENABLED           (SDMMC_NISIER_BWRRDY_ENABLED_Val << SDMMC_NISIER_BWRRDY_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the BWRRDY status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_BRDRDY_Pos               _U_(5)                                               /**< (SDMMC_NISIER) Buffer Read Ready Signal Enable Position */
-#define SDMMC_NISIER_BRDRDY_Msk               (_U_(0x1) << SDMMC_NISIER_BRDRDY_Pos)                /**< (SDMMC_NISIER) Buffer Read Ready Signal Enable Mask */
-#define SDMMC_NISIER_BRDRDY(value)            (SDMMC_NISIER_BRDRDY_Msk & ((value) << SDMMC_NISIER_BRDRDY_Pos))
-#define   SDMMC_NISIER_BRDRDY_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the BRDRDY status rises in SDMMC_NISTR.  */
-#define   SDMMC_NISIER_BRDRDY_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the BRDRDY status rises in SDMMC_NISTR.  */
-#define SDMMC_NISIER_BRDRDY_MASKED            (SDMMC_NISIER_BRDRDY_MASKED_Val << SDMMC_NISIER_BRDRDY_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the BRDRDY status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_BRDRDY_ENABLED           (SDMMC_NISIER_BRDRDY_ENABLED_Val << SDMMC_NISIER_BRDRDY_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the BRDRDY status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_Msk                      _U_(0x003F)                                          /**< (SDMMC_NISIER) Register Mask  */
+#define SDMMC_NISIER_Msk                      _U_(0x0000)                                          /**< (SDMMC_NISIER) Register Mask  */
 
 /* EMMC mode */
+#define SDMMC_NISIER_EMMC_CMDC_Pos            _U_(0)                                               /**< (SDMMC_NISIER) Command Complete Signal Enable Position */
+#define SDMMC_NISIER_EMMC_CMDC_Msk            (_U_(0x1) << SDMMC_NISIER_EMMC_CMDC_Pos)             /**< (SDMMC_NISIER) Command Complete Signal Enable Mask */
+#define SDMMC_NISIER_EMMC_CMDC(value)         (SDMMC_NISIER_EMMC_CMDC_Msk & ((value) << SDMMC_NISIER_EMMC_CMDC_Pos))
+#define   SDMMC_NISIER_EMMC_CMDC_MASKED_Val   _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the CMDC status rises in SDMMC_NISTR.  */
+#define   SDMMC_NISIER_EMMC_CMDC_ENABLED_Val  _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the CMDC status rises in SDMMC_NISTR.  */
+#define SDMMC_NISIER_EMMC_CMDC_MASKED         (SDMMC_NISIER_EMMC_CMDC_MASKED_Val << SDMMC_NISIER_EMMC_CMDC_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the CMDC status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_EMMC_CMDC_ENABLED        (SDMMC_NISIER_EMMC_CMDC_ENABLED_Val << SDMMC_NISIER_EMMC_CMDC_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the CMDC status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_EMMC_TRFC_Pos            _U_(1)                                               /**< (SDMMC_NISIER) Transfer Complete Signal Enable Position */
+#define SDMMC_NISIER_EMMC_TRFC_Msk            (_U_(0x1) << SDMMC_NISIER_EMMC_TRFC_Pos)             /**< (SDMMC_NISIER) Transfer Complete Signal Enable Mask */
+#define SDMMC_NISIER_EMMC_TRFC(value)         (SDMMC_NISIER_EMMC_TRFC_Msk & ((value) << SDMMC_NISIER_EMMC_TRFC_Pos))
+#define   SDMMC_NISIER_EMMC_TRFC_MASKED_Val   _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the TRFC status rises in SDMMC_NISTR.  */
+#define   SDMMC_NISIER_EMMC_TRFC_ENABLED_Val  _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the TRFC status rises in SDMMC_NISTR.  */
+#define SDMMC_NISIER_EMMC_TRFC_MASKED         (SDMMC_NISIER_EMMC_TRFC_MASKED_Val << SDMMC_NISIER_EMMC_TRFC_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the TRFC status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_EMMC_TRFC_ENABLED        (SDMMC_NISIER_EMMC_TRFC_ENABLED_Val << SDMMC_NISIER_EMMC_TRFC_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the TRFC status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_EMMC_BLKGE_Pos           _U_(2)                                               /**< (SDMMC_NISIER) Block Gap Event Signal Enable Position */
+#define SDMMC_NISIER_EMMC_BLKGE_Msk           (_U_(0x1) << SDMMC_NISIER_EMMC_BLKGE_Pos)            /**< (SDMMC_NISIER) Block Gap Event Signal Enable Mask */
+#define SDMMC_NISIER_EMMC_BLKGE(value)        (SDMMC_NISIER_EMMC_BLKGE_Msk & ((value) << SDMMC_NISIER_EMMC_BLKGE_Pos))
+#define   SDMMC_NISIER_EMMC_BLKGE_MASKED_Val  _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the BLKGE status rises in SDMMC_NISTR.  */
+#define   SDMMC_NISIER_EMMC_BLKGE_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the BLKGE status rises in SDMMC_NISTR.  */
+#define SDMMC_NISIER_EMMC_BLKGE_MASKED        (SDMMC_NISIER_EMMC_BLKGE_MASKED_Val << SDMMC_NISIER_EMMC_BLKGE_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the BLKGE status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_EMMC_BLKGE_ENABLED       (SDMMC_NISIER_EMMC_BLKGE_ENABLED_Val << SDMMC_NISIER_EMMC_BLKGE_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the BLKGE status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_EMMC_DMAINT_Pos          _U_(3)                                               /**< (SDMMC_NISIER) DMA Interrupt Signal Enable Position */
+#define SDMMC_NISIER_EMMC_DMAINT_Msk          (_U_(0x1) << SDMMC_NISIER_EMMC_DMAINT_Pos)           /**< (SDMMC_NISIER) DMA Interrupt Signal Enable Mask */
+#define SDMMC_NISIER_EMMC_DMAINT(value)       (SDMMC_NISIER_EMMC_DMAINT_Msk & ((value) << SDMMC_NISIER_EMMC_DMAINT_Pos))
+#define   SDMMC_NISIER_EMMC_DMAINT_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the DMAINT status rises in SDMMC_NISTR.  */
+#define   SDMMC_NISIER_EMMC_DMAINT_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the DMAINT status rises in SDMMC_NISTR.  */
+#define SDMMC_NISIER_EMMC_DMAINT_MASKED       (SDMMC_NISIER_EMMC_DMAINT_MASKED_Val << SDMMC_NISIER_EMMC_DMAINT_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the DMAINT status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_EMMC_DMAINT_ENABLED      (SDMMC_NISIER_EMMC_DMAINT_ENABLED_Val << SDMMC_NISIER_EMMC_DMAINT_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the DMAINT status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_EMMC_BWRRDY_Pos          _U_(4)                                               /**< (SDMMC_NISIER) Buffer Write Ready Signal Enable Position */
+#define SDMMC_NISIER_EMMC_BWRRDY_Msk          (_U_(0x1) << SDMMC_NISIER_EMMC_BWRRDY_Pos)           /**< (SDMMC_NISIER) Buffer Write Ready Signal Enable Mask */
+#define SDMMC_NISIER_EMMC_BWRRDY(value)       (SDMMC_NISIER_EMMC_BWRRDY_Msk & ((value) << SDMMC_NISIER_EMMC_BWRRDY_Pos))
+#define   SDMMC_NISIER_EMMC_BWRRDY_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the BWRRDY status rises in SDMMC_NISTR.  */
+#define   SDMMC_NISIER_EMMC_BWRRDY_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the BWRRDY status rises in SDMMC_NISTR.  */
+#define SDMMC_NISIER_EMMC_BWRRDY_MASKED       (SDMMC_NISIER_EMMC_BWRRDY_MASKED_Val << SDMMC_NISIER_EMMC_BWRRDY_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the BWRRDY status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_EMMC_BWRRDY_ENABLED      (SDMMC_NISIER_EMMC_BWRRDY_ENABLED_Val << SDMMC_NISIER_EMMC_BWRRDY_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the BWRRDY status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_EMMC_BRDRDY_Pos          _U_(5)                                               /**< (SDMMC_NISIER) Buffer Read Ready Signal Enable Position */
+#define SDMMC_NISIER_EMMC_BRDRDY_Msk          (_U_(0x1) << SDMMC_NISIER_EMMC_BRDRDY_Pos)           /**< (SDMMC_NISIER) Buffer Read Ready Signal Enable Mask */
+#define SDMMC_NISIER_EMMC_BRDRDY(value)       (SDMMC_NISIER_EMMC_BRDRDY_Msk & ((value) << SDMMC_NISIER_EMMC_BRDRDY_Pos))
+#define   SDMMC_NISIER_EMMC_BRDRDY_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the BRDRDY status rises in SDMMC_NISTR.  */
+#define   SDMMC_NISIER_EMMC_BRDRDY_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the BRDRDY status rises in SDMMC_NISTR.  */
+#define SDMMC_NISIER_EMMC_BRDRDY_MASKED       (SDMMC_NISIER_EMMC_BRDRDY_MASKED_Val << SDMMC_NISIER_EMMC_BRDRDY_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the BRDRDY status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_EMMC_BRDRDY_ENABLED      (SDMMC_NISIER_EMMC_BRDRDY_ENABLED_Val << SDMMC_NISIER_EMMC_BRDRDY_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the BRDRDY status rises in SDMMC_NISTR. Position  */
 #define SDMMC_NISIER_EMMC_BOOTAR_Pos          _U_(14)                                              /**< (SDMMC_NISIER) Boot Acknowledge Received Signal Enable Position */
 #define SDMMC_NISIER_EMMC_BOOTAR_Msk          (_U_(0x1) << SDMMC_NISIER_EMMC_BOOTAR_Pos)           /**< (SDMMC_NISIER) Boot Acknowledge Received Signal Enable Mask */
 #define SDMMC_NISIER_EMMC_BOOTAR(value)       (SDMMC_NISIER_EMMC_BOOTAR_Msk & ((value) << SDMMC_NISIER_EMMC_BOOTAR_Pos))
@@ -908,9 +1153,51 @@
 #define   SDMMC_NISIER_EMMC_BOOTAR_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the BOOTAR status rises in SDMMC_NISTR.  */
 #define SDMMC_NISIER_EMMC_BOOTAR_MASKED       (SDMMC_NISIER_EMMC_BOOTAR_MASKED_Val << SDMMC_NISIER_EMMC_BOOTAR_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the BOOTAR status rises in SDMMC_NISTR. Position  */
 #define SDMMC_NISIER_EMMC_BOOTAR_ENABLED      (SDMMC_NISIER_EMMC_BOOTAR_ENABLED_Val << SDMMC_NISIER_EMMC_BOOTAR_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the BOOTAR status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_EMMC_Msk                 _U_(0x4000)                                           /**< (SDMMC_NISIER_EMMC) Register Mask  */
+#define SDMMC_NISIER_EMMC_Msk                 _U_(0x403F)                                           /**< (SDMMC_NISIER_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
+#define SDMMC_NISIER_SD_SDIO_CMDC_Pos         _U_(0)                                               /**< (SDMMC_NISIER) Command Complete Signal Enable Position */
+#define SDMMC_NISIER_SD_SDIO_CMDC_Msk         (_U_(0x1) << SDMMC_NISIER_SD_SDIO_CMDC_Pos)          /**< (SDMMC_NISIER) Command Complete Signal Enable Mask */
+#define SDMMC_NISIER_SD_SDIO_CMDC(value)      (SDMMC_NISIER_SD_SDIO_CMDC_Msk & ((value) << SDMMC_NISIER_SD_SDIO_CMDC_Pos))
+#define   SDMMC_NISIER_SD_SDIO_CMDC_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the CMDC status rises in SDMMC_NISTR.  */
+#define   SDMMC_NISIER_SD_SDIO_CMDC_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the CMDC status rises in SDMMC_NISTR.  */
+#define SDMMC_NISIER_SD_SDIO_CMDC_MASKED      (SDMMC_NISIER_SD_SDIO_CMDC_MASKED_Val << SDMMC_NISIER_SD_SDIO_CMDC_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the CMDC status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_SD_SDIO_CMDC_ENABLED     (SDMMC_NISIER_SD_SDIO_CMDC_ENABLED_Val << SDMMC_NISIER_SD_SDIO_CMDC_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the CMDC status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_SD_SDIO_TRFC_Pos         _U_(1)                                               /**< (SDMMC_NISIER) Transfer Complete Signal Enable Position */
+#define SDMMC_NISIER_SD_SDIO_TRFC_Msk         (_U_(0x1) << SDMMC_NISIER_SD_SDIO_TRFC_Pos)          /**< (SDMMC_NISIER) Transfer Complete Signal Enable Mask */
+#define SDMMC_NISIER_SD_SDIO_TRFC(value)      (SDMMC_NISIER_SD_SDIO_TRFC_Msk & ((value) << SDMMC_NISIER_SD_SDIO_TRFC_Pos))
+#define   SDMMC_NISIER_SD_SDIO_TRFC_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the TRFC status rises in SDMMC_NISTR.  */
+#define   SDMMC_NISIER_SD_SDIO_TRFC_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the TRFC status rises in SDMMC_NISTR.  */
+#define SDMMC_NISIER_SD_SDIO_TRFC_MASKED      (SDMMC_NISIER_SD_SDIO_TRFC_MASKED_Val << SDMMC_NISIER_SD_SDIO_TRFC_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the TRFC status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_SD_SDIO_TRFC_ENABLED     (SDMMC_NISIER_SD_SDIO_TRFC_ENABLED_Val << SDMMC_NISIER_SD_SDIO_TRFC_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the TRFC status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_SD_SDIO_BLKGE_Pos        _U_(2)                                               /**< (SDMMC_NISIER) Block Gap Event Signal Enable Position */
+#define SDMMC_NISIER_SD_SDIO_BLKGE_Msk        (_U_(0x1) << SDMMC_NISIER_SD_SDIO_BLKGE_Pos)         /**< (SDMMC_NISIER) Block Gap Event Signal Enable Mask */
+#define SDMMC_NISIER_SD_SDIO_BLKGE(value)     (SDMMC_NISIER_SD_SDIO_BLKGE_Msk & ((value) << SDMMC_NISIER_SD_SDIO_BLKGE_Pos))
+#define   SDMMC_NISIER_SD_SDIO_BLKGE_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the BLKGE status rises in SDMMC_NISTR.  */
+#define   SDMMC_NISIER_SD_SDIO_BLKGE_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the BLKGE status rises in SDMMC_NISTR.  */
+#define SDMMC_NISIER_SD_SDIO_BLKGE_MASKED     (SDMMC_NISIER_SD_SDIO_BLKGE_MASKED_Val << SDMMC_NISIER_SD_SDIO_BLKGE_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the BLKGE status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_SD_SDIO_BLKGE_ENABLED    (SDMMC_NISIER_SD_SDIO_BLKGE_ENABLED_Val << SDMMC_NISIER_SD_SDIO_BLKGE_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the BLKGE status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_SD_SDIO_DMAINT_Pos       _U_(3)                                               /**< (SDMMC_NISIER) DMA Interrupt Signal Enable Position */
+#define SDMMC_NISIER_SD_SDIO_DMAINT_Msk       (_U_(0x1) << SDMMC_NISIER_SD_SDIO_DMAINT_Pos)        /**< (SDMMC_NISIER) DMA Interrupt Signal Enable Mask */
+#define SDMMC_NISIER_SD_SDIO_DMAINT(value)    (SDMMC_NISIER_SD_SDIO_DMAINT_Msk & ((value) << SDMMC_NISIER_SD_SDIO_DMAINT_Pos))
+#define   SDMMC_NISIER_SD_SDIO_DMAINT_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the DMAINT status rises in SDMMC_NISTR.  */
+#define   SDMMC_NISIER_SD_SDIO_DMAINT_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the DMAINT status rises in SDMMC_NISTR.  */
+#define SDMMC_NISIER_SD_SDIO_DMAINT_MASKED    (SDMMC_NISIER_SD_SDIO_DMAINT_MASKED_Val << SDMMC_NISIER_SD_SDIO_DMAINT_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the DMAINT status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_SD_SDIO_DMAINT_ENABLED   (SDMMC_NISIER_SD_SDIO_DMAINT_ENABLED_Val << SDMMC_NISIER_SD_SDIO_DMAINT_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the DMAINT status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_SD_SDIO_BWRRDY_Pos       _U_(4)                                               /**< (SDMMC_NISIER) Buffer Write Ready Signal Enable Position */
+#define SDMMC_NISIER_SD_SDIO_BWRRDY_Msk       (_U_(0x1) << SDMMC_NISIER_SD_SDIO_BWRRDY_Pos)        /**< (SDMMC_NISIER) Buffer Write Ready Signal Enable Mask */
+#define SDMMC_NISIER_SD_SDIO_BWRRDY(value)    (SDMMC_NISIER_SD_SDIO_BWRRDY_Msk & ((value) << SDMMC_NISIER_SD_SDIO_BWRRDY_Pos))
+#define   SDMMC_NISIER_SD_SDIO_BWRRDY_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the BWRRDY status rises in SDMMC_NISTR.  */
+#define   SDMMC_NISIER_SD_SDIO_BWRRDY_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the BWRRDY status rises in SDMMC_NISTR.  */
+#define SDMMC_NISIER_SD_SDIO_BWRRDY_MASKED    (SDMMC_NISIER_SD_SDIO_BWRRDY_MASKED_Val << SDMMC_NISIER_SD_SDIO_BWRRDY_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the BWRRDY status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_SD_SDIO_BWRRDY_ENABLED   (SDMMC_NISIER_SD_SDIO_BWRRDY_ENABLED_Val << SDMMC_NISIER_SD_SDIO_BWRRDY_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the BWRRDY status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_SD_SDIO_BRDRDY_Pos       _U_(5)                                               /**< (SDMMC_NISIER) Buffer Read Ready Signal Enable Position */
+#define SDMMC_NISIER_SD_SDIO_BRDRDY_Msk       (_U_(0x1) << SDMMC_NISIER_SD_SDIO_BRDRDY_Pos)        /**< (SDMMC_NISIER) Buffer Read Ready Signal Enable Mask */
+#define SDMMC_NISIER_SD_SDIO_BRDRDY(value)    (SDMMC_NISIER_SD_SDIO_BRDRDY_Msk & ((value) << SDMMC_NISIER_SD_SDIO_BRDRDY_Pos))
+#define   SDMMC_NISIER_SD_SDIO_BRDRDY_MASKED_Val _U_(0x0)                                             /**< (SDMMC_NISIER) No interrupt is generated when the BRDRDY status rises in SDMMC_NISTR.  */
+#define   SDMMC_NISIER_SD_SDIO_BRDRDY_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the BRDRDY status rises in SDMMC_NISTR.  */
+#define SDMMC_NISIER_SD_SDIO_BRDRDY_MASKED    (SDMMC_NISIER_SD_SDIO_BRDRDY_MASKED_Val << SDMMC_NISIER_SD_SDIO_BRDRDY_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the BRDRDY status rises in SDMMC_NISTR. Position  */
+#define SDMMC_NISIER_SD_SDIO_BRDRDY_ENABLED   (SDMMC_NISIER_SD_SDIO_BRDRDY_ENABLED_Val << SDMMC_NISIER_SD_SDIO_BRDRDY_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the BRDRDY status rises in SDMMC_NISTR. Position  */
 #define SDMMC_NISIER_SD_SDIO_CINS_Pos         _U_(6)                                               /**< (SDMMC_NISIER) Card Insertion Signal Enable Position */
 #define SDMMC_NISIER_SD_SDIO_CINS_Msk         (_U_(0x1) << SDMMC_NISIER_SD_SDIO_CINS_Pos)          /**< (SDMMC_NISIER) Card Insertion Signal Enable Mask */
 #define SDMMC_NISIER_SD_SDIO_CINS(value)      (SDMMC_NISIER_SD_SDIO_CINS_Msk & ((value) << SDMMC_NISIER_SD_SDIO_CINS_Pos))
@@ -932,92 +1219,92 @@
 #define   SDMMC_NISIER_SD_SDIO_CINT_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_NISIER) An interrupt is generated when the CINT status rises in SDMMC_NISTR.  */
 #define SDMMC_NISIER_SD_SDIO_CINT_MASKED      (SDMMC_NISIER_SD_SDIO_CINT_MASKED_Val << SDMMC_NISIER_SD_SDIO_CINT_Pos) /**< (SDMMC_NISIER) No interrupt is generated when the CINT status rises in SDMMC_NISTR. Position  */
 #define SDMMC_NISIER_SD_SDIO_CINT_ENABLED     (SDMMC_NISIER_SD_SDIO_CINT_ENABLED_Val << SDMMC_NISIER_SD_SDIO_CINT_Pos) /**< (SDMMC_NISIER) An interrupt is generated when the CINT status rises in SDMMC_NISTR. Position  */
-#define SDMMC_NISIER_SD_SDIO_Msk              _U_(0x01C0)                                           /**< (SDMMC_NISIER_SD_SDIO) Register Mask  */
+#define SDMMC_NISIER_SD_SDIO_Msk              _U_(0x01FF)                                           /**< (SDMMC_NISIER_SD_SDIO) Register Mask  */
 
 
 /* -------- SDMMC_EISIER : (SDMMC Offset: 0x3A) (R/W 16) Error Interrupt Signal Enable Register -------- */
 #define SDMMC_EISIER_RESETVALUE               _U_(0x00)                                            /**<  (SDMMC_EISIER) Error Interrupt Signal Enable Register  Reset Value */
 
-#define SDMMC_EISIER_CMDTEO_Pos               _U_(0)                                               /**< (SDMMC_EISIER) Command Timeout Error Signal Enable Position */
-#define SDMMC_EISIER_CMDTEO_Msk               (_U_(0x1) << SDMMC_EISIER_CMDTEO_Pos)                /**< (SDMMC_EISIER) Command Timeout Error Signal Enable Mask */
-#define SDMMC_EISIER_CMDTEO(value)            (SDMMC_EISIER_CMDTEO_Msk & ((value) << SDMMC_EISIER_CMDTEO_Pos))
-#define   SDMMC_EISIER_CMDTEO_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CMDTEO status rises in SDMMC_EISTR.  */
-#define   SDMMC_EISIER_CMDTEO_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CMDTEO status rises in SDMMC_EISTR.  */
-#define SDMMC_EISIER_CMDTEO_MASKED            (SDMMC_EISIER_CMDTEO_MASKED_Val << SDMMC_EISIER_CMDTEO_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CMDTEO status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_CMDTEO_ENABLED           (SDMMC_EISIER_CMDTEO_ENABLED_Val << SDMMC_EISIER_CMDTEO_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CMDTEO status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_CMDCRC_Pos               _U_(1)                                               /**< (SDMMC_EISIER) Command CRC Error Signal Enable Position */
-#define SDMMC_EISIER_CMDCRC_Msk               (_U_(0x1) << SDMMC_EISIER_CMDCRC_Pos)                /**< (SDMMC_EISIER) Command CRC Error Signal Enable Mask */
-#define SDMMC_EISIER_CMDCRC(value)            (SDMMC_EISIER_CMDCRC_Msk & ((value) << SDMMC_EISIER_CMDCRC_Pos))
-#define   SDMMC_EISIER_CMDCRC_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CDMCRC status rises in SDMMC_EISTR.  */
-#define   SDMMC_EISIER_CMDCRC_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CMDCRC status rises in SDMMC_EISTR.  */
-#define SDMMC_EISIER_CMDCRC_MASKED            (SDMMC_EISIER_CMDCRC_MASKED_Val << SDMMC_EISIER_CMDCRC_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CDMCRC status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_CMDCRC_ENABLED           (SDMMC_EISIER_CMDCRC_ENABLED_Val << SDMMC_EISIER_CMDCRC_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CMDCRC status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_CMDEND_Pos               _U_(2)                                               /**< (SDMMC_EISIER) Command End Bit Error Signal Enable Position */
-#define SDMMC_EISIER_CMDEND_Msk               (_U_(0x1) << SDMMC_EISIER_CMDEND_Pos)                /**< (SDMMC_EISIER) Command End Bit Error Signal Enable Mask */
-#define SDMMC_EISIER_CMDEND(value)            (SDMMC_EISIER_CMDEND_Msk & ((value) << SDMMC_EISIER_CMDEND_Pos))
-#define   SDMMC_EISIER_CMDEND_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CMDEND status rises in SDMMC_EISTR.  */
-#define   SDMMC_EISIER_CMDEND_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CMDEND status rises in SDMMC_EISTR.  */
-#define SDMMC_EISIER_CMDEND_MASKED            (SDMMC_EISIER_CMDEND_MASKED_Val << SDMMC_EISIER_CMDEND_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CMDEND status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_CMDEND_ENABLED           (SDMMC_EISIER_CMDEND_ENABLED_Val << SDMMC_EISIER_CMDEND_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CMDEND status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_CMDIDX_Pos               _U_(3)                                               /**< (SDMMC_EISIER) Command Index Error Signal Enable Position */
-#define SDMMC_EISIER_CMDIDX_Msk               (_U_(0x1) << SDMMC_EISIER_CMDIDX_Pos)                /**< (SDMMC_EISIER) Command Index Error Signal Enable Mask */
-#define SDMMC_EISIER_CMDIDX(value)            (SDMMC_EISIER_CMDIDX_Msk & ((value) << SDMMC_EISIER_CMDIDX_Pos))
-#define   SDMMC_EISIER_CMDIDX_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CMDIDX status rises in SDMMC_EISTR.  */
-#define   SDMMC_EISIER_CMDIDX_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CMDIDX status rises in SDMMC_EISTR.  */
-#define SDMMC_EISIER_CMDIDX_MASKED            (SDMMC_EISIER_CMDIDX_MASKED_Val << SDMMC_EISIER_CMDIDX_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CMDIDX status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_CMDIDX_ENABLED           (SDMMC_EISIER_CMDIDX_ENABLED_Val << SDMMC_EISIER_CMDIDX_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CMDIDX status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_DATTEO_Pos               _U_(4)                                               /**< (SDMMC_EISIER) Data Timeout Error Signal Enable Position */
-#define SDMMC_EISIER_DATTEO_Msk               (_U_(0x1) << SDMMC_EISIER_DATTEO_Pos)                /**< (SDMMC_EISIER) Data Timeout Error Signal Enable Mask */
-#define SDMMC_EISIER_DATTEO(value)            (SDMMC_EISIER_DATTEO_Msk & ((value) << SDMMC_EISIER_DATTEO_Pos))
-#define   SDMMC_EISIER_DATTEO_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the DATTEO status rises in SDMMC_EISTR.  */
-#define   SDMMC_EISIER_DATTEO_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the DATTEO status rises in SDMMC_EISTR.  */
-#define SDMMC_EISIER_DATTEO_MASKED            (SDMMC_EISIER_DATTEO_MASKED_Val << SDMMC_EISIER_DATTEO_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the DATTEO status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_DATTEO_ENABLED           (SDMMC_EISIER_DATTEO_ENABLED_Val << SDMMC_EISIER_DATTEO_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the DATTEO status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_DATCRC_Pos               _U_(5)                                               /**< (SDMMC_EISIER) Data CRC Error Signal Enable Position */
-#define SDMMC_EISIER_DATCRC_Msk               (_U_(0x1) << SDMMC_EISIER_DATCRC_Pos)                /**< (SDMMC_EISIER) Data CRC Error Signal Enable Mask */
-#define SDMMC_EISIER_DATCRC(value)            (SDMMC_EISIER_DATCRC_Msk & ((value) << SDMMC_EISIER_DATCRC_Pos))
-#define   SDMMC_EISIER_DATCRC_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the DATCRC status rises in SDMMC_EISTR.  */
-#define   SDMMC_EISIER_DATCRC_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the DATCRC status rises in SDMMC_EISTR.  */
-#define SDMMC_EISIER_DATCRC_MASKED            (SDMMC_EISIER_DATCRC_MASKED_Val << SDMMC_EISIER_DATCRC_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the DATCRC status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_DATCRC_ENABLED           (SDMMC_EISIER_DATCRC_ENABLED_Val << SDMMC_EISIER_DATCRC_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the DATCRC status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_DATEND_Pos               _U_(6)                                               /**< (SDMMC_EISIER) Data End Bit Error Signal Enable Position */
-#define SDMMC_EISIER_DATEND_Msk               (_U_(0x1) << SDMMC_EISIER_DATEND_Pos)                /**< (SDMMC_EISIER) Data End Bit Error Signal Enable Mask */
-#define SDMMC_EISIER_DATEND(value)            (SDMMC_EISIER_DATEND_Msk & ((value) << SDMMC_EISIER_DATEND_Pos))
-#define   SDMMC_EISIER_DATEND_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the DATEND status rises in SDMMC_EISTR.  */
-#define   SDMMC_EISIER_DATEND_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the DATEND status rises in SDMMC_EISTR.  */
-#define SDMMC_EISIER_DATEND_MASKED            (SDMMC_EISIER_DATEND_MASKED_Val << SDMMC_EISIER_DATEND_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the DATEND status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_DATEND_ENABLED           (SDMMC_EISIER_DATEND_ENABLED_Val << SDMMC_EISIER_DATEND_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the DATEND status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_CURLIM_Pos               _U_(7)                                               /**< (SDMMC_EISIER) Current Limit Error Signal Enable Position */
-#define SDMMC_EISIER_CURLIM_Msk               (_U_(0x1) << SDMMC_EISIER_CURLIM_Pos)                /**< (SDMMC_EISIER) Current Limit Error Signal Enable Mask */
-#define SDMMC_EISIER_CURLIM(value)            (SDMMC_EISIER_CURLIM_Msk & ((value) << SDMMC_EISIER_CURLIM_Pos))
-#define   SDMMC_EISIER_CURLIM_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CURLIM status rises in SDMMC_EISTR.  */
-#define   SDMMC_EISIER_CURLIM_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CURLIM status rises in SDMMC_EISTR.  */
-#define SDMMC_EISIER_CURLIM_MASKED            (SDMMC_EISIER_CURLIM_MASKED_Val << SDMMC_EISIER_CURLIM_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CURLIM status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_CURLIM_ENABLED           (SDMMC_EISIER_CURLIM_ENABLED_Val << SDMMC_EISIER_CURLIM_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CURLIM status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_ACMD_Pos                 _U_(8)                                               /**< (SDMMC_EISIER) Auto CMD Error Signal Enable Position */
-#define SDMMC_EISIER_ACMD_Msk                 (_U_(0x1) << SDMMC_EISIER_ACMD_Pos)                  /**< (SDMMC_EISIER) Auto CMD Error Signal Enable Mask */
-#define SDMMC_EISIER_ACMD(value)              (SDMMC_EISIER_ACMD_Msk & ((value) << SDMMC_EISIER_ACMD_Pos))
-#define   SDMMC_EISIER_ACMD_MASKED_Val        _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the ACMD status rises in SDMMC_EISTR.  */
-#define   SDMMC_EISIER_ACMD_ENABLED_Val       _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the ACMD status rises in SDMMC_EISTR.  */
-#define SDMMC_EISIER_ACMD_MASKED              (SDMMC_EISIER_ACMD_MASKED_Val << SDMMC_EISIER_ACMD_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the ACMD status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_ACMD_ENABLED             (SDMMC_EISIER_ACMD_ENABLED_Val << SDMMC_EISIER_ACMD_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the ACMD status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_ADMA_Pos                 _U_(9)                                               /**< (SDMMC_EISIER) ADMA Error Signal Enable Position */
-#define SDMMC_EISIER_ADMA_Msk                 (_U_(0x1) << SDMMC_EISIER_ADMA_Pos)                  /**< (SDMMC_EISIER) ADMA Error Signal Enable Mask */
-#define SDMMC_EISIER_ADMA(value)              (SDMMC_EISIER_ADMA_Msk & ((value) << SDMMC_EISIER_ADMA_Pos))
-#define   SDMMC_EISIER_ADMA_MASKED_Val        _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the ADMA status rises in SDMMC_EISTR.  */
-#define   SDMMC_EISIER_ADMA_ENABLED_Val       _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the ADMA status rises in SDMMC_EISTR.  */
-#define SDMMC_EISIER_ADMA_MASKED              (SDMMC_EISIER_ADMA_MASKED_Val << SDMMC_EISIER_ADMA_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the ADMA status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_ADMA_ENABLED             (SDMMC_EISIER_ADMA_ENABLED_Val << SDMMC_EISIER_ADMA_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the ADMA status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_TUNING_Pos               _U_(10)                                              /**< (SDMMC_EISIER) Tuning Error Signal Enable Position */
-#define SDMMC_EISIER_TUNING_Msk               (_U_(0x1) << SDMMC_EISIER_TUNING_Pos)                /**< (SDMMC_EISIER) Tuning Error Signal Enable Mask */
-#define SDMMC_EISIER_TUNING(value)            (SDMMC_EISIER_TUNING_Msk & ((value) << SDMMC_EISIER_TUNING_Pos))
-#define   SDMMC_EISIER_TUNING_MASKED_Val      _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the TUNING status rises in SDMMC_EISTR.  */
-#define   SDMMC_EISIER_TUNING_ENABLED_Val     _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the TUNING status rises in SDMMC_EISTR.  */
-#define SDMMC_EISIER_TUNING_MASKED            (SDMMC_EISIER_TUNING_MASKED_Val << SDMMC_EISIER_TUNING_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the TUNING status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_TUNING_ENABLED           (SDMMC_EISIER_TUNING_ENABLED_Val << SDMMC_EISIER_TUNING_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the TUNING status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_Msk                      _U_(0x07FF)                                          /**< (SDMMC_EISIER) Register Mask  */
+#define SDMMC_EISIER_Msk                      _U_(0x0000)                                          /**< (SDMMC_EISIER) Register Mask  */
 
 /* EMMC mode */
+#define SDMMC_EISIER_EMMC_CMDTEO_Pos          _U_(0)                                               /**< (SDMMC_EISIER) Command Timeout Error Signal Enable Position */
+#define SDMMC_EISIER_EMMC_CMDTEO_Msk          (_U_(0x1) << SDMMC_EISIER_EMMC_CMDTEO_Pos)           /**< (SDMMC_EISIER) Command Timeout Error Signal Enable Mask */
+#define SDMMC_EISIER_EMMC_CMDTEO(value)       (SDMMC_EISIER_EMMC_CMDTEO_Msk & ((value) << SDMMC_EISIER_EMMC_CMDTEO_Pos))
+#define   SDMMC_EISIER_EMMC_CMDTEO_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CMDTEO status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_EMMC_CMDTEO_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CMDTEO status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_EMMC_CMDTEO_MASKED       (SDMMC_EISIER_EMMC_CMDTEO_MASKED_Val << SDMMC_EISIER_EMMC_CMDTEO_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CMDTEO status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_CMDTEO_ENABLED      (SDMMC_EISIER_EMMC_CMDTEO_ENABLED_Val << SDMMC_EISIER_EMMC_CMDTEO_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CMDTEO status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_CMDCRC_Pos          _U_(1)                                               /**< (SDMMC_EISIER) Command CRC Error Signal Enable Position */
+#define SDMMC_EISIER_EMMC_CMDCRC_Msk          (_U_(0x1) << SDMMC_EISIER_EMMC_CMDCRC_Pos)           /**< (SDMMC_EISIER) Command CRC Error Signal Enable Mask */
+#define SDMMC_EISIER_EMMC_CMDCRC(value)       (SDMMC_EISIER_EMMC_CMDCRC_Msk & ((value) << SDMMC_EISIER_EMMC_CMDCRC_Pos))
+#define   SDMMC_EISIER_EMMC_CMDCRC_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CDMCRC status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_EMMC_CMDCRC_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CMDCRC status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_EMMC_CMDCRC_MASKED       (SDMMC_EISIER_EMMC_CMDCRC_MASKED_Val << SDMMC_EISIER_EMMC_CMDCRC_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CDMCRC status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_CMDCRC_ENABLED      (SDMMC_EISIER_EMMC_CMDCRC_ENABLED_Val << SDMMC_EISIER_EMMC_CMDCRC_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CMDCRC status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_CMDEND_Pos          _U_(2)                                               /**< (SDMMC_EISIER) Command End Bit Error Signal Enable Position */
+#define SDMMC_EISIER_EMMC_CMDEND_Msk          (_U_(0x1) << SDMMC_EISIER_EMMC_CMDEND_Pos)           /**< (SDMMC_EISIER) Command End Bit Error Signal Enable Mask */
+#define SDMMC_EISIER_EMMC_CMDEND(value)       (SDMMC_EISIER_EMMC_CMDEND_Msk & ((value) << SDMMC_EISIER_EMMC_CMDEND_Pos))
+#define   SDMMC_EISIER_EMMC_CMDEND_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CMDEND status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_EMMC_CMDEND_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CMDEND status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_EMMC_CMDEND_MASKED       (SDMMC_EISIER_EMMC_CMDEND_MASKED_Val << SDMMC_EISIER_EMMC_CMDEND_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CMDEND status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_CMDEND_ENABLED      (SDMMC_EISIER_EMMC_CMDEND_ENABLED_Val << SDMMC_EISIER_EMMC_CMDEND_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CMDEND status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_CMDIDX_Pos          _U_(3)                                               /**< (SDMMC_EISIER) Command Index Error Signal Enable Position */
+#define SDMMC_EISIER_EMMC_CMDIDX_Msk          (_U_(0x1) << SDMMC_EISIER_EMMC_CMDIDX_Pos)           /**< (SDMMC_EISIER) Command Index Error Signal Enable Mask */
+#define SDMMC_EISIER_EMMC_CMDIDX(value)       (SDMMC_EISIER_EMMC_CMDIDX_Msk & ((value) << SDMMC_EISIER_EMMC_CMDIDX_Pos))
+#define   SDMMC_EISIER_EMMC_CMDIDX_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CMDIDX status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_EMMC_CMDIDX_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CMDIDX status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_EMMC_CMDIDX_MASKED       (SDMMC_EISIER_EMMC_CMDIDX_MASKED_Val << SDMMC_EISIER_EMMC_CMDIDX_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CMDIDX status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_CMDIDX_ENABLED      (SDMMC_EISIER_EMMC_CMDIDX_ENABLED_Val << SDMMC_EISIER_EMMC_CMDIDX_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CMDIDX status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_DATTEO_Pos          _U_(4)                                               /**< (SDMMC_EISIER) Data Timeout Error Signal Enable Position */
+#define SDMMC_EISIER_EMMC_DATTEO_Msk          (_U_(0x1) << SDMMC_EISIER_EMMC_DATTEO_Pos)           /**< (SDMMC_EISIER) Data Timeout Error Signal Enable Mask */
+#define SDMMC_EISIER_EMMC_DATTEO(value)       (SDMMC_EISIER_EMMC_DATTEO_Msk & ((value) << SDMMC_EISIER_EMMC_DATTEO_Pos))
+#define   SDMMC_EISIER_EMMC_DATTEO_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the DATTEO status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_EMMC_DATTEO_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the DATTEO status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_EMMC_DATTEO_MASKED       (SDMMC_EISIER_EMMC_DATTEO_MASKED_Val << SDMMC_EISIER_EMMC_DATTEO_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the DATTEO status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_DATTEO_ENABLED      (SDMMC_EISIER_EMMC_DATTEO_ENABLED_Val << SDMMC_EISIER_EMMC_DATTEO_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the DATTEO status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_DATCRC_Pos          _U_(5)                                               /**< (SDMMC_EISIER) Data CRC Error Signal Enable Position */
+#define SDMMC_EISIER_EMMC_DATCRC_Msk          (_U_(0x1) << SDMMC_EISIER_EMMC_DATCRC_Pos)           /**< (SDMMC_EISIER) Data CRC Error Signal Enable Mask */
+#define SDMMC_EISIER_EMMC_DATCRC(value)       (SDMMC_EISIER_EMMC_DATCRC_Msk & ((value) << SDMMC_EISIER_EMMC_DATCRC_Pos))
+#define   SDMMC_EISIER_EMMC_DATCRC_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the DATCRC status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_EMMC_DATCRC_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the DATCRC status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_EMMC_DATCRC_MASKED       (SDMMC_EISIER_EMMC_DATCRC_MASKED_Val << SDMMC_EISIER_EMMC_DATCRC_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the DATCRC status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_DATCRC_ENABLED      (SDMMC_EISIER_EMMC_DATCRC_ENABLED_Val << SDMMC_EISIER_EMMC_DATCRC_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the DATCRC status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_DATEND_Pos          _U_(6)                                               /**< (SDMMC_EISIER) Data End Bit Error Signal Enable Position */
+#define SDMMC_EISIER_EMMC_DATEND_Msk          (_U_(0x1) << SDMMC_EISIER_EMMC_DATEND_Pos)           /**< (SDMMC_EISIER) Data End Bit Error Signal Enable Mask */
+#define SDMMC_EISIER_EMMC_DATEND(value)       (SDMMC_EISIER_EMMC_DATEND_Msk & ((value) << SDMMC_EISIER_EMMC_DATEND_Pos))
+#define   SDMMC_EISIER_EMMC_DATEND_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the DATEND status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_EMMC_DATEND_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the DATEND status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_EMMC_DATEND_MASKED       (SDMMC_EISIER_EMMC_DATEND_MASKED_Val << SDMMC_EISIER_EMMC_DATEND_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the DATEND status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_DATEND_ENABLED      (SDMMC_EISIER_EMMC_DATEND_ENABLED_Val << SDMMC_EISIER_EMMC_DATEND_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the DATEND status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_CURLIM_Pos          _U_(7)                                               /**< (SDMMC_EISIER) Current Limit Error Signal Enable Position */
+#define SDMMC_EISIER_EMMC_CURLIM_Msk          (_U_(0x1) << SDMMC_EISIER_EMMC_CURLIM_Pos)           /**< (SDMMC_EISIER) Current Limit Error Signal Enable Mask */
+#define SDMMC_EISIER_EMMC_CURLIM(value)       (SDMMC_EISIER_EMMC_CURLIM_Msk & ((value) << SDMMC_EISIER_EMMC_CURLIM_Pos))
+#define   SDMMC_EISIER_EMMC_CURLIM_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CURLIM status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_EMMC_CURLIM_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CURLIM status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_EMMC_CURLIM_MASKED       (SDMMC_EISIER_EMMC_CURLIM_MASKED_Val << SDMMC_EISIER_EMMC_CURLIM_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CURLIM status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_CURLIM_ENABLED      (SDMMC_EISIER_EMMC_CURLIM_ENABLED_Val << SDMMC_EISIER_EMMC_CURLIM_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CURLIM status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_ACMD_Pos            _U_(8)                                               /**< (SDMMC_EISIER) Auto CMD Error Signal Enable Position */
+#define SDMMC_EISIER_EMMC_ACMD_Msk            (_U_(0x1) << SDMMC_EISIER_EMMC_ACMD_Pos)             /**< (SDMMC_EISIER) Auto CMD Error Signal Enable Mask */
+#define SDMMC_EISIER_EMMC_ACMD(value)         (SDMMC_EISIER_EMMC_ACMD_Msk & ((value) << SDMMC_EISIER_EMMC_ACMD_Pos))
+#define   SDMMC_EISIER_EMMC_ACMD_MASKED_Val   _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the ACMD status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_EMMC_ACMD_ENABLED_Val  _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the ACMD status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_EMMC_ACMD_MASKED         (SDMMC_EISIER_EMMC_ACMD_MASKED_Val << SDMMC_EISIER_EMMC_ACMD_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the ACMD status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_ACMD_ENABLED        (SDMMC_EISIER_EMMC_ACMD_ENABLED_Val << SDMMC_EISIER_EMMC_ACMD_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the ACMD status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_ADMA_Pos            _U_(9)                                               /**< (SDMMC_EISIER) ADMA Error Signal Enable Position */
+#define SDMMC_EISIER_EMMC_ADMA_Msk            (_U_(0x1) << SDMMC_EISIER_EMMC_ADMA_Pos)             /**< (SDMMC_EISIER) ADMA Error Signal Enable Mask */
+#define SDMMC_EISIER_EMMC_ADMA(value)         (SDMMC_EISIER_EMMC_ADMA_Msk & ((value) << SDMMC_EISIER_EMMC_ADMA_Pos))
+#define   SDMMC_EISIER_EMMC_ADMA_MASKED_Val   _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the ADMA status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_EMMC_ADMA_ENABLED_Val  _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the ADMA status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_EMMC_ADMA_MASKED         (SDMMC_EISIER_EMMC_ADMA_MASKED_Val << SDMMC_EISIER_EMMC_ADMA_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the ADMA status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_ADMA_ENABLED        (SDMMC_EISIER_EMMC_ADMA_ENABLED_Val << SDMMC_EISIER_EMMC_ADMA_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the ADMA status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_TUNING_Pos          _U_(10)                                              /**< (SDMMC_EISIER) Tuning Error Signal Enable Position */
+#define SDMMC_EISIER_EMMC_TUNING_Msk          (_U_(0x1) << SDMMC_EISIER_EMMC_TUNING_Pos)           /**< (SDMMC_EISIER) Tuning Error Signal Enable Mask */
+#define SDMMC_EISIER_EMMC_TUNING(value)       (SDMMC_EISIER_EMMC_TUNING_Msk & ((value) << SDMMC_EISIER_EMMC_TUNING_Pos))
+#define   SDMMC_EISIER_EMMC_TUNING_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the TUNING status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_EMMC_TUNING_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the TUNING status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_EMMC_TUNING_MASKED       (SDMMC_EISIER_EMMC_TUNING_MASKED_Val << SDMMC_EISIER_EMMC_TUNING_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the TUNING status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_EMMC_TUNING_ENABLED      (SDMMC_EISIER_EMMC_TUNING_ENABLED_Val << SDMMC_EISIER_EMMC_TUNING_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the TUNING status rises in SDMMC_EISTR. Position  */
 #define SDMMC_EISIER_EMMC_BOOTAE_Pos          _U_(12)                                              /**< (SDMMC_EISIER) Boot Acknowledge Error Signal Enable Position */
 #define SDMMC_EISIER_EMMC_BOOTAE_Msk          (_U_(0x1) << SDMMC_EISIER_EMMC_BOOTAE_Pos)           /**< (SDMMC_EISIER) Boot Acknowledge Error Signal Enable Mask */
 #define SDMMC_EISIER_EMMC_BOOTAE(value)       (SDMMC_EISIER_EMMC_BOOTAE_Msk & ((value) << SDMMC_EISIER_EMMC_BOOTAE_Pos))
@@ -1025,10 +1312,87 @@
 #define   SDMMC_EISIER_EMMC_BOOTAE_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the BOOTAE status rises in SDMMC_EISTR.  */
 #define SDMMC_EISIER_EMMC_BOOTAE_MASKED       (SDMMC_EISIER_EMMC_BOOTAE_MASKED_Val << SDMMC_EISIER_EMMC_BOOTAE_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the BOOTAE status rises in SDMMC_EISTR. Position  */
 #define SDMMC_EISIER_EMMC_BOOTAE_ENABLED      (SDMMC_EISIER_EMMC_BOOTAE_ENABLED_Val << SDMMC_EISIER_EMMC_BOOTAE_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the BOOTAE status rises in SDMMC_EISTR. Position  */
-#define SDMMC_EISIER_EMMC_Msk                 _U_(0x1000)                                           /**< (SDMMC_EISIER_EMMC) Register Mask  */
+#define SDMMC_EISIER_EMMC_Msk                 _U_(0x17FF)                                           /**< (SDMMC_EISIER_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
-#define SDMMC_EISIER_SD_SDIO_Msk              _U_(0x0000)                                           /**< (SDMMC_EISIER_SD_SDIO) Register Mask  */
+#define SDMMC_EISIER_SD_SDIO_CMDTEO_Pos       _U_(0)                                               /**< (SDMMC_EISIER) Command Timeout Error Signal Enable Position */
+#define SDMMC_EISIER_SD_SDIO_CMDTEO_Msk       (_U_(0x1) << SDMMC_EISIER_SD_SDIO_CMDTEO_Pos)        /**< (SDMMC_EISIER) Command Timeout Error Signal Enable Mask */
+#define SDMMC_EISIER_SD_SDIO_CMDTEO(value)    (SDMMC_EISIER_SD_SDIO_CMDTEO_Msk & ((value) << SDMMC_EISIER_SD_SDIO_CMDTEO_Pos))
+#define   SDMMC_EISIER_SD_SDIO_CMDTEO_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CMDTEO status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_SD_SDIO_CMDTEO_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CMDTEO status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_SD_SDIO_CMDTEO_MASKED    (SDMMC_EISIER_SD_SDIO_CMDTEO_MASKED_Val << SDMMC_EISIER_SD_SDIO_CMDTEO_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CMDTEO status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_CMDTEO_ENABLED   (SDMMC_EISIER_SD_SDIO_CMDTEO_ENABLED_Val << SDMMC_EISIER_SD_SDIO_CMDTEO_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CMDTEO status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_CMDCRC_Pos       _U_(1)                                               /**< (SDMMC_EISIER) Command CRC Error Signal Enable Position */
+#define SDMMC_EISIER_SD_SDIO_CMDCRC_Msk       (_U_(0x1) << SDMMC_EISIER_SD_SDIO_CMDCRC_Pos)        /**< (SDMMC_EISIER) Command CRC Error Signal Enable Mask */
+#define SDMMC_EISIER_SD_SDIO_CMDCRC(value)    (SDMMC_EISIER_SD_SDIO_CMDCRC_Msk & ((value) << SDMMC_EISIER_SD_SDIO_CMDCRC_Pos))
+#define   SDMMC_EISIER_SD_SDIO_CMDCRC_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CDMCRC status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_SD_SDIO_CMDCRC_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CMDCRC status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_SD_SDIO_CMDCRC_MASKED    (SDMMC_EISIER_SD_SDIO_CMDCRC_MASKED_Val << SDMMC_EISIER_SD_SDIO_CMDCRC_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CDMCRC status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_CMDCRC_ENABLED   (SDMMC_EISIER_SD_SDIO_CMDCRC_ENABLED_Val << SDMMC_EISIER_SD_SDIO_CMDCRC_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CMDCRC status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_CMDEND_Pos       _U_(2)                                               /**< (SDMMC_EISIER) Command End Bit Error Signal Enable Position */
+#define SDMMC_EISIER_SD_SDIO_CMDEND_Msk       (_U_(0x1) << SDMMC_EISIER_SD_SDIO_CMDEND_Pos)        /**< (SDMMC_EISIER) Command End Bit Error Signal Enable Mask */
+#define SDMMC_EISIER_SD_SDIO_CMDEND(value)    (SDMMC_EISIER_SD_SDIO_CMDEND_Msk & ((value) << SDMMC_EISIER_SD_SDIO_CMDEND_Pos))
+#define   SDMMC_EISIER_SD_SDIO_CMDEND_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CMDEND status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_SD_SDIO_CMDEND_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CMDEND status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_SD_SDIO_CMDEND_MASKED    (SDMMC_EISIER_SD_SDIO_CMDEND_MASKED_Val << SDMMC_EISIER_SD_SDIO_CMDEND_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CMDEND status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_CMDEND_ENABLED   (SDMMC_EISIER_SD_SDIO_CMDEND_ENABLED_Val << SDMMC_EISIER_SD_SDIO_CMDEND_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CMDEND status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_CMDIDX_Pos       _U_(3)                                               /**< (SDMMC_EISIER) Command Index Error Signal Enable Position */
+#define SDMMC_EISIER_SD_SDIO_CMDIDX_Msk       (_U_(0x1) << SDMMC_EISIER_SD_SDIO_CMDIDX_Pos)        /**< (SDMMC_EISIER) Command Index Error Signal Enable Mask */
+#define SDMMC_EISIER_SD_SDIO_CMDIDX(value)    (SDMMC_EISIER_SD_SDIO_CMDIDX_Msk & ((value) << SDMMC_EISIER_SD_SDIO_CMDIDX_Pos))
+#define   SDMMC_EISIER_SD_SDIO_CMDIDX_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CMDIDX status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_SD_SDIO_CMDIDX_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CMDIDX status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_SD_SDIO_CMDIDX_MASKED    (SDMMC_EISIER_SD_SDIO_CMDIDX_MASKED_Val << SDMMC_EISIER_SD_SDIO_CMDIDX_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CMDIDX status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_CMDIDX_ENABLED   (SDMMC_EISIER_SD_SDIO_CMDIDX_ENABLED_Val << SDMMC_EISIER_SD_SDIO_CMDIDX_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CMDIDX status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_DATTEO_Pos       _U_(4)                                               /**< (SDMMC_EISIER) Data Timeout Error Signal Enable Position */
+#define SDMMC_EISIER_SD_SDIO_DATTEO_Msk       (_U_(0x1) << SDMMC_EISIER_SD_SDIO_DATTEO_Pos)        /**< (SDMMC_EISIER) Data Timeout Error Signal Enable Mask */
+#define SDMMC_EISIER_SD_SDIO_DATTEO(value)    (SDMMC_EISIER_SD_SDIO_DATTEO_Msk & ((value) << SDMMC_EISIER_SD_SDIO_DATTEO_Pos))
+#define   SDMMC_EISIER_SD_SDIO_DATTEO_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the DATTEO status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_SD_SDIO_DATTEO_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the DATTEO status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_SD_SDIO_DATTEO_MASKED    (SDMMC_EISIER_SD_SDIO_DATTEO_MASKED_Val << SDMMC_EISIER_SD_SDIO_DATTEO_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the DATTEO status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_DATTEO_ENABLED   (SDMMC_EISIER_SD_SDIO_DATTEO_ENABLED_Val << SDMMC_EISIER_SD_SDIO_DATTEO_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the DATTEO status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_DATCRC_Pos       _U_(5)                                               /**< (SDMMC_EISIER) Data CRC Error Signal Enable Position */
+#define SDMMC_EISIER_SD_SDIO_DATCRC_Msk       (_U_(0x1) << SDMMC_EISIER_SD_SDIO_DATCRC_Pos)        /**< (SDMMC_EISIER) Data CRC Error Signal Enable Mask */
+#define SDMMC_EISIER_SD_SDIO_DATCRC(value)    (SDMMC_EISIER_SD_SDIO_DATCRC_Msk & ((value) << SDMMC_EISIER_SD_SDIO_DATCRC_Pos))
+#define   SDMMC_EISIER_SD_SDIO_DATCRC_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the DATCRC status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_SD_SDIO_DATCRC_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the DATCRC status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_SD_SDIO_DATCRC_MASKED    (SDMMC_EISIER_SD_SDIO_DATCRC_MASKED_Val << SDMMC_EISIER_SD_SDIO_DATCRC_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the DATCRC status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_DATCRC_ENABLED   (SDMMC_EISIER_SD_SDIO_DATCRC_ENABLED_Val << SDMMC_EISIER_SD_SDIO_DATCRC_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the DATCRC status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_DATEND_Pos       _U_(6)                                               /**< (SDMMC_EISIER) Data End Bit Error Signal Enable Position */
+#define SDMMC_EISIER_SD_SDIO_DATEND_Msk       (_U_(0x1) << SDMMC_EISIER_SD_SDIO_DATEND_Pos)        /**< (SDMMC_EISIER) Data End Bit Error Signal Enable Mask */
+#define SDMMC_EISIER_SD_SDIO_DATEND(value)    (SDMMC_EISIER_SD_SDIO_DATEND_Msk & ((value) << SDMMC_EISIER_SD_SDIO_DATEND_Pos))
+#define   SDMMC_EISIER_SD_SDIO_DATEND_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the DATEND status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_SD_SDIO_DATEND_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the DATEND status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_SD_SDIO_DATEND_MASKED    (SDMMC_EISIER_SD_SDIO_DATEND_MASKED_Val << SDMMC_EISIER_SD_SDIO_DATEND_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the DATEND status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_DATEND_ENABLED   (SDMMC_EISIER_SD_SDIO_DATEND_ENABLED_Val << SDMMC_EISIER_SD_SDIO_DATEND_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the DATEND status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_CURLIM_Pos       _U_(7)                                               /**< (SDMMC_EISIER) Current Limit Error Signal Enable Position */
+#define SDMMC_EISIER_SD_SDIO_CURLIM_Msk       (_U_(0x1) << SDMMC_EISIER_SD_SDIO_CURLIM_Pos)        /**< (SDMMC_EISIER) Current Limit Error Signal Enable Mask */
+#define SDMMC_EISIER_SD_SDIO_CURLIM(value)    (SDMMC_EISIER_SD_SDIO_CURLIM_Msk & ((value) << SDMMC_EISIER_SD_SDIO_CURLIM_Pos))
+#define   SDMMC_EISIER_SD_SDIO_CURLIM_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the CURLIM status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_SD_SDIO_CURLIM_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the CURLIM status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_SD_SDIO_CURLIM_MASKED    (SDMMC_EISIER_SD_SDIO_CURLIM_MASKED_Val << SDMMC_EISIER_SD_SDIO_CURLIM_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the CURLIM status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_CURLIM_ENABLED   (SDMMC_EISIER_SD_SDIO_CURLIM_ENABLED_Val << SDMMC_EISIER_SD_SDIO_CURLIM_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the CURLIM status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_ACMD_Pos         _U_(8)                                               /**< (SDMMC_EISIER) Auto CMD Error Signal Enable Position */
+#define SDMMC_EISIER_SD_SDIO_ACMD_Msk         (_U_(0x1) << SDMMC_EISIER_SD_SDIO_ACMD_Pos)          /**< (SDMMC_EISIER) Auto CMD Error Signal Enable Mask */
+#define SDMMC_EISIER_SD_SDIO_ACMD(value)      (SDMMC_EISIER_SD_SDIO_ACMD_Msk & ((value) << SDMMC_EISIER_SD_SDIO_ACMD_Pos))
+#define   SDMMC_EISIER_SD_SDIO_ACMD_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the ACMD status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_SD_SDIO_ACMD_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the ACMD status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_SD_SDIO_ACMD_MASKED      (SDMMC_EISIER_SD_SDIO_ACMD_MASKED_Val << SDMMC_EISIER_SD_SDIO_ACMD_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the ACMD status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_ACMD_ENABLED     (SDMMC_EISIER_SD_SDIO_ACMD_ENABLED_Val << SDMMC_EISIER_SD_SDIO_ACMD_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the ACMD status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_ADMA_Pos         _U_(9)                                               /**< (SDMMC_EISIER) ADMA Error Signal Enable Position */
+#define SDMMC_EISIER_SD_SDIO_ADMA_Msk         (_U_(0x1) << SDMMC_EISIER_SD_SDIO_ADMA_Pos)          /**< (SDMMC_EISIER) ADMA Error Signal Enable Mask */
+#define SDMMC_EISIER_SD_SDIO_ADMA(value)      (SDMMC_EISIER_SD_SDIO_ADMA_Msk & ((value) << SDMMC_EISIER_SD_SDIO_ADMA_Pos))
+#define   SDMMC_EISIER_SD_SDIO_ADMA_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the ADMA status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_SD_SDIO_ADMA_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the ADMA status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_SD_SDIO_ADMA_MASKED      (SDMMC_EISIER_SD_SDIO_ADMA_MASKED_Val << SDMMC_EISIER_SD_SDIO_ADMA_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the ADMA status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_ADMA_ENABLED     (SDMMC_EISIER_SD_SDIO_ADMA_ENABLED_Val << SDMMC_EISIER_SD_SDIO_ADMA_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the ADMA status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_TUNING_Pos       _U_(10)                                              /**< (SDMMC_EISIER) Tuning Error Signal Enable Position */
+#define SDMMC_EISIER_SD_SDIO_TUNING_Msk       (_U_(0x1) << SDMMC_EISIER_SD_SDIO_TUNING_Pos)        /**< (SDMMC_EISIER) Tuning Error Signal Enable Mask */
+#define SDMMC_EISIER_SD_SDIO_TUNING(value)    (SDMMC_EISIER_SD_SDIO_TUNING_Msk & ((value) << SDMMC_EISIER_SD_SDIO_TUNING_Pos))
+#define   SDMMC_EISIER_SD_SDIO_TUNING_MASKED_Val _U_(0x0)                                             /**< (SDMMC_EISIER) No interrupt is generated when the TUNING status rises in SDMMC_EISTR.  */
+#define   SDMMC_EISIER_SD_SDIO_TUNING_ENABLED_Val _U_(0x1)                                             /**< (SDMMC_EISIER) An interrupt is generated when the TUNING status rises in SDMMC_EISTR.  */
+#define SDMMC_EISIER_SD_SDIO_TUNING_MASKED    (SDMMC_EISIER_SD_SDIO_TUNING_MASKED_Val << SDMMC_EISIER_SD_SDIO_TUNING_Pos) /**< (SDMMC_EISIER) No interrupt is generated when the TUNING status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_TUNING_ENABLED   (SDMMC_EISIER_SD_SDIO_TUNING_ENABLED_Val << SDMMC_EISIER_SD_SDIO_TUNING_Pos) /**< (SDMMC_EISIER) An interrupt is generated when the TUNING status rises in SDMMC_EISTR. Position  */
+#define SDMMC_EISIER_SD_SDIO_Msk              _U_(0x07FF)                                           /**< (SDMMC_EISIER_SD_SDIO) Register Mask  */
 
 
 /* -------- SDMMC_ACESR : (SDMMC Offset: 0x3C) ( R/ 16) Auto CMD Error Status Register -------- */
@@ -1074,37 +1438,23 @@
 /* -------- SDMMC_HC2R : (SDMMC Offset: 0x3E) (R/W 16) Host Control 2 Register -------- */
 #define SDMMC_HC2R_RESETVALUE                 _U_(0x00)                                            /**<  (SDMMC_HC2R) Host Control 2 Register  Reset Value */
 
-#define SDMMC_HC2R_DRVSEL_Pos                 _U_(4)                                               /**< (SDMMC_HC2R) Driver Strength Select Position */
-#define SDMMC_HC2R_DRVSEL_Msk                 (_U_(0x3) << SDMMC_HC2R_DRVSEL_Pos)                  /**< (SDMMC_HC2R) Driver Strength Select Mask */
-#define SDMMC_HC2R_DRVSEL(value)              (SDMMC_HC2R_DRVSEL_Msk & ((value) << SDMMC_HC2R_DRVSEL_Pos))
-#define   SDMMC_HC2R_DRVSEL_TYPEB_Val         _U_(0x0)                                             /**< (SDMMC_HC2R) Driver Type B is selected (Default)  */
-#define   SDMMC_HC2R_DRVSEL_TYPEA_Val         _U_(0x1)                                             /**< (SDMMC_HC2R) Driver Type A is selected  */
-#define   SDMMC_HC2R_DRVSEL_TYPEC_Val         _U_(0x2)                                             /**< (SDMMC_HC2R) Driver Type C is selected  */
-#define   SDMMC_HC2R_DRVSEL_TYPED_Val         _U_(0x3)                                             /**< (SDMMC_HC2R) Driver Type D is selected  */
-#define SDMMC_HC2R_DRVSEL_TYPEB               (SDMMC_HC2R_DRVSEL_TYPEB_Val << SDMMC_HC2R_DRVSEL_Pos) /**< (SDMMC_HC2R) Driver Type B is selected (Default) Position  */
-#define SDMMC_HC2R_DRVSEL_TYPEA               (SDMMC_HC2R_DRVSEL_TYPEA_Val << SDMMC_HC2R_DRVSEL_Pos) /**< (SDMMC_HC2R) Driver Type A is selected Position  */
-#define SDMMC_HC2R_DRVSEL_TYPEC               (SDMMC_HC2R_DRVSEL_TYPEC_Val << SDMMC_HC2R_DRVSEL_Pos) /**< (SDMMC_HC2R) Driver Type C is selected Position  */
-#define SDMMC_HC2R_DRVSEL_TYPED               (SDMMC_HC2R_DRVSEL_TYPED_Val << SDMMC_HC2R_DRVSEL_Pos) /**< (SDMMC_HC2R) Driver Type D is selected Position  */
-#define SDMMC_HC2R_SCLKSEL_Pos                _U_(7)                                               /**< (SDMMC_HC2R) Sampling Clock Select Position */
-#define SDMMC_HC2R_SCLKSEL_Msk                (_U_(0x1) << SDMMC_HC2R_SCLKSEL_Pos)                 /**< (SDMMC_HC2R) Sampling Clock Select Mask */
-#define SDMMC_HC2R_SCLKSEL(value)             (SDMMC_HC2R_SCLKSEL_Msk & ((value) << SDMMC_HC2R_SCLKSEL_Pos))
-#define   SDMMC_HC2R_SCLKSEL_0_Val            _U_(0x0)                                             /**< (SDMMC_HC2R) The fixed clock is used to sample data.  */
-#define   SDMMC_HC2R_SCLKSEL_1_Val            _U_(0x1)                                             /**< (SDMMC_HC2R) The tuned clock is used to sample data.  */
-#define SDMMC_HC2R_SCLKSEL_0                  (SDMMC_HC2R_SCLKSEL_0_Val << SDMMC_HC2R_SCLKSEL_Pos) /**< (SDMMC_HC2R) The fixed clock is used to sample data. Position  */
-#define SDMMC_HC2R_SCLKSEL_1                  (SDMMC_HC2R_SCLKSEL_1_Val << SDMMC_HC2R_SCLKSEL_Pos) /**< (SDMMC_HC2R) The tuned clock is used to sample data. Position  */
-#define SDMMC_HC2R_PVALEN_Pos                 _U_(15)                                              /**< (SDMMC_HC2R) Preset Value Enable Position */
-#define SDMMC_HC2R_PVALEN_Msk                 (_U_(0x1) << SDMMC_HC2R_PVALEN_Pos)                  /**< (SDMMC_HC2R) Preset Value Enable Mask */
-#define SDMMC_HC2R_PVALEN(value)              (SDMMC_HC2R_PVALEN_Msk & ((value) << SDMMC_HC2R_PVALEN_Pos))
-#define   SDMMC_HC2R_PVALEN_0_Val             _U_(0x0)                                             /**< (SDMMC_HC2R) SDCLK and Driver strength are controlled by the user.  */
-#define   SDMMC_HC2R_PVALEN_1_Val             _U_(0x1)                                             /**< (SDMMC_HC2R) Automatic selection by Preset Value is enabled.  */
-#define SDMMC_HC2R_PVALEN_0                   (SDMMC_HC2R_PVALEN_0_Val << SDMMC_HC2R_PVALEN_Pos)   /**< (SDMMC_HC2R) SDCLK and Driver strength are controlled by the user. Position  */
-#define SDMMC_HC2R_PVALEN_1                   (SDMMC_HC2R_PVALEN_1_Val << SDMMC_HC2R_PVALEN_Pos)   /**< (SDMMC_HC2R) Automatic selection by Preset Value is enabled. Position  */
-#define SDMMC_HC2R_Msk                        _U_(0x80B0)                                          /**< (SDMMC_HC2R) Register Mask  */
+#define SDMMC_HC2R_Msk                        _U_(0x0000)                                          /**< (SDMMC_HC2R) Register Mask  */
 
 /* EMMC mode */
 #define SDMMC_HC2R_EMMC_HS200EN_Pos           _U_(0)                                               /**< (SDMMC_HC2R) HS200 Mode Enable Position */
 #define SDMMC_HC2R_EMMC_HS200EN_Msk           (_U_(0xF) << SDMMC_HC2R_EMMC_HS200EN_Pos)            /**< (SDMMC_HC2R) HS200 Mode Enable Mask */
 #define SDMMC_HC2R_EMMC_HS200EN(value)        (SDMMC_HC2R_EMMC_HS200EN_Msk & ((value) << SDMMC_HC2R_EMMC_HS200EN_Pos))
+#define SDMMC_HC2R_EMMC_DRVSEL_Pos            _U_(4)                                               /**< (SDMMC_HC2R) Driver Strength Select Position */
+#define SDMMC_HC2R_EMMC_DRVSEL_Msk            (_U_(0x3) << SDMMC_HC2R_EMMC_DRVSEL_Pos)             /**< (SDMMC_HC2R) Driver Strength Select Mask */
+#define SDMMC_HC2R_EMMC_DRVSEL(value)         (SDMMC_HC2R_EMMC_DRVSEL_Msk & ((value) << SDMMC_HC2R_EMMC_DRVSEL_Pos))
+#define   SDMMC_HC2R_EMMC_DRVSEL_TYPEB_Val    _U_(0x0)                                             /**< (SDMMC_HC2R) Driver Type B is selected (Default)  */
+#define   SDMMC_HC2R_EMMC_DRVSEL_TYPEA_Val    _U_(0x1)                                             /**< (SDMMC_HC2R) Driver Type A is selected  */
+#define   SDMMC_HC2R_EMMC_DRVSEL_TYPEC_Val    _U_(0x2)                                             /**< (SDMMC_HC2R) Driver Type C is selected  */
+#define   SDMMC_HC2R_EMMC_DRVSEL_TYPED_Val    _U_(0x3)                                             /**< (SDMMC_HC2R) Driver Type D is selected  */
+#define SDMMC_HC2R_EMMC_DRVSEL_TYPEB          (SDMMC_HC2R_EMMC_DRVSEL_TYPEB_Val << SDMMC_HC2R_EMMC_DRVSEL_Pos) /**< (SDMMC_HC2R) Driver Type B is selected (Default) Position  */
+#define SDMMC_HC2R_EMMC_DRVSEL_TYPEA          (SDMMC_HC2R_EMMC_DRVSEL_TYPEA_Val << SDMMC_HC2R_EMMC_DRVSEL_Pos) /**< (SDMMC_HC2R) Driver Type A is selected Position  */
+#define SDMMC_HC2R_EMMC_DRVSEL_TYPEC          (SDMMC_HC2R_EMMC_DRVSEL_TYPEC_Val << SDMMC_HC2R_EMMC_DRVSEL_Pos) /**< (SDMMC_HC2R) Driver Type C is selected Position  */
+#define SDMMC_HC2R_EMMC_DRVSEL_TYPED          (SDMMC_HC2R_EMMC_DRVSEL_TYPED_Val << SDMMC_HC2R_EMMC_DRVSEL_Pos) /**< (SDMMC_HC2R) Driver Type D is selected Position  */
 #define SDMMC_HC2R_EMMC_EXTUN_Pos             _U_(6)                                               /**< (SDMMC_HC2R) Execute Tuning Position */
 #define SDMMC_HC2R_EMMC_EXTUN_Msk             (_U_(0x1) << SDMMC_HC2R_EMMC_EXTUN_Pos)              /**< (SDMMC_HC2R) Execute Tuning Mask */
 #define SDMMC_HC2R_EMMC_EXTUN(value)          (SDMMC_HC2R_EMMC_EXTUN_Msk & ((value) << SDMMC_HC2R_EMMC_EXTUN_Pos))
@@ -1112,7 +1462,21 @@
 #define   SDMMC_HC2R_EMMC_EXTUN_1_Val         _U_(0x1)                                             /**< (SDMMC_HC2R) Execute tuning  */
 #define SDMMC_HC2R_EMMC_EXTUN_0               (SDMMC_HC2R_EMMC_EXTUN_0_Val << SDMMC_HC2R_EMMC_EXTUN_Pos) /**< (SDMMC_HC2R) Not tuned or tuning completed Position  */
 #define SDMMC_HC2R_EMMC_EXTUN_1               (SDMMC_HC2R_EMMC_EXTUN_1_Val << SDMMC_HC2R_EMMC_EXTUN_Pos) /**< (SDMMC_HC2R) Execute tuning Position  */
-#define SDMMC_HC2R_EMMC_Msk                   _U_(0x004F)                                           /**< (SDMMC_HC2R_EMMC) Register Mask  */
+#define SDMMC_HC2R_EMMC_SCLKSEL_Pos           _U_(7)                                               /**< (SDMMC_HC2R) Sampling Clock Select Position */
+#define SDMMC_HC2R_EMMC_SCLKSEL_Msk           (_U_(0x1) << SDMMC_HC2R_EMMC_SCLKSEL_Pos)            /**< (SDMMC_HC2R) Sampling Clock Select Mask */
+#define SDMMC_HC2R_EMMC_SCLKSEL(value)        (SDMMC_HC2R_EMMC_SCLKSEL_Msk & ((value) << SDMMC_HC2R_EMMC_SCLKSEL_Pos))
+#define   SDMMC_HC2R_EMMC_SCLKSEL_0_Val       _U_(0x0)                                             /**< (SDMMC_HC2R) The fixed clock is used to sample data.  */
+#define   SDMMC_HC2R_EMMC_SCLKSEL_1_Val       _U_(0x1)                                             /**< (SDMMC_HC2R) The tuned clock is used to sample data.  */
+#define SDMMC_HC2R_EMMC_SCLKSEL_0             (SDMMC_HC2R_EMMC_SCLKSEL_0_Val << SDMMC_HC2R_EMMC_SCLKSEL_Pos) /**< (SDMMC_HC2R) The fixed clock is used to sample data. Position  */
+#define SDMMC_HC2R_EMMC_SCLKSEL_1             (SDMMC_HC2R_EMMC_SCLKSEL_1_Val << SDMMC_HC2R_EMMC_SCLKSEL_Pos) /**< (SDMMC_HC2R) The tuned clock is used to sample data. Position  */
+#define SDMMC_HC2R_EMMC_PVALEN_Pos            _U_(15)                                              /**< (SDMMC_HC2R) Preset Value Enable Position */
+#define SDMMC_HC2R_EMMC_PVALEN_Msk            (_U_(0x1) << SDMMC_HC2R_EMMC_PVALEN_Pos)             /**< (SDMMC_HC2R) Preset Value Enable Mask */
+#define SDMMC_HC2R_EMMC_PVALEN(value)         (SDMMC_HC2R_EMMC_PVALEN_Msk & ((value) << SDMMC_HC2R_EMMC_PVALEN_Pos))
+#define   SDMMC_HC2R_EMMC_PVALEN_0_Val        _U_(0x0)                                             /**< (SDMMC_HC2R) SDCLK and Driver strength are controlled by the user.  */
+#define   SDMMC_HC2R_EMMC_PVALEN_1_Val        _U_(0x1)                                             /**< (SDMMC_HC2R) Automatic selection by Preset Value is enabled.  */
+#define SDMMC_HC2R_EMMC_PVALEN_0              (SDMMC_HC2R_EMMC_PVALEN_0_Val << SDMMC_HC2R_EMMC_PVALEN_Pos) /**< (SDMMC_HC2R) SDCLK and Driver strength are controlled by the user. Position  */
+#define SDMMC_HC2R_EMMC_PVALEN_1              (SDMMC_HC2R_EMMC_PVALEN_1_Val << SDMMC_HC2R_EMMC_PVALEN_Pos) /**< (SDMMC_HC2R) Automatic selection by Preset Value is enabled. Position  */
+#define SDMMC_HC2R_EMMC_Msk                   _U_(0x80FF)                                           /**< (SDMMC_HC2R_EMMC) Register Mask  */
 
 /* SD_SDIO mode */
 #define SDMMC_HC2R_SD_SDIO_UHSMS_Pos          _U_(0)                                               /**< (SDMMC_HC2R) UHS Mode Select Position */
@@ -1135,6 +1499,17 @@
 #define   SDMMC_HC2R_SD_SDIO_VS18EN_1_Val     _U_(0x1)                                             /**< (SDMMC_HC2R) 1.8V signaling.  */
 #define SDMMC_HC2R_SD_SDIO_VS18EN_0           (SDMMC_HC2R_SD_SDIO_VS18EN_0_Val << SDMMC_HC2R_SD_SDIO_VS18EN_Pos) /**< (SDMMC_HC2R) 3.3V signaling. Position  */
 #define SDMMC_HC2R_SD_SDIO_VS18EN_1           (SDMMC_HC2R_SD_SDIO_VS18EN_1_Val << SDMMC_HC2R_SD_SDIO_VS18EN_Pos) /**< (SDMMC_HC2R) 1.8V signaling. Position  */
+#define SDMMC_HC2R_SD_SDIO_DRVSEL_Pos         _U_(4)                                               /**< (SDMMC_HC2R) Driver Strength Select Position */
+#define SDMMC_HC2R_SD_SDIO_DRVSEL_Msk         (_U_(0x3) << SDMMC_HC2R_SD_SDIO_DRVSEL_Pos)          /**< (SDMMC_HC2R) Driver Strength Select Mask */
+#define SDMMC_HC2R_SD_SDIO_DRVSEL(value)      (SDMMC_HC2R_SD_SDIO_DRVSEL_Msk & ((value) << SDMMC_HC2R_SD_SDIO_DRVSEL_Pos))
+#define   SDMMC_HC2R_SD_SDIO_DRVSEL_TYPEB_Val _U_(0x0)                                             /**< (SDMMC_HC2R) Driver Type B is selected (Default)  */
+#define   SDMMC_HC2R_SD_SDIO_DRVSEL_TYPEA_Val _U_(0x1)                                             /**< (SDMMC_HC2R) Driver Type A is selected  */
+#define   SDMMC_HC2R_SD_SDIO_DRVSEL_TYPEC_Val _U_(0x2)                                             /**< (SDMMC_HC2R) Driver Type C is selected  */
+#define   SDMMC_HC2R_SD_SDIO_DRVSEL_TYPED_Val _U_(0x3)                                             /**< (SDMMC_HC2R) Driver Type D is selected  */
+#define SDMMC_HC2R_SD_SDIO_DRVSEL_TYPEB       (SDMMC_HC2R_SD_SDIO_DRVSEL_TYPEB_Val << SDMMC_HC2R_SD_SDIO_DRVSEL_Pos) /**< (SDMMC_HC2R) Driver Type B is selected (Default) Position  */
+#define SDMMC_HC2R_SD_SDIO_DRVSEL_TYPEA       (SDMMC_HC2R_SD_SDIO_DRVSEL_TYPEA_Val << SDMMC_HC2R_SD_SDIO_DRVSEL_Pos) /**< (SDMMC_HC2R) Driver Type A is selected Position  */
+#define SDMMC_HC2R_SD_SDIO_DRVSEL_TYPEC       (SDMMC_HC2R_SD_SDIO_DRVSEL_TYPEC_Val << SDMMC_HC2R_SD_SDIO_DRVSEL_Pos) /**< (SDMMC_HC2R) Driver Type C is selected Position  */
+#define SDMMC_HC2R_SD_SDIO_DRVSEL_TYPED       (SDMMC_HC2R_SD_SDIO_DRVSEL_TYPED_Val << SDMMC_HC2R_SD_SDIO_DRVSEL_Pos) /**< (SDMMC_HC2R) Driver Type D is selected Position  */
 #define SDMMC_HC2R_SD_SDIO_EXTUN_Pos          _U_(6)                                               /**< (SDMMC_HC2R) Execute Tuning Position */
 #define SDMMC_HC2R_SD_SDIO_EXTUN_Msk          (_U_(0x1) << SDMMC_HC2R_SD_SDIO_EXTUN_Pos)           /**< (SDMMC_HC2R) Execute Tuning Mask */
 #define SDMMC_HC2R_SD_SDIO_EXTUN(value)       (SDMMC_HC2R_SD_SDIO_EXTUN_Msk & ((value) << SDMMC_HC2R_SD_SDIO_EXTUN_Pos))
@@ -1142,6 +1517,13 @@
 #define   SDMMC_HC2R_SD_SDIO_EXTUN_1_Val      _U_(0x1)                                             /**< (SDMMC_HC2R) Execute tuning.  */
 #define SDMMC_HC2R_SD_SDIO_EXTUN_0            (SDMMC_HC2R_SD_SDIO_EXTUN_0_Val << SDMMC_HC2R_SD_SDIO_EXTUN_Pos) /**< (SDMMC_HC2R) Not tuned or tuning completed. Position  */
 #define SDMMC_HC2R_SD_SDIO_EXTUN_1            (SDMMC_HC2R_SD_SDIO_EXTUN_1_Val << SDMMC_HC2R_SD_SDIO_EXTUN_Pos) /**< (SDMMC_HC2R) Execute tuning. Position  */
+#define SDMMC_HC2R_SD_SDIO_SCLKSEL_Pos        _U_(7)                                               /**< (SDMMC_HC2R) Sampling Clock Select Position */
+#define SDMMC_HC2R_SD_SDIO_SCLKSEL_Msk        (_U_(0x1) << SDMMC_HC2R_SD_SDIO_SCLKSEL_Pos)         /**< (SDMMC_HC2R) Sampling Clock Select Mask */
+#define SDMMC_HC2R_SD_SDIO_SCLKSEL(value)     (SDMMC_HC2R_SD_SDIO_SCLKSEL_Msk & ((value) << SDMMC_HC2R_SD_SDIO_SCLKSEL_Pos))
+#define   SDMMC_HC2R_SD_SDIO_SCLKSEL_0_Val    _U_(0x0)                                             /**< (SDMMC_HC2R) The fixed clock is used to sample data.  */
+#define   SDMMC_HC2R_SD_SDIO_SCLKSEL_1_Val    _U_(0x1)                                             /**< (SDMMC_HC2R) The tuned clock is used to sample data.  */
+#define SDMMC_HC2R_SD_SDIO_SCLKSEL_0          (SDMMC_HC2R_SD_SDIO_SCLKSEL_0_Val << SDMMC_HC2R_SD_SDIO_SCLKSEL_Pos) /**< (SDMMC_HC2R) The fixed clock is used to sample data. Position  */
+#define SDMMC_HC2R_SD_SDIO_SCLKSEL_1          (SDMMC_HC2R_SD_SDIO_SCLKSEL_1_Val << SDMMC_HC2R_SD_SDIO_SCLKSEL_Pos) /**< (SDMMC_HC2R) The tuned clock is used to sample data. Position  */
 #define SDMMC_HC2R_SD_SDIO_ASINTEN_Pos        _U_(14)                                              /**< (SDMMC_HC2R) Asynchronous Interrupt Enable Position */
 #define SDMMC_HC2R_SD_SDIO_ASINTEN_Msk        (_U_(0x1) << SDMMC_HC2R_SD_SDIO_ASINTEN_Pos)         /**< (SDMMC_HC2R) Asynchronous Interrupt Enable Mask */
 #define SDMMC_HC2R_SD_SDIO_ASINTEN(value)     (SDMMC_HC2R_SD_SDIO_ASINTEN_Msk & ((value) << SDMMC_HC2R_SD_SDIO_ASINTEN_Pos))
@@ -1149,7 +1531,14 @@
 #define   SDMMC_HC2R_SD_SDIO_ASINTEN_1_Val    _U_(0x1)                                             /**< (SDMMC_HC2R) Enabled  */
 #define SDMMC_HC2R_SD_SDIO_ASINTEN_0          (SDMMC_HC2R_SD_SDIO_ASINTEN_0_Val << SDMMC_HC2R_SD_SDIO_ASINTEN_Pos) /**< (SDMMC_HC2R) Disabled Position  */
 #define SDMMC_HC2R_SD_SDIO_ASINTEN_1          (SDMMC_HC2R_SD_SDIO_ASINTEN_1_Val << SDMMC_HC2R_SD_SDIO_ASINTEN_Pos) /**< (SDMMC_HC2R) Enabled Position  */
-#define SDMMC_HC2R_SD_SDIO_Msk                _U_(0x404F)                                           /**< (SDMMC_HC2R_SD_SDIO) Register Mask  */
+#define SDMMC_HC2R_SD_SDIO_PVALEN_Pos         _U_(15)                                              /**< (SDMMC_HC2R) Preset Value Enable Position */
+#define SDMMC_HC2R_SD_SDIO_PVALEN_Msk         (_U_(0x1) << SDMMC_HC2R_SD_SDIO_PVALEN_Pos)          /**< (SDMMC_HC2R) Preset Value Enable Mask */
+#define SDMMC_HC2R_SD_SDIO_PVALEN(value)      (SDMMC_HC2R_SD_SDIO_PVALEN_Msk & ((value) << SDMMC_HC2R_SD_SDIO_PVALEN_Pos))
+#define   SDMMC_HC2R_SD_SDIO_PVALEN_0_Val     _U_(0x0)                                             /**< (SDMMC_HC2R) SDCLK and Driver strength are controlled by the user.  */
+#define   SDMMC_HC2R_SD_SDIO_PVALEN_1_Val     _U_(0x1)                                             /**< (SDMMC_HC2R) Automatic selection by Preset Value is enabled.  */
+#define SDMMC_HC2R_SD_SDIO_PVALEN_0           (SDMMC_HC2R_SD_SDIO_PVALEN_0_Val << SDMMC_HC2R_SD_SDIO_PVALEN_Pos) /**< (SDMMC_HC2R) SDCLK and Driver strength are controlled by the user. Position  */
+#define SDMMC_HC2R_SD_SDIO_PVALEN_1           (SDMMC_HC2R_SD_SDIO_PVALEN_1_Val << SDMMC_HC2R_SD_SDIO_PVALEN_Pos) /**< (SDMMC_HC2R) Automatic selection by Preset Value is enabled. Position  */
+#define SDMMC_HC2R_SD_SDIO_Msk                _U_(0xC0FF)                                           /**< (SDMMC_HC2R_SD_SDIO) Register Mask  */
 
 
 /* -------- SDMMC_CA0R : (SDMMC Offset: 0x40) (R/W 32) Capabilities 0 Register -------- */
