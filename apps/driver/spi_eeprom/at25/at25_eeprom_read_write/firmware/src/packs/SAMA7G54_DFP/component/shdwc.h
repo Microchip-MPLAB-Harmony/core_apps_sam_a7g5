@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-06-28T13:20:15Z */
+/* file generated from device description version 2021-07-26T12:51:16Z */
 #ifndef _SAMA7G_SHDWC_COMPONENT_H_
 #define _SAMA7G_SHDWC_COMPONENT_H_
 
@@ -94,20 +94,20 @@
 #define SHDW_MR_LPDBC_6_RTCOUT                (SHDW_MR_LPDBC_6_RTCOUT_Val << SHDW_MR_LPDBC_Pos)    /**< (SHDW_MR) WKUP0/1 in active state for at least 6 RTCOUTx clock periods Position  */
 #define SHDW_MR_LPDBC_7_RTCOUT                (SHDW_MR_LPDBC_7_RTCOUT_Val << SHDW_MR_LPDBC_Pos)    /**< (SHDW_MR) WKUP0/1 in active state for at least 7 RTCOUTx clock periods Position  */
 #define SHDW_MR_LPDBC_8_RTCOUT                (SHDW_MR_LPDBC_8_RTCOUT_Val << SHDW_MR_LPDBC_Pos)    /**< (SHDW_MR) WKUP0/1 in active state for at least 8 RTCOUTx clock periods Position  */
-#define SHDW_MR_ACCWKEN_Pos                   _U_(18)                                              /**< (SHDW_MR) Analog Comparator Controller Wakeup Enable Position */
-#define SHDW_MR_ACCWKEN_Msk                   (_U_(0x1) << SHDW_MR_ACCWKEN_Pos)                    /**< (SHDW_MR) Analog Comparator Controller Wakeup Enable Mask */
-#define SHDW_MR_ACCWKEN(value)                (SHDW_MR_ACCWKEN_Msk & ((value) << SHDW_MR_ACCWKEN_Pos))
-#define   SHDW_MR_ACCWKEN_0_Val               _U_(0x0)                                             /**< (SHDW_MR) The Analog comparator alarm signal has no effect on the Shutdown Controller.  */
-#define   SHDW_MR_ACCWKEN_1_Val               _U_(0x1)                                             /**< (SHDW_MR) The Analog comparator alarm signal forces the de-assertion of the SHDN pin.  */
-#define SHDW_MR_ACCWKEN_0                     (SHDW_MR_ACCWKEN_0_Val << SHDW_MR_ACCWKEN_Pos)       /**< (SHDW_MR) The Analog comparator alarm signal has no effect on the Shutdown Controller. Position  */
-#define SHDW_MR_ACCWKEN_1                     (SHDW_MR_ACCWKEN_1_Val << SHDW_MR_ACCWKEN_Pos)       /**< (SHDW_MR) The Analog comparator alarm signal forces the de-assertion of the SHDN pin. Position  */
-#define SHDW_MR_RXLPWKEN_Pos                  _U_(19)                                              /**< (SHDW_MR) Debug Unit Wakeup Enable Position */
-#define SHDW_MR_RXLPWKEN_Msk                  (_U_(0x1) << SHDW_MR_RXLPWKEN_Pos)                   /**< (SHDW_MR) Debug Unit Wakeup Enable Mask */
-#define SHDW_MR_RXLPWKEN(value)               (SHDW_MR_RXLPWKEN_Msk & ((value) << SHDW_MR_RXLPWKEN_Pos))
-#define   SHDW_MR_RXLPWKEN_0_Val              _U_(0x0)                                             /**< (SHDW_MR) The Backup RX UART Comparison event has no effect on the Shutdown Controller.  */
-#define   SHDW_MR_RXLPWKEN_1_Val              _U_(0x1)                                             /**< (SHDW_MR) The Backup RX UART Comparison event forces the de-assertion of the SHDN pin.  */
-#define SHDW_MR_RXLPWKEN_0                    (SHDW_MR_RXLPWKEN_0_Val << SHDW_MR_RXLPWKEN_Pos)     /**< (SHDW_MR) The Backup RX UART Comparison event has no effect on the Shutdown Controller. Position  */
-#define SHDW_MR_RXLPWKEN_1                    (SHDW_MR_RXLPWKEN_1_Val << SHDW_MR_RXLPWKEN_Pos)     /**< (SHDW_MR) The Backup RX UART Comparison event forces the de-assertion of the SHDN pin. Position  */
+#define SHDW_MR_RTTWKEN_Pos                   _U_(16)                                              /**< (SHDW_MR) Real-time Timer Wake-up Enable Position */
+#define SHDW_MR_RTTWKEN_Msk                   (_U_(0x1) << SHDW_MR_RTTWKEN_Pos)                    /**< (SHDW_MR) Real-time Timer Wake-up Enable Mask */
+#define SHDW_MR_RTTWKEN(value)                (SHDW_MR_RTTWKEN_Msk & ((value) << SHDW_MR_RTTWKEN_Pos))
+#define   SHDW_MR_RTTWKEN_0_Val               _U_(0x0)                                             /**< (SHDW_MR) The RTT Alarm signal has no effect on the SHDWC.  */
+#define   SHDW_MR_RTTWKEN_1_Val               _U_(0x1)                                             /**< (SHDW_MR) The RTT Alarm signal forces the de-assertion of the SHDN pin.  */
+#define SHDW_MR_RTTWKEN_0                     (SHDW_MR_RTTWKEN_0_Val << SHDW_MR_RTTWKEN_Pos)       /**< (SHDW_MR) The RTT Alarm signal has no effect on the SHDWC. Position  */
+#define SHDW_MR_RTTWKEN_1                     (SHDW_MR_RTTWKEN_1_Val << SHDW_MR_RTTWKEN_Pos)       /**< (SHDW_MR) The RTT Alarm signal forces the de-assertion of the SHDN pin. Position  */
+#define SHDW_MR_RTCWKEN_Pos                   _U_(17)                                              /**< (SHDW_MR) Real-time Clock Wake-up Enable Position */
+#define SHDW_MR_RTCWKEN_Msk                   (_U_(0x1) << SHDW_MR_RTCWKEN_Pos)                    /**< (SHDW_MR) Real-time Clock Wake-up Enable Mask */
+#define SHDW_MR_RTCWKEN(value)                (SHDW_MR_RTCWKEN_Msk & ((value) << SHDW_MR_RTCWKEN_Pos))
+#define   SHDW_MR_RTCWKEN_0_Val               _U_(0x0)                                             /**< (SHDW_MR) The RTC Alarm signal has no effect on the SHDWC.  */
+#define   SHDW_MR_RTCWKEN_1_Val               _U_(0x1)                                             /**< (SHDW_MR) The RTC Alarm signal forces the de-assertion of the SHDN pin.  */
+#define SHDW_MR_RTCWKEN_0                     (SHDW_MR_RTCWKEN_0_Val << SHDW_MR_RTCWKEN_Pos)       /**< (SHDW_MR) The RTC Alarm signal has no effect on the SHDWC. Position  */
+#define SHDW_MR_RTCWKEN_1                     (SHDW_MR_RTCWKEN_1_Val << SHDW_MR_RTCWKEN_Pos)       /**< (SHDW_MR) The RTC Alarm signal forces the de-assertion of the SHDN pin. Position  */
 #define SHDW_MR_AUTOLPM_Pos                   _U_(20)                                              /**< (SHDW_MR) Automatic LPM Pad Management Position */
 #define SHDW_MR_AUTOLPM_Msk                   (_U_(0x1) << SHDW_MR_AUTOLPM_Pos)                    /**< (SHDW_MR) Automatic LPM Pad Management Mask */
 #define SHDW_MR_AUTOLPM(value)                (SHDW_MR_AUTOLPM_Msk & ((value) << SHDW_MR_AUTOLPM_Pos))
@@ -130,7 +130,7 @@
 #define SHDW_MR_WKUPDBC_512_SLCK              (SHDW_MR_WKUPDBC_512_SLCK_Val << SHDW_MR_WKUPDBC_Pos) /**< (SHDW_MR) PIOBUx shall be in its active state for at least 512 SLCK periods Position  */
 #define SHDW_MR_WKUPDBC_4096_SLCK             (SHDW_MR_WKUPDBC_4096_SLCK_Val << SHDW_MR_WKUPDBC_Pos) /**< (SHDW_MR) PIOBUx shall be in its active state for at least 4,096 SLCK periods Position  */
 #define SHDW_MR_WKUPDBC_32768_SLCK            (SHDW_MR_WKUPDBC_32768_SLCK_Val << SHDW_MR_WKUPDBC_Pos) /**< (SHDW_MR) PIOBUx shall be in its active state for at least 32,768 SLCK periods Position  */
-#define SHDW_MR_Msk                           _U_(0x071C0703)                                      /**< (SHDW_MR) Register Mask  */
+#define SHDW_MR_Msk                           _U_(0x07130703)                                      /**< (SHDW_MR) Register Mask  */
 
 #define SHDW_MR_LPDBCEN_Pos                   _U_(0)                                               /**< (SHDW_MR Position) Low-Power Debouncer Enable WKUPx */
 #define SHDW_MR_LPDBCEN_Msk                   (_U_(0x3) << SHDW_MR_LPDBCEN_Pos)                    /**< (SHDW_MR Mask) LPDBCEN */
@@ -146,20 +146,20 @@
 #define   SHDW_SR_WKUPS_PRESENT_Val           _U_(0x1)                                             /**< (SHDW_SR) At least one wakeup due to the assertion of the PIOBU, WKUP pins has occurred since the last read of SHDW_SR.  */
 #define SHDW_SR_WKUPS_NO                      (SHDW_SR_WKUPS_NO_Val << SHDW_SR_WKUPS_Pos)          /**< (SHDW_SR) No wakeup due to the assertion of the PIOBU, WKUP pins has occurred since the last read of SHDW_SR. Position  */
 #define SHDW_SR_WKUPS_PRESENT                 (SHDW_SR_WKUPS_PRESENT_Val << SHDW_SR_WKUPS_Pos)     /**< (SHDW_SR) At least one wakeup due to the assertion of the PIOBU, WKUP pins has occurred since the last read of SHDW_SR. Position  */
-#define SHDW_SR_ACCWK_Pos                     _U_(6)                                               /**< (SHDW_SR) Analog Comparator Controller Wakeup Position */
-#define SHDW_SR_ACCWK_Msk                     (_U_(0x1) << SHDW_SR_ACCWK_Pos)                      /**< (SHDW_SR) Analog Comparator Controller Wakeup Mask */
-#define SHDW_SR_ACCWK(value)                  (SHDW_SR_ACCWK_Msk & ((value) << SHDW_SR_ACCWK_Pos))
-#define   SHDW_SR_ACCWK_0_Val                 _U_(0x0)                                             /**< (SHDW_SR) No wakeup alarm from the ACC occurred since the last read of SHDW_SR.  */
-#define   SHDW_SR_ACCWK_1_Val                 _U_(0x1)                                             /**< (SHDW_SR) At least one wakeup alarm from the ACC occurred since the last read of SHDW_SR.  */
-#define SHDW_SR_ACCWK_0                       (SHDW_SR_ACCWK_0_Val << SHDW_SR_ACCWK_Pos)           /**< (SHDW_SR) No wakeup alarm from the ACC occurred since the last read of SHDW_SR. Position  */
-#define SHDW_SR_ACCWK_1                       (SHDW_SR_ACCWK_1_Val << SHDW_SR_ACCWK_Pos)           /**< (SHDW_SR) At least one wakeup alarm from the ACC occurred since the last read of SHDW_SR. Position  */
-#define SHDW_SR_RXLPWK_Pos                    _U_(7)                                               /**< (SHDW_SR) Debug Unit Wakeup Position */
-#define SHDW_SR_RXLPWK_Msk                    (_U_(0x1) << SHDW_SR_RXLPWK_Pos)                     /**< (SHDW_SR) Debug Unit Wakeup Mask */
-#define SHDW_SR_RXLPWK(value)                 (SHDW_SR_RXLPWK_Msk & ((value) << SHDW_SR_RXLPWK_Pos))
-#define   SHDW_SR_RXLPWK_0_Val                _U_(0x0)                                             /**< (SHDW_SR) No wakeup alarm from the Backup RX UART Comparison unit (RXLP) occurred since the last read of SHDW_SR.  */
-#define   SHDW_SR_RXLPWK_1_Val                _U_(0x1)                                             /**< (SHDW_SR) At least one wakeup alarm from the Backup RX UART Comparison unit (RXLP) occurred since the last read of SHDW_SR.  */
-#define SHDW_SR_RXLPWK_0                      (SHDW_SR_RXLPWK_0_Val << SHDW_SR_RXLPWK_Pos)         /**< (SHDW_SR) No wakeup alarm from the Backup RX UART Comparison unit (RXLP) occurred since the last read of SHDW_SR. Position  */
-#define SHDW_SR_RXLPWK_1                      (SHDW_SR_RXLPWK_1_Val << SHDW_SR_RXLPWK_Pos)         /**< (SHDW_SR) At least one wakeup alarm from the Backup RX UART Comparison unit (RXLP) occurred since the last read of SHDW_SR. Position  */
+#define SHDW_SR_RTTWK_Pos                     _U_(4)                                               /**< (SHDW_SR) Real-time Timer Wake-up Position */
+#define SHDW_SR_RTTWK_Msk                     (_U_(0x1) << SHDW_SR_RTTWK_Pos)                      /**< (SHDW_SR) Real-time Timer Wake-up Mask */
+#define SHDW_SR_RTTWK(value)                  (SHDW_SR_RTTWK_Msk & ((value) << SHDW_SR_RTTWK_Pos))
+#define   SHDW_SR_RTTWK_0_Val                 _U_(0x0)                                             /**< (SHDW_SR) No wake-up alarm from the RTT occurred since the last read of SHDW_SR.  */
+#define   SHDW_SR_RTTWK_1_Val                 _U_(0x1)                                             /**< (SHDW_SR) At least one wake-up alarm from the RTT occurred since the last read of SHDW_SR.  */
+#define SHDW_SR_RTTWK_0                       (SHDW_SR_RTTWK_0_Val << SHDW_SR_RTTWK_Pos)           /**< (SHDW_SR) No wake-up alarm from the RTT occurred since the last read of SHDW_SR. Position  */
+#define SHDW_SR_RTTWK_1                       (SHDW_SR_RTTWK_1_Val << SHDW_SR_RTTWK_Pos)           /**< (SHDW_SR) At least one wake-up alarm from the RTT occurred since the last read of SHDW_SR. Position  */
+#define SHDW_SR_RTCWK_Pos                     _U_(5)                                               /**< (SHDW_SR) Real-time Clock Wake-up Position */
+#define SHDW_SR_RTCWK_Msk                     (_U_(0x1) << SHDW_SR_RTCWK_Pos)                      /**< (SHDW_SR) Real-time Clock Wake-up Mask */
+#define SHDW_SR_RTCWK(value)                  (SHDW_SR_RTCWK_Msk & ((value) << SHDW_SR_RTCWK_Pos))
+#define   SHDW_SR_RTCWK_0_Val                 _U_(0x0)                                             /**< (SHDW_SR) No wake-up alarm from the RTC occurred since the last read of SHDW_SR.  */
+#define   SHDW_SR_RTCWK_1_Val                 _U_(0x1)                                             /**< (SHDW_SR) At least one wake-up alarm from the RTC occurred since the last read of SHDW_SR.  */
+#define SHDW_SR_RTCWK_0                       (SHDW_SR_RTCWK_0_Val << SHDW_SR_RTCWK_Pos)           /**< (SHDW_SR) No wake-up alarm from the RTC occurred since the last read of SHDW_SR. Position  */
+#define SHDW_SR_RTCWK_1                       (SHDW_SR_RTCWK_1_Val << SHDW_SR_RTCWK_Pos)           /**< (SHDW_SR) At least one wake-up alarm from the RTC occurred since the last read of SHDW_SR. Position  */
 #define SHDW_SR_LPM_Pos                       _U_(8)                                               /**< (SHDW_SR) Low-Power Mode Pad Status Position */
 #define SHDW_SR_LPM_Msk                       (_U_(0x1) << SHDW_SR_LPM_Pos)                        /**< (SHDW_SR) Low-Power Mode Pad Status Mask */
 #define SHDW_SR_LPM(value)                    (SHDW_SR_LPM_Msk & ((value) << SHDW_SR_LPM_Pos))    
@@ -209,7 +209,7 @@
 #define   SHDW_SR_WKUPIS5_ENABLE_Val          _U_(0x1)                                             /**< (SHDW_SR) The corresponding wakeup input was active at the time the debouncer triggered a wakeup event.  */
 #define SHDW_SR_WKUPIS5_DISABLE               (SHDW_SR_WKUPIS5_DISABLE_Val << SHDW_SR_WKUPIS5_Pos) /**< (SHDW_SR) The corresponding wakeup input is disabled, or was inactive at the time the debouncer triggered a wakeup event. Position  */
 #define SHDW_SR_WKUPIS5_ENABLE                (SHDW_SR_WKUPIS5_ENABLE_Val << SHDW_SR_WKUPIS5_Pos)  /**< (SHDW_SR) The corresponding wakeup input was active at the time the debouncer triggered a wakeup event. Position  */
-#define SHDW_SR_Msk                           _U_(0x003F01C1)                                      /**< (SHDW_SR) Register Mask  */
+#define SHDW_SR_Msk                           _U_(0x003F0131)                                      /**< (SHDW_SR) Register Mask  */
 
 #define SHDW_SR_WKUPIS_Pos                    _U_(16)                                              /**< (SHDW_SR Position) Wakeup x to x5 Input Status */
 #define SHDW_SR_WKUPIS_Msk                    (_U_(0x3F) << SHDW_SR_WKUPIS_Pos)                    /**< (SHDW_SR Mask) WKUPIS */
