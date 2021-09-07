@@ -104,7 +104,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: HarmonyCore, value: 'false'}
+        attributes: {id: HarmonyCore, value: 'true'}
   - type: Boolean
     attributes: {id: ENABLE_SYS_COMMON}
     children:
@@ -272,7 +272,7 @@ children:
       - type: Boolean
         attributes: {id: enabled}
         children:
-        - {type: Value, value: 'false'}
+        - {type: Value, value: 'true'}
   - type: File
     attributes: {id: SYS_CACHE_HEADER}
     children:
@@ -281,7 +281,7 @@ children:
       - type: Boolean
         attributes: {id: enabled}
         children:
-        - {type: Value, value: 'false'}
+        - {type: Value, value: 'true'}
   - type: File
     attributes: {id: SYS_CACHE_SOURCE}
     children:
@@ -290,7 +290,7 @@ children:
       - type: Boolean
         attributes: {id: enabled}
         children:
-        - {type: Value, value: 'false'}
+        - {type: Value, value: 'true'}
   - type: File
     attributes: {id: SYS_DEBUG_DEF_HEADER}
     children:

@@ -447,13 +447,6 @@ children:
         attributes: {id: visible}
         children:
         - {type: Value, value: 'false'}
-  - type: Boolean
-    attributes: {id: DATA_CACHE_ENABLE}
-    children:
-    - type: Values
-      children:
-      - type: User
-        attributes: {value: 'false'}
   - type: Integer
     attributes: {id: DDRPLL_CORE_FREQUENCY}
     children:
@@ -748,13 +741,6 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '266000000'}
-  - type: Boolean
-    attributes: {id: INSTRUCTION_CACHE_ENABLE}
-    children:
-    - type: Values
-      children:
-      - type: User
-        attributes: {value: 'false'}
   - type: Integer
     attributes: {id: ISC_CLOCK_FREQUENCY}
     children:
