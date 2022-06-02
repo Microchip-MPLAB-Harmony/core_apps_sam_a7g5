@@ -1175,6 +1175,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '200000000'}
+  - type: Boolean
+    attributes: {id: PIO_MULTI_INSTANCE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
   - type: Integer
     attributes: {id: PIT64B0_CLOCK_FREQUENCY}
     children:
@@ -1798,6 +1805,20 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: XDMAC0_Handler}
+  - type: Boolean
+    attributes: {id: XDMAC0_SINT_INTERRUPT_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: String
+    attributes: {id: XDMAC0_SINT_INTERRUPT_HANDLER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: XDMAC0_SINT_Handler}
   - type: Integer
     attributes: {id: XDMAC1_CLOCK_FREQUENCY}
     children:

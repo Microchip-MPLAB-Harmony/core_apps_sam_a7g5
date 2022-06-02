@@ -1,7 +1,7 @@
 /*
- * Instance header file for SAMA7G54
+ * Instance header file for ATSAMA7G54
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2021-07-26T12:51:16Z */
+/* file generated from device description version 2022-02-07T12:32:53Z */
 #ifndef _SAMA7G_HSMC_INSTANCE_
 #define _SAMA7G_HSMC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for HSMC peripheral ========== */
-#define HSMC_INSTANCE_ID                         _UL_(21)   /* Static Memory Controller - NAND Flash Controller */
-#define HSMC_CLOCK_ID                            _UL_(21)   
+#define HSMC_INSTANCE_ID                         (21)       /* Static Memory Controller - NAND Flash Controller */
+#define HSMC_CLOCK_ID                            (21)       
 
 #endif /* _SAMA7G_HSMC_INSTANCE_ */
