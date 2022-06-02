@@ -222,7 +222,7 @@ void EIC_EXT_IRQ1_Handler( void )        __attribute__((weak, alias("DefaultInte
 
 /* Array of interrupt handlers indexed by its IRQn_Type IDs */
 
-peripheral_interrupt_handler_t gicPIVectorTable[171U] = 
+PPI_SPI_HANDLER gicPIVectorTable[171U] = 
 {
     NULL,
     NULL,

@@ -436,6 +436,18 @@ size_t FLEXCOM3_USART_WriteBufferSizeGet(void)
     return (flexcom3UsartObj.wrBufferSize - 1);
 }
 
+bool FLEXCOM3_USART_TransmitComplete(void)
+{
+    bool status = false;
+
+    if (FLEXCOM3_REGS->FLEX_US_CSR & FLEX_US_CSR_TXEMPTY_Msk)
+    {
+        status = true;
+    }
+
+    return status;
+}
+
 bool FLEXCOM3_USART_WriteNotificationEnable(bool isEnabled, bool isPersistent)
 {
     bool previousStatus = flexcom3UsartObj.isWrNotificationEnabled;

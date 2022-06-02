@@ -1,7 +1,7 @@
 /*
- * Instance header file for SAMA7G54
+ * Instance header file for ATSAMA7G54
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2021-07-26T12:51:16Z */
+/* file generated from device description version 2022-02-07T12:32:53Z */
 #ifndef _SAMA7G_GMAC1_INSTANCE_
 #define _SAMA7G_GMAC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for GMAC1 peripheral ========== */
-#define GMAC1_INSTANCE_ID                        _UL_(52)   /* Ethernet MAC */
-#define GMAC1_CLOCK_ID                           _UL_(52)   
-#define GMAC1_INSTANCE_ID_TSU                    _UL_(54)   /* Ethernet MAC - Time Stamp Unit Generic Clock - No Interrupt */
-#define GMAC1_INSTANCE_ID_Q1                     _UL_(121)  /* GMAC1 Queue 1 Interrupt signal toggled on a DMA write to the first word of each DMA data buffer associated with queue 1 */
+#define GMAC1_INSTANCE_ID                        (52)       /* Ethernet MAC */
+#define GMAC1_CLOCK_ID                           (52)       
+#define GMAC1_INSTANCE_ID_TSU                    (54)       /* Ethernet MAC - Time Stamp Unit Generic Clock - No Interrupt */
+#define GMAC1_INSTANCE_ID_Q1                     (121)      /* GMAC1 Queue 1 Interrupt signal toggled on a DMA write to the first word of each DMA data buffer associated with queue 1 */
 
 #endif /* _SAMA7G_GMAC1_INSTANCE_ */
