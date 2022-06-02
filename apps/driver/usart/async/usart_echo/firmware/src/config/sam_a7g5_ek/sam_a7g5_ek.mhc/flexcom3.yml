@@ -229,6 +229,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: flexcom3, value: '247'}
+  - type: Integer
+    attributes: {id: FLEXCOM_TWI_TIMEOUT_COUNT_VAL}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: flexcom3, value: '160000'}
   - type: Boolean
     attributes: {id: FLEXCOM_USART_FIFO_ENABLE}
     children:
