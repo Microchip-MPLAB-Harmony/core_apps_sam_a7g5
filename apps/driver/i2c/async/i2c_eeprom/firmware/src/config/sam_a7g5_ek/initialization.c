@@ -83,6 +83,9 @@ const DRV_I2C_PLIB_INTERFACE drvI2C0PLibAPI = {
     /* I2C PLib Transfer Write Read Add function */
     .writeRead = (DRV_I2C_PLIB_WRITE_READ)FLEXCOM1_TWI_WriteRead,
 
+    /*I2C PLib Tranfer Abort function */
+    .transferAbort = (DRV_I2C_PLIB_TRANSFER_ABORT)FLEXCOM1_TWI_TransferAbort,
+
     /* I2C PLib Transfer Status function */
     .errorGet = (DRV_I2C_PLIB_ERROR_GET)FLEXCOM1_TWI_ErrorGet,
 
@@ -183,7 +186,8 @@ void SYS_Initialize ( void* data )
     MMU_Initialize();
     Matrix_Initialize();
 
-	PIO_Initialize();
+    PIO_Initialize();
+
 
 
 

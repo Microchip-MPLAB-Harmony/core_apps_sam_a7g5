@@ -1,7 +1,7 @@
 /*
- * Instance header file for SAMA7G54
+ * Instance header file for ATSAMA7G54
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2021-07-26T12:51:16Z */
+/* file generated from device description version 2022-02-07T12:32:53Z */
 #ifndef _SAMA7G_XDMAC0_INSTANCE_
 #define _SAMA7G_XDMAC0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for XDMAC0 peripheral ========== */
-#define XDMAC0_INSTANCE_ID                       _UL_(22)   /* DMA 0, mem to periph, 32 Channels */
-#define XDMAC0_CLOCK_ID                          _UL_(22)   
-#define XDMAC0_INSTANCE_ID_SINT                  _UL_(112)  /* DMA 0, mem to periph, 32 Channels, Secure INTerrupt */
+#define XDMAC0_INSTANCE_ID                       (22)       /* DMA 0, mem to periph, 32 Channels */
+#define XDMAC0_CLOCK_ID                          (22)       
+#define XDMAC0_INSTANCE_ID_SINT                  (112)      /* DMA 0, mem to periph, 32 Channels, Secure INTerrupt */
 
 #endif /* _SAMA7G_XDMAC0_INSTANCE_ */
