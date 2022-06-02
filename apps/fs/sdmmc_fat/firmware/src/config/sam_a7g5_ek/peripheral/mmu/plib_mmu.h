@@ -41,8 +41,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _PLIB_MMU_H    // Guards against multiple inclusion
-#define _PLIB_MMU_H
+#ifndef PLIB_MMU_H    // Guards against multiple inclusion
+#define PLIB_MMU_H
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 
@@ -76,15 +76,6 @@ void MMU_Initialize(void);
 void icache_InvalidateAll(void);
 void icache_Enable(void);
 void icache_Disable(void);
-void dcache_InvalidateAll(void);
-void dcache_CleanAll(void);
-void dcache_CleanInvalidateAll(void);
-
-void dcache_InvalidateByAddr (uint32_t *addr, uint32_t size);
-void dcache_CleanByAddr (uint32_t *addr, uint32_t size);
-void dcache_CleanInvalidateByAddr (uint32_t *addr, uint32_t size);
-void dcache_Enable(void);
-void dcache_Disable(void);
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 
