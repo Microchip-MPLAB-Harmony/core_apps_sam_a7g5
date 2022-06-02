@@ -52,7 +52,7 @@
 extern "C" {
 #endif //__cplusplus
 
-typedef void (*GENERIC_TIMER_CALLBACK) (void* context);
+typedef void (*GENERIC_TIMER_CALLBACK) (uintptr_t context);
 
 void GENERIC_TIMER_Initialize(void);
 
