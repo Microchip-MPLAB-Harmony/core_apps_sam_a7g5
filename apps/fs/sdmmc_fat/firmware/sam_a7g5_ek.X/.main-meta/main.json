@@ -1,0 +1,78 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.core_apps_sam_a7g5_fs_sdmmc_fat_sam_a7g5_ek",
+		"version": "3.0.0",
+		"displayName": "FAT filesystem using SDMMC Media Example for SAM A7G5 Family",
+		"projectName": "sdmmc_fat_sam_a7g5_ek",
+		"shortDescription": "This application shows an example of using the MPLAB Harmony File System to access and modify the contents of a SD card using the SDMMC driver.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=6.0.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=4.1.0"
+			}
+		],
+		"dfp": {
+			"name": "SAMA7G5_DFP",
+			"semverRange": "^1.0.56"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.8.0"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "SAMA7G54",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit",
+				"SAMA5D27-SOM1-EK1"
+			],
+			[
+				"Harmony",
+				"Middleware",
+				"File System (FS)",
+				"SDMMC_FAT"
+			],
+			[
+				"File System (FS)",
+				"SDMMC_FAT"
+			]
+		],
+		"peripherals": [
+			"SDMMC_FAT"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"File System",
+			"SAMA7G54",
+			"SAM A7G5 Family"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
