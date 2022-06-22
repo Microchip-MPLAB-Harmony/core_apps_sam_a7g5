@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.core_apps_sam_a7g5_driver_i2c_sync_i2c_eeprom_sam_a7g5_ek_freertos",
-		"version": "3.0.0",
+		"version": "3.2.0",
 		"displayName": "I2C driver synchronous - I2C EEPROM Example for SAM A7G5 Family",
 		"projectName": "i2c_eeprom_sam_a7g5_ek_freertos",
 		"shortDescription": "This example application shows how to use the I2C driver in synchronous mode to perform operations on the EEPROM.",
@@ -24,7 +24,7 @@
 		},
 		"configurator": {
 			"name": "MHC",
-			"semverRange": ">=3.8.0"
+			"semverRange": ">=3.8.5"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",

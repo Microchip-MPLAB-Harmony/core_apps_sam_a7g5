@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.core_apps_sam_a7g5_driver_usart_async_usart_echo_sam_a7g5_ek",
-		"version": "3.0.0",
+		"version": "3.2.0",
 		"displayName": "USART driver asynchronous - USART echo Example for SAM A7G5 Family",
 		"projectName": "usart_echo_sam_a7g5_ek",
 		"shortDescription": "This example echoes the received characters over the console using the USART driver in asynchronous mode.",
@@ -24,7 +24,7 @@
 		},
 		"configurator": {
 			"name": "MHC",
-			"semverRange": ">=3.8.0"
+			"semverRange": ">=3.8.5"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
