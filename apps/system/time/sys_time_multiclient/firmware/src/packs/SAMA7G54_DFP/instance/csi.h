@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7G54
+ * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_CSI_INSTANCE_
 #define _SAMA7G_CSI_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for CSI peripheral ========== */
-#define CSI_INSTANCE_ID                          (33)       /* Camera Serial Interface 2 between ISC and MIPI PHY */
 #define CSI_CLOCK_ID                             (33)       
+#define CSI_INSTANCE_ID                          (33)       /* Camera Serial Interface 2 between ISC and MIPI PHY */
 
 #endif /* _SAMA7G_CSI_INSTANCE_ */

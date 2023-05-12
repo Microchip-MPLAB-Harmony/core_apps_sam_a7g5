@@ -38,7 +38,7 @@ To build the application, refer to the following table and open the project usin
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| sam_a7g5_ek_freertos.X | MPLABX project for [SAMA7G5 Evaluation Kit]() |
+| sam_a7g5_ek_freertos.X | MPLABX project for [SAMA7G5 Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV21H18A) |
 |||
 
 ## Setting up AT91Bootstrap loader
@@ -51,10 +51,10 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-| sam_a7g5_ek_freertos.X | [SAMA7G5 Evaluation Kit]() |
+| sam_a7g5_ek_freertos.X | [SAMA7G5 Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV21H18A) |
 |||
 
-### Setting up [SAMA7G5 Evaluation Kit]()
+### Setting up [SAMA7G5 Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV21H18A)
 
 #### Addtional hardware required
 
@@ -102,5 +102,5 @@ Refer to the following table for switch and LED name:
 
 | Board | Switch Name | LED Name |
 | ----- | ----------- | -------- |
-|  [SAMA7G5 Evaluation Kit]()  | USER_BUTTON | RGB_LED(Green) |
+|  [SAMA7G5 Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV21H18A)  | USER_BUTTON | RGB_LED(Green) |
 ||||
