@@ -1,7 +1,7 @@
 /*
  * Component description for GMAC
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_GMAC_COMPONENT_H_
 #define _SAMA7G_GMAC_COMPONENT_H_
 
@@ -286,11 +286,11 @@
 #define GMAC_UR_MIM_Pos                       _UINT32_(0)                                          /* (GMAC_UR) Media Interface Mode Position */
 #define GMAC_UR_MIM_Msk                       (_UINT32_(0x3) << GMAC_UR_MIM_Pos)                   /* (GMAC_UR) Media Interface Mode Mask */
 #define GMAC_UR_MIM(value)                    (GMAC_UR_MIM_Msk & (_UINT32_(value) << GMAC_UR_MIM_Pos)) /* Assigment of value for MIM in the GMAC_UR register */
-#define   GMAC_UR_MIM_RMII_Val                _UINT32_(0x0)                                        /* (GMAC_UR) RMII mode is selected.  */
-#define   GMAC_UR_MIM_MII_Val                 _UINT32_(0x1)                                        /* (GMAC_UR) MII mode is selected.  */
+#define   GMAC_UR_MIM_MII_Val                 _UINT32_(0x0)                                        /* (GMAC_UR) MII mode is selected.  */
+#define   GMAC_UR_MIM_RMII_Val                _UINT32_(0x1)                                        /* (GMAC_UR) RMII mode is selected.  */
 #define   GMAC_UR_MIM_RGMII_Val               _UINT32_(0x2)                                        /* (GMAC_UR) RGMII mode is selected.  */
-#define GMAC_UR_MIM_RMII                      (GMAC_UR_MIM_RMII_Val << GMAC_UR_MIM_Pos)            /* (GMAC_UR) RMII mode is selected. Position  */
 #define GMAC_UR_MIM_MII                       (GMAC_UR_MIM_MII_Val << GMAC_UR_MIM_Pos)             /* (GMAC_UR) MII mode is selected. Position  */
+#define GMAC_UR_MIM_RMII                      (GMAC_UR_MIM_RMII_Val << GMAC_UR_MIM_Pos)            /* (GMAC_UR) RMII mode is selected. Position  */
 #define GMAC_UR_MIM_RGMII                     (GMAC_UR_MIM_RGMII_Val << GMAC_UR_MIM_Pos)           /* (GMAC_UR) RGMII mode is selected. Position  */
 #define GMAC_UR_REFCLK_Pos                    _UINT32_(2)                                          /* (GMAC_UR) Reference Clock Selection Position */
 #define GMAC_UR_REFCLK_Msk                    (_UINT32_(0x1) << GMAC_UR_REFCLK_Pos)                /* (GMAC_UR) Reference Clock Selection Mask */
