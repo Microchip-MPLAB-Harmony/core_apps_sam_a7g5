@@ -54,8 +54,8 @@
 #include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/matrix/plib_matrix.h"
 #include "peripheral/pio/plib_pio.h"
-#include "peripheral/flexcom/twi/master/plib_flexcom1_twi_master.h"
 #include "bsp/bsp.h"
+#include "peripheral/flexcom/twi/master/plib_flexcom1_twi_master.h"
 #include "driver/i2c/drv_i2c.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
@@ -72,6 +72,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "SAMA7G54"
+#define DEVICE_ARCH			 "CORTEX-A7"
+#define DEVICE_FAMILY		 "SAMA"
+#define DEVICE_SERIES		 "SAMA7G"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 800000000

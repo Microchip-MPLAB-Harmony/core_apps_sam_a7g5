@@ -1,7 +1,7 @@
 /*
  * Header file for ATSAMA7G54
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* File generated from device description version 2022-02-07T12:32:53Z */
+/* File generated from device description version 2023-01-20T08:56:53Z */
 #ifndef _SAMA7G54_H_
 #define _SAMA7G54_H_
 

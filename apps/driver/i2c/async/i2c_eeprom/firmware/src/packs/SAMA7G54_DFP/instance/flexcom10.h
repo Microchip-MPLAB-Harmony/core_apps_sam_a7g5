@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7G54
+ * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,18 +20,18 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_FLEXCOM10_INSTANCE_
 #define _SAMA7G_FLEXCOM10_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for FLEXCOM10 peripheral ========== */
-#define FLEXCOM10_INSTANCE_ID                    (48)       /* Flexcom 10 */
 #define FLEXCOM10_CLOCK_ID                       (48)       
 #define FLEXCOM10_DMAC_ID_RX                     (25)       
 #define FLEXCOM10_DMAC_ID_TX                     (26)       
-#define FLEXCOM10_USART_FIFO_SIZE                (32)       
+#define FLEXCOM10_INSTANCE_ID                    (48)       /* Flexcom 10 */
 #define FLEXCOM10_SPI_FIFO_SIZE                  (32)       
 #define FLEXCOM10_TWI_FIFO_SIZE                  (32)       
+#define FLEXCOM10_USART_FIFO_SIZE                (32)       
 
 #endif /* _SAMA7G_FLEXCOM10_INSTANCE_ */
