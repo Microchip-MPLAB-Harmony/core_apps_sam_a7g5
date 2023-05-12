@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7G54
+ * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_I2SMCC0_INSTANCE_
 #define _SAMA7G_I2SMCC0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for I2SMCC0 peripheral ========== */
-#define I2SMCC0_INSTANCE_ID                      (57)       /* Inter-IC Sound Controller 0 */
 #define I2SMCC0_CLOCK_ID                         (57)       
 #define I2SMCC0_DMAC_ID_RX                       (33)       
 #define I2SMCC0_DMAC_ID_TX                       (34)       
+#define I2SMCC0_INSTANCE_ID                      (57)       /* Inter-IC Sound Controller 0 */
 
 #endif /* _SAMA7G_I2SMCC0_INSTANCE_ */

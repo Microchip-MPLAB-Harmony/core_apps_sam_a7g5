@@ -48,10 +48,11 @@
 #include <stddef.h>
 #include "device.h"
 #include "plib_generic_timer.h"
+#include "interrupts.h"
 
 #define GENERIC_TIMER_FREQUENCY 24000000U
 
-static uint64_t compareDelta = 24000UL;
+volatile static uint64_t compareDelta = 24000UL;
 
 
 void GENERIC_TIMER_Initialize(void)
@@ -78,9 +79,9 @@ void GENERIC_TIMER_DelayUs(uint32_t delay_us)
     uint64_t finalCount = GENERIC_TIMER_CounterValueGet() +
       (uint64_t)((GENERIC_TIMER_FREQUENCY /1000000UL) * (uint64_t)delay_us);
     while(GENERIC_TIMER_CounterValueGet() < finalCount)
-	{
-		
-	}
+    {
+
+    }
 }
 
 
@@ -90,9 +91,9 @@ void GENERIC_TIMER_DelayMs(uint32_t delay_ms)
     uint64_t finalCount = GENERIC_TIMER_CounterValueGet() +
       (uint64_t)((GENERIC_TIMER_FREQUENCY /1000UL) * (uint64_t)delay_ms);
     while(GENERIC_TIMER_CounterValueGet() < finalCount)
-	{
-		
-	}
+    {
+
+    }
 }
 
 void GENERIC_TIMER_Start(void)
@@ -123,4 +124,3 @@ void GENERIC_TIMER_Stop(void)
 {
     PL1_SetControl(2U);
 }
- 
