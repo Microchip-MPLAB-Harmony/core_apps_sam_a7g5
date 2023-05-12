@@ -1,7 +1,7 @@
 /*
- * Instance header file for ATSAMA7G54
+ * Instance header file for ATSAMA7G54D4G
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_SPDIFRX_INSTANCE_
 #define _SAMA7G_SPDIFRX_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SPDIFRX peripheral ========== */
-#define SPDIFRX_INSTANCE_ID                      (84)       /* Sony Philips Digital Interface RX */
 #define SPDIFRX_CLOCK_ID                         (84)       
 #define SPDIFRX_DMAC_ID_RX                       (49)       
+#define SPDIFRX_INSTANCE_ID                      (84)       /* Sony Philips Digital Interface RX */
 
 #endif /* _SAMA7G_SPDIFRX_INSTANCE_ */
