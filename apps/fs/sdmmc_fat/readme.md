@@ -62,23 +62,17 @@ The following table shows the target hardware for the application projects.
 
 #### Setting up the SD Card
 
-- Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a7g5_ek.X/binaries/boot.bin)
-- Copy the downloaded boot loader binary( boot.bin) onto the SD card
 - Create a new JPEG file in the SD Card with name FILE_TOO_LONG_NAME_EXAMPLE_123.JPG
 
 #### Setting up the board
 
-- SDMMC slot used for bootloading the application is SDMMC1 (J4)
 - Connect the USB port J7 on board to the computer using a micro USB cable (to power the board)
 - Connect the USB port J24 on board to the computer using a micro USB cable (to enable debug com port)
 
 ## Running the Application
 
 1. Build the application using its IDE
-2. Copy the output binary (named 'harmony.bin') onto the SD Card (Refer to the 'Setting up hardware' section above for setting up the SD card)
-3. Insert the SD card into SDMMC slot on the board (Refer to the 'Setting up hardware' section for the correct SDMMC slot)
-4. Reset the board to run the application
-5. The LED is turned ON if there was no error during creating the directory and copying the file into it
+2. The LED is turned ON if there was no error during creating the directory and copying the file into it
 
 
 Refer to the following table for LED name:

@@ -60,18 +60,8 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [SAMA7G5 Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV21H18A)
 
-#### Addtional hardware required
-
-- SD Card with FAT32 file system
-
-#### Setting up the SD Card
-
-- Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a7g5_ek.X/binaries/boot.bin)
-- Copy the downloaded boot loader binary( boot.bin) onto the SD card
-
 #### Setting up the board
 
-- SDMMC slot used for bootloading the application is SDMMC1 (J4)
 - Connect the USB port J7 on board to the computer using a micro USB cable (to power the board)
 - Connect the USB port J24 on board to the computer using a micro USB cable (to enable debug com port)
 
@@ -90,20 +80,17 @@ The following table shows the target hardware for the application projects.
     
     Flow Control : None
 3. Build the application using its IDE
-4. Copy the output binary (named 'harmony.bin') onto the SD Card (Refer to the 'Setting up hardware' section above for setting up the SD card)
-5. Insert the SD card into SDMMC slot on the board (Refer to the 'Setting up hardware' section for the correct SDMMC slot)
-6. Reset the board to run the application
-7. Observe the following output on the terminal.
+4. Observe the following output on the terminal.
 
    ![output](images/output1.png)
 
-8. Enter any character on the terminal to run task3. Notice how task1 and task2 are pre-empted by task3 as task3 is of higher priority than task1 and task2. Pressing character 'l' or "L' toggles the on board LED. Notice how task1 and task2 are not run when characters are entered continuously on the terminal.
+5. Enter any character on the terminal to run task3. Notice how task1 and task2 are pre-empted by task3 as task3 is of higher priority than task1 and task2. Pressing character 'l' or "L' toggles the on board LED. Notice how task1 and task2 are not run when characters are entered continuously on the terminal.
 
    ![output](images/output2.png)
 
    ![output](images/output2_1.png)
 
-9. Press the user switch on the board to run task4. Notice how task4 preempts all other tasks as it is of highest priority.
+6. Press the user switch on the board to run task4. Notice how task4 preempts all other tasks as it is of highest priority.
 
    ![output](images/output3.png)
 

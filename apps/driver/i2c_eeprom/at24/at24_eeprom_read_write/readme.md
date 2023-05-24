@@ -46,28 +46,18 @@ The following table shows the target hardware for the application projects.
 
 #### Addtional hardware required
 
-- SD Card with FAT32 file system
 - One [EEPROM 3 Click](https://www.mikroe.com/eeprom-3-click) board
-
-#### Setting up the SD Card
-
-- Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a7g5_ek.X/binaries/boot.bin)
-- Copy the downloaded boot loader binary( boot.bin) onto the SD card
 
 #### Setting up the board
 
 - Install the [EEPROM 3 Click](https://www.mikroe.com/eeprom-3-click) board on to the mikroBUS1 connector
-- SDMMC slot used for bootloading the application is SDMMC1 (J4)
 - Connect the USB port J7 on board to the computer using a micro USB cable (to power the board)
 - Connect the USB port J24 on board to the computer using a micro USB cable (to enable debug com port)
 
 ## Running the Application
 
 1. Build the application using its IDE
-2. Copy the output binary (named 'harmony.bin') onto the SD Card (Refer to the 'Setting up hardware' section above for setting up the SD card)
-3. Insert the SD card into SDMMC slot on the board (Refer to the 'Setting up hardware' section for the correct SDMMC slot)
-4. Reset the board to run the application
-5. LED is turned ON when the data read from EEPROM matches with the written data
+2. LED is turned ON when the data read from EEPROM matches with the written data
 
 Refer to the following table for LED name:
 

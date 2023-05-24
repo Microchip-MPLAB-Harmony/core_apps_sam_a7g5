@@ -56,46 +56,33 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [SAMA7G5 Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV21H18A)
 
-#### Addtional hardware required
-
-- SD Card with FAT32 file system
-
-#### Setting up the SD Card
-
-- Download harmony MPU bootstrap loader from this [location](firmware/at91bootstrap_sam_a7g5_ek_freertos.X/binaries/boot.bin)
-- Copy the downloaded boot loader binary( boot.bin) onto the SD card
-
 #### Setting up the board
 
-- SDMMC slot used for bootloading the application is SDMMC1 (J4)
 - Connect the USB port J7 on board to the computer using a micro USB cable (to power the board)
 - Connect the USB port J24 on board to the computer using a micro USB cable (to enable debug com port)
 
 ## Running the Application
 
 1. Build the application using its IDE
-2. Copy the output binary (named 'harmony.bin') onto the SD Card (Refer to the 'Setting up hardware' section above for setting up the SD card)
-3. Insert the SD card into SDMMC slot on the board (Refer to the 'Setting up hardware' section for the correct SDMMC slot)
-4. Open the Terminal application (Ex.:Tera term) on the computer.
-5. Connect to the EDBG/Jlink Virtual COM port and configure the serial settings as follows:
+2. Open the Terminal application (Ex.:Tera term) on the computer.
+3. Connect to the EDBG/Jlink Virtual COM port and configure the serial settings as follows:
     - Baud : 115200
     - Data : 8 Bits
     - Parity : None
     - Stop : 1 Bit
     - Flow Control : None
-6. Reset the board to run the application
-7. Observe the following message getting printed on the console every two seconds
+4. Observe the following message getting printed on the console every two seconds
 
     ![output_sys_time_multiclient_1](images/output_sys_time_multiclient_1.png)
 
-8. Press the switch and observe the following output on the terminal (highlighted in red box)
+5. Press the switch and observe the following output on the terminal (highlighted in red box)
 
     ![output_sys_time_multiclient_2](images/output_sys_time_multiclient_2.png)
 
     - "Delay time = 500 ms" indicates the amount of time spent during the delay
     - "Single shot timer of 100 ms expired" is printed only once on every switch press
 
-9. LED indicates the periodic timer functionality
+6. LED indicates the periodic timer functionality
     - LED is toggled periodically every one second
 
 Refer to the following table for switch and LED name:
