@@ -1,5 +1,5 @@
 ---
-parent: Harmony 3 driver and system service application examples for SAM A7G5 family
+parent: Harmony 3 driver and system service application examples for SAMA7G5 family
 title: FAT filesystem using SDMMC Media 
 has_children: false
 has_toc: false
