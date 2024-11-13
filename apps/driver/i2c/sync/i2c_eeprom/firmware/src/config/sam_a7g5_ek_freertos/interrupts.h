@@ -58,7 +58,7 @@
 // *****************************************************************************
 
 void GENERIC_TIMER_InterruptHandler (void);
-void FLEXCOM1_InterruptHandler (void);
+void FLEXCOM8_InterruptHandler (void);
 
 
 

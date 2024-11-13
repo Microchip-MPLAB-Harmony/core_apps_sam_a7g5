@@ -48,22 +48,21 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "peripheral/flexcom/twi/master/plib_flexcom8_twi_master.h"
 #include "peripheral/dwdt/plib_dwdt.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gic/plib_gic.h"
 #include "peripheral/mmu/plib_mmu.h"
-#include "peripheral/matrix/plib_matrix.h"
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/generic_timer/plib_generic_timer.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "peripheral/flexcom/twi/master/plib_flexcom1_twi_master.h"
 #include "bsp/bsp.h"
-#include "driver/i2c/drv_i2c.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
+#include "driver/i2c/drv_i2c.h"
 #include "app_i2c_eeprom.h"
 
 
@@ -77,13 +76,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "SAMA7G54"
-#define DEVICE_ARCH			 "CORTEX-A7"
-#define DEVICE_FAMILY		 "SAMA"
-#define DEVICE_SERIES		 "SAMA7G"
+#define DEVICE_NAME          "SAMA7G54"
+#define DEVICE_ARCH          "CORTEX-A7"
+#define DEVICE_FAMILY        "SAMA7"
+#define DEVICE_SERIES        "SAMA7G5"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 800000000
+#define CPU_CLOCK_FREQUENCY 800000000U
 
 // *****************************************************************************
 // *****************************************************************************

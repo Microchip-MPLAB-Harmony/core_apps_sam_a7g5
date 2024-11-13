@@ -34,7 +34,7 @@
 #define PLL_ID_AUDIOPLL         5U
 #define PLL_ID_ETHPLL           6U
 #define PLL_UPDT_STUPTIM_VAL    0x3FU
-#define PLL_ACR_RECOMMENDED     0x1B040010U
+#define PLL_ACR_RECOMMENDED     0x00070010U
 
 #define APB_DEBUG_S_BASE 0xE8800000U
 #define TIMESTAMP_OFFSET 0x43000U
@@ -93,7 +93,7 @@ static void initPeripheralClocks(void)
     } periphList[] =
     {
         {ID_PIOA, 1U, 0U, 0U, 0U},
-        {ID_FLEXCOM1, 1U, 0U, 0U, 0U},
+        {ID_FLEXCOM8, 1U, 0U, 0U, 0U},
         {EOL_MARKER, 0U, 0U, 0U, 0U}//end of list marker
     };
 

@@ -80,9 +80,9 @@ void PIO_Initialize ( void )
  /* Port B Latch configuration */
    PIOB_REGS->PIO_CODR = 0x100U;
 
- /* Port C Peripheral function F configuration */
-   PIOC_REGS->PIO_MSKR = 0x600U;
-   PIOC_REGS->PIO_CFGR = 0x6U;
+ /* Port C Peripheral function B configuration */
+   PIOC_REGS->PIO_MSKR = 0x6000U;
+   PIOC_REGS->PIO_CFGR = 0x2U;
 
 
  /* Port D Peripheral function GPIO configuration */
