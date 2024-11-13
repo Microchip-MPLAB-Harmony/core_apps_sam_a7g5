@@ -39,9 +39,6 @@
             <logicalFolder name="f5" displayName="gic" projectFiles="true">
               <itemPath>../src/config/sam_a7g5_ek_freertos/peripheral/gic/plib_gic.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="matrix" projectFiles="true">
-              <itemPath>../src/config/sam_a7g5_ek_freertos/peripheral/matrix/plib_matrix.h</itemPath>
-            </logicalFolder>
             <logicalFolder name="f7" displayName="mmu" projectFiles="true">
               <itemPath>../src/config/sam_a7g5_ek_freertos/peripheral/mmu/plib_mmu.h</itemPath>
             </logicalFolder>
@@ -94,6 +91,7 @@
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_prototypes.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stream_buffer.h</itemPath>
             <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/message_buffer.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_syscall_numbers.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="portable" projectFiles="true">
             <logicalFolder name="f1" displayName="XC32" projectFiles="true">
@@ -141,7 +139,6 @@
             <itemPath>../src/packs/SAMA7G54_DFP/component/isc.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/matrix.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/mcan.h</itemPath>
-            <itemPath>../src/packs/SAMA7G54_DFP/component/mipicsi2phy.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/nicgpv.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/otpc.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/pdmc.h</itemPath>
@@ -178,6 +175,7 @@
             <itemPath>../src/packs/SAMA7G54_DFP/component/uhpfs.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/uhphs.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/xdmac.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/component/csi.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/SAMA7G54_DFP/instance/acc.h</itemPath>
@@ -270,6 +268,14 @@
             <itemPath>../src/packs/SAMA7G54_DFP/instance/xdmac0.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/instance/xdmac1.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/instance/xdmac2.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/piod.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/pioe.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/pioc.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/securam.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/piob.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/tzaesb.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/pioa.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/instance/uhphs.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f3" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAMA7G54_DFP/pio/sama7g54.h</itemPath>
@@ -324,9 +330,6 @@
             </logicalFolder>
             <logicalFolder name="f5" displayName="gic" projectFiles="true">
               <itemPath>../src/config/sam_a7g5_ek_freertos/peripheral/gic/plib_gic.c</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f6" displayName="matrix" projectFiles="true">
-              <itemPath>../src/config/sam_a7g5_ek_freertos/peripheral/matrix/plib_matrix.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f7" displayName="mmu" projectFiles="true">
               <itemPath>../src/config/sam_a7g5_ek_freertos/peripheral/mmu/plib_mmu.c</itemPath>
@@ -396,11 +399,11 @@
         <targetPluginBoard/>
         <platformTool>jlink</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.21</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA7G5_DFP" vendor="Microchip" version="1.0.56"/>
+        <pack name="SAMA7G5_DFP" vendor="Microchip" version="1.5.222"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
