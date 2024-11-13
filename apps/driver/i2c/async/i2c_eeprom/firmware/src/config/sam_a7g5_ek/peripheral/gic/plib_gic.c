@@ -72,7 +72,7 @@ static const struct {
     uint32_t  irqSecurity;
 }gicIrqConfig[] =
 {
-    {FLEXCOM1_IRQn, FLEXCOM1_InterruptHandler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
+    {FLEXCOM8_IRQn, FLEXCOM8_InterruptHandler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
 };
 
 // *****************************************************************************
@@ -195,4 +195,29 @@ void GIC_INT_IrqRestore(bool state)
         __disable_irq();
         __DMB();
     }
+}
+
+bool GIC_INT_SourceDisable( IRQn_Type source )
+{
+    bool processorStatus;
+    bool intSrcStatus;
+
+    processorStatus = GIC_INT_IrqDisable();
+
+    intSrcStatus = (GIC_GetEnableIRQ(source) != 0U);
+
+    GIC_DisableIRQ( source );
+
+    GIC_INT_IrqRestore( processorStatus );
+
+    /* return the source status */
+    return intSrcStatus;
+}
+
+void GIC_INT_SourceRestore( IRQn_Type source, bool status )
+{
+    if( status ) {
+        GIC_EnableIRQ( source );
+    }
+    return;
 }

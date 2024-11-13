@@ -48,7 +48,6 @@
 #include "device.h"
 
 
-
 // ****************************************************************************
 // ****************************************************************************
 // Section: Configuration Bits
@@ -63,9 +62,10 @@
 // *****************************************************************************
 // *****************************************************************************
 /* Following MISRA-C rules are deviated in the below code block */
-/* MISRA C-2012 Rule 11.1 */
-/* MISRA C-2012 Rule 11.3 */
-/* MISRA C-2012 Rule 11.8 */
+/* MISRA C-2012 Rule 7.2 - Deviation record ID - H3_MISRAC_2012_R_7_2_DR_1 */
+/* MISRA C-2012 Rule 11.1 - Deviation record ID - H3_MISRAC_2012_R_11_1_DR_1 */
+/* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+/* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
 // <editor-fold defaultstate="collapsed" desc="DRV_I2C Instance 0 Initialization Data">
 
 /* I2C Client Objects Pool */
@@ -78,26 +78,26 @@ static DRV_I2C_TRANSFER_OBJ drvI2C0TransferObj[DRV_I2C_QUEUE_SIZE_IDX0];
 static const DRV_I2C_PLIB_INTERFACE drvI2C0PLibAPI = {
 
     /* I2C PLib Transfer Read Add function */
-    .read_t = (DRV_I2C_PLIB_READ)FLEXCOM1_TWI_Read,
+    .read_t = (DRV_I2C_PLIB_READ)FLEXCOM8_TWI_Read,
 
     /* I2C PLib Transfer Write Add function */
-    .write_t = (DRV_I2C_PLIB_WRITE)FLEXCOM1_TWI_Write,
+    .write_t = (DRV_I2C_PLIB_WRITE)FLEXCOM8_TWI_Write,
 
 
     /* I2C PLib Transfer Write Read Add function */
-    .writeRead = (DRV_I2C_PLIB_WRITE_READ)FLEXCOM1_TWI_WriteRead,
+    .writeRead = (DRV_I2C_PLIB_WRITE_READ)FLEXCOM8_TWI_WriteRead,
 
     /*I2C PLib Transfer Abort function */
-    .transferAbort = (DRV_I2C_PLIB_TRANSFER_ABORT)FLEXCOM1_TWI_TransferAbort,
+    .transferAbort = (DRV_I2C_PLIB_TRANSFER_ABORT)FLEXCOM8_TWI_TransferAbort,
 
     /* I2C PLib Transfer Status function */
-    .errorGet = (DRV_I2C_PLIB_ERROR_GET)FLEXCOM1_TWI_ErrorGet,
+    .errorGet = (DRV_I2C_PLIB_ERROR_GET)FLEXCOM8_TWI_ErrorGet,
 
     /* I2C PLib Transfer Setup function */
-    .transferSetup = (DRV_I2C_PLIB_TRANSFER_SETUP)FLEXCOM1_TWI_TransferSetup,
+    .transferSetup = (DRV_I2C_PLIB_TRANSFER_SETUP)FLEXCOM8_TWI_TransferSetup,
 
     /* I2C PLib Callback Register */
-    .callbackRegister = (DRV_I2C_PLIB_CALLBACK_REGISTER)FLEXCOM1_TWI_CallbackRegister,
+    .callbackRegister = (DRV_I2C_PLIB_CALLBACK_REGISTER)FLEXCOM8_TWI_CallbackRegister,
 };
 
 
@@ -107,7 +107,7 @@ static const DRV_I2C_INTERRUPT_SOURCES drvI2C0InterruptSources =
     .isSingleIntSrc                        = true,
 
     /* Peripheral interrupt line */
-    .intSources.i2cInterrupt             = (int32_t)FLEXCOM1_IRQn,
+    .intSources.i2cInterrupt             = (int32_t)FLEXCOM8_IRQn,
 };
 
 /* I2C Driver Initialization Data */
@@ -182,6 +182,7 @@ SYSTEM_OBJECTS sysObj;
 
 void SYS_Initialize ( void* data )
 {
+
     /* MISRAC 2012 deviation block start */
     /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
@@ -190,16 +191,13 @@ void SYS_Initialize ( void* data )
     CLK_Initialize();
 	GIC_Initialize();
     MMU_Initialize();
-    Matrix_Initialize();
-
     PIO_Initialize();
 
 
 
+    FLEXCOM8_TWI_Initialize();
+
 	BSP_Initialize();
-    FLEXCOM1_TWI_Initialize();
-
-
 
     /* MISRAC 2012 deviation block start */
     /* Following MISRA-C rules deviated in this block  */
@@ -219,9 +217,7 @@ void SYS_Initialize ( void* data )
 
 
     /* MISRAC 2012 deviation block end */
-
 }
-
 
 /*******************************************************************************
  End of File
