@@ -1,0 +1,2732 @@
+configVersion: 1.0.0
+componentName: core
+coreVersion: 5.8.2
+device: SAMA7G54
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: core
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: bsp
+  type: package
+  version: v3.23.0
+- dependencyPackage: ''
+  name: core
+  type: package
+  version: v3.15.5
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: core
+          x: '220'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    ACC_CLOCK_FREQUENCY:
+      attributes:
+        id: ACC_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    ADC_CLOCK_FREQUENCY:
+      attributes:
+        id: ADC_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    ADC_GCLK_FREQUENCY:
+      attributes:
+        id: ADC_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    AES_CLOCK_FREQUENCY:
+      attributes:
+        id: AES_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    APP_START_ADDRESS:
+      attributes:
+        id: APP_START_ADDRESS
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x66F00000'
+          type: Dynamic
+        type: Values
+      type: String
+    ASRC_CLOCK_FREQUENCY:
+      attributes:
+        id: ASRC_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    ASRC_GCLK_FREQUENCY:
+      attributes:
+        id: ASRC_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    AUDIOPLL_CORE_FREQUENCY:
+      attributes:
+        id: AUDIOPLL_CORE_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    AUDIOPLL_FREQUENCY:
+      attributes:
+        id: AUDIOPLL_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    AUDIOPLL_IO_FREQUENCY:
+      attributes:
+        id: AUDIOPLL_IO_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    BAUDPLL_CORE_FREQUENCY:
+      attributes:
+        id: BAUDPLL_CORE_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    BAUDPLL_FREQUENCY:
+      attributes:
+        id: BAUDPLL_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_CPUPLL_DIVPMC:
+      attributes:
+        id: CLK_CPUPLL_DIVPMC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_CPUPLL_EN:
+      attributes:
+        id: CLK_CPUPLL_EN
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CLK_CPUPLL_FRACR:
+      attributes:
+        id: CLK_CPUPLL_FRACR
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1398102'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_CPUPLL_MUL:
+      attributes:
+        id: CLK_CPUPLL_MUL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '32'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_CPU_CKR_CSS:
+      attributes:
+        id: CLK_CPU_CKR_CSS
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '2'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CLK_CPU_CKR_MDIV:
+      attributes:
+        id: CLK_CPU_CKR_MDIV
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '2'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CLK_CPU_CKR_PRES:
+      attributes:
+        id: CLK_CPU_CKR_PRES
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CLK_DDRPLL_DIVPMC:
+      attributes:
+        id: CLK_DDRPLL_DIVPMC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_DDRPLL_EN:
+      attributes:
+        id: CLK_DDRPLL_EN
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CLK_DDRPLL_FRACR:
+      attributes:
+        id: CLK_DDRPLL_FRACR
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1747627'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_DDRPLL_MUL:
+      attributes:
+        id: CLK_DDRPLL_MUL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '43'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_IMGPLL_DIVPMC:
+      attributes:
+        id: CLK_IMGPLL_DIVPMC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '3'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_IMGPLL_EN:
+      attributes:
+        id: CLK_IMGPLL_EN
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CLK_IMGPLL_FRACR:
+      attributes:
+        id: CLK_IMGPLL_FRACR
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1398101'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_IMGPLL_MUL:
+      attributes:
+        id: CLK_IMGPLL_MUL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '43'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_MCR_MCK1_CSS:
+      attributes:
+        id: CLK_MCR_MCK1_CSS
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '3'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CLK_MCR_MCK1_DIV:
+      attributes:
+        id: CLK_MCR_MCK1_DIV
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CLK_MCR_MCK2_CSS:
+      attributes:
+        id: CLK_MCR_MCK2_CSS
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CLK_MCR_MCK2_DIV:
+      attributes:
+        id: CLK_MCR_MCK2_DIV
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CLK_MCR_MCK3_CSS:
+      attributes:
+        id: CLK_MCR_MCK3_CSS
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '5'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CLK_MCR_MCK3_DIV:
+      attributes:
+        id: CLK_MCR_MCK3_DIV
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CLK_MCR_MCK4_CSS:
+      attributes:
+        id: CLK_MCR_MCK4_CSS
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '3'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CLK_MCR_MCK4_DIV:
+      attributes:
+        id: CLK_MCR_MCK4_DIV
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CLK_MOSCRCEN:
+      attributes:
+        id: CLK_MOSCRCEN
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CLK_MOSCSEL:
+      attributes:
+        id: CLK_MOSCSEL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CLK_MOSCXTEN:
+      attributes:
+        id: CLK_MOSCXTEN
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CLK_MOSCXT_FREQ:
+      attributes:
+        id: CLK_MOSCXT_FREQ
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '24000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_PCK0_FREQUENCY:
+      attributes:
+        id: CLK_PCK0_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_PCK1_FREQUENCY:
+      attributes:
+        id: CLK_PCK1_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_PCK2_FREQUENCY:
+      attributes:
+        id: CLK_PCK2_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_PCK3_FREQUENCY:
+      attributes:
+        id: CLK_PCK3_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_PCK4_FREQUENCY:
+      attributes:
+        id: CLK_PCK4_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_PCK5_FREQUENCY:
+      attributes:
+        id: CLK_PCK5_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_PCK6_FREQUENCY:
+      attributes:
+        id: CLK_PCK6_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_PCK7_FREQUENCY:
+      attributes:
+        id: CLK_PCK7_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_SYSPLL_DIVPMC:
+      attributes:
+        id: CLK_SYSPLL_DIVPMC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '2'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_SYSPLL_EN:
+      attributes:
+        id: CLK_SYSPLL_EN
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CLK_SYSPLL_FRACR:
+      attributes:
+        id: CLK_SYSPLL_FRACR
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_SYSPLL_MUL:
+      attributes:
+        id: CLK_SYSPLL_MUL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '49'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CLK_TD_OSCSEL:
+      attributes:
+        id: CLK_TD_OSCSEL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    COMPILER_CHOICE:
+      attributes:
+        id: COMPILER_CHOICE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    CPKCC_CLOCK_FREQUENCY:
+      attributes:
+        id: CPKCC_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CPUPLL_CORE_FREQUENCY:
+      attributes:
+        id: CPUPLL_CORE_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '800000003'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CPUPLL_FREQUENCY:
+      attributes:
+        id: CPUPLL_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '800000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CPU_CLOCK_FREQUENCY:
+      attributes:
+        id: CPU_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '800000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CSI2DC_CLOCK_FREQUENCY:
+      attributes:
+        id: CSI2DC_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CSI_CLOCK_FREQUENCY:
+      attributes:
+        id: CSI_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    DDRPLL_CORE_FREQUENCY:
+      attributes:
+        id: DDRPLL_CORE_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1066000001'
+          type: Dynamic
+        type: Values
+      type: Integer
+    DDRPLL_FREQUENCY:
+      attributes:
+        id: DDRPLL_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '533000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    EIC_CLOCK_FREQUENCY:
+      attributes:
+        id: EIC_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    ETHPLL_CORE_FREQUENCY:
+      attributes:
+        id: ETHPLL_CORE_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    ETHPLL_FREQUENCY:
+      attributes:
+        id: ETHPLL_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FCLK_FREQUENCY:
+      attributes:
+        id: FCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '800000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM0_CLOCK_FREQUENCY:
+      attributes:
+        id: FLEXCOM0_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM0_GCLK_FREQUENCY:
+      attributes:
+        id: FLEXCOM0_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM10_CLOCK_FREQUENCY:
+      attributes:
+        id: FLEXCOM10_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM10_GCLK_FREQUENCY:
+      attributes:
+        id: FLEXCOM10_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM11_CLOCK_FREQUENCY:
+      attributes:
+        id: FLEXCOM11_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM11_GCLK_FREQUENCY:
+      attributes:
+        id: FLEXCOM11_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM1_CLOCK_FREQUENCY:
+      attributes:
+        id: FLEXCOM1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM1_GCLK_FREQUENCY:
+      attributes:
+        id: FLEXCOM1_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM2_CLOCK_FREQUENCY:
+      attributes:
+        id: FLEXCOM2_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM2_GCLK_FREQUENCY:
+      attributes:
+        id: FLEXCOM2_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM3_CLOCK_FREQUENCY:
+      attributes:
+        id: FLEXCOM3_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM3_GCLK_FREQUENCY:
+      attributes:
+        id: FLEXCOM3_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM4_CLOCK_FREQUENCY:
+      attributes:
+        id: FLEXCOM4_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM4_GCLK_FREQUENCY:
+      attributes:
+        id: FLEXCOM4_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM5_CLOCK_FREQUENCY:
+      attributes:
+        id: FLEXCOM5_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM5_GCLK_FREQUENCY:
+      attributes:
+        id: FLEXCOM5_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM6_CLOCK_FREQUENCY:
+      attributes:
+        id: FLEXCOM6_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM6_GCLK_FREQUENCY:
+      attributes:
+        id: FLEXCOM6_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM7_CLOCK_FREQUENCY:
+      attributes:
+        id: FLEXCOM7_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM7_GCLK_FREQUENCY:
+      attributes:
+        id: FLEXCOM7_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM8_CLOCK_ENABLE:
+      attributes:
+        id: FLEXCOM8_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: flexcom8
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    FLEXCOM8_CLOCK_FREQUENCY:
+      attributes:
+        id: FLEXCOM8_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM8_GCLK_FREQUENCY:
+      attributes:
+        id: FLEXCOM8_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM8_INTERRUPT_ENABLE:
+      attributes:
+        id: FLEXCOM8_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: flexcom8
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    FLEXCOM8_INTERRUPT_HANDLER:
+      attributes:
+        id: FLEXCOM8_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: flexcom8
+            value: FLEXCOM8_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    FLEXCOM9_CLOCK_FREQUENCY:
+      attributes:
+        id: FLEXCOM9_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FLEXCOM9_GCLK_FREQUENCY:
+      attributes:
+        id: FLEXCOM9_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    GENERIC_TIMER_INTERRUPT_PREFIX:
+      attributes:
+        id: GENERIC_TIMER_INTERRUPT_PREFIX
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: SecPhysTimer
+          type: Dynamic
+        type: Values
+      type: String
+    GMAC0_CLOCK_FREQUENCY:
+      attributes:
+        id: GMAC0_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    GMAC1_CLOCK_FREQUENCY:
+      attributes:
+        id: GMAC1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    HSMC_CLOCK_FREQUENCY:
+      attributes:
+        id: HSMC_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    I2SMCC0_CLOCK_FREQUENCY:
+      attributes:
+        id: I2SMCC0_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    I2SMCC0_GCLK_FREQUENCY:
+      attributes:
+        id: I2SMCC0_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    I2SMCC1_CLOCK_FREQUENCY:
+      attributes:
+        id: I2SMCC1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    I2SMCC1_GCLK_FREQUENCY:
+      attributes:
+        id: I2SMCC1_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    ICM_CLOCK_FREQUENCY:
+      attributes:
+        id: ICM_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    IMGPLL_CORE_FREQUENCY:
+      attributes:
+        id: IMGPLL_CORE_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1063999998'
+          type: Dynamic
+        type: Values
+      type: Integer
+    IMGPLL_FREQUENCY:
+      attributes:
+        id: IMGPLL_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '266000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    ISC_CLOCK_FREQUENCY:
+      attributes:
+        id: ISC_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    KEIL_STACK_HEAP_SIZE:
+      attributes:
+        id: KEIL_STACK_HEAP_SIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x1200'
+          type: Dynamic
+        type: Values
+      type: String
+    MAINCK_FREQUENCY:
+      attributes:
+        id: MAINCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '24000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MATRIX_CLOCK_FREQUENCY:
+      attributes:
+        id: MATRIX_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCAN0_CLOCK_FREQUENCY:
+      attributes:
+        id: MCAN0_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCAN0_GCLK_FREQUENCY:
+      attributes:
+        id: MCAN0_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCAN1_CLOCK_FREQUENCY:
+      attributes:
+        id: MCAN1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCAN1_GCLK_FREQUENCY:
+      attributes:
+        id: MCAN1_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCAN2_CLOCK_FREQUENCY:
+      attributes:
+        id: MCAN2_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCAN2_GCLK_FREQUENCY:
+      attributes:
+        id: MCAN2_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCAN3_CLOCK_FREQUENCY:
+      attributes:
+        id: MCAN3_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCAN3_GCLK_FREQUENCY:
+      attributes:
+        id: MCAN3_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCAN4_CLOCK_FREQUENCY:
+      attributes:
+        id: MCAN4_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCAN4_GCLK_FREQUENCY:
+      attributes:
+        id: MCAN4_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCAN5_CLOCK_FREQUENCY:
+      attributes:
+        id: MCAN5_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCAN5_GCLK_FREQUENCY:
+      attributes:
+        id: MCAN5_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCK0_FREQUENCY:
+      attributes:
+        id: MCK0_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCK1_FREQUENCY:
+      attributes:
+        id: MCK1_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCK2_FREQUENCY:
+      attributes:
+        id: MCK2_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '533000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCK3_FREQUENCY:
+      attributes:
+        id: MCK3_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '266000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCK4_FREQUENCY:
+      attributes:
+        id: MCK4_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '400000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PDMC0_CLOCK_FREQUENCY:
+      attributes:
+        id: PDMC0_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PDMC0_GCLK_FREQUENCY:
+      attributes:
+        id: PDMC0_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PDMC1_CLOCK_FREQUENCY:
+      attributes:
+        id: PDMC1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PDMC1_GCLK_FREQUENCY:
+      attributes:
+        id: PDMC1_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PIN_109_FUNCTION_TYPE:
+      attributes:
+        id: PIN_109_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: FLEXCOM8_IO1
+          type: User
+        type: Values
+      type: String
+    PIN_109_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_109_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: B
+          type: User
+        type: Values
+      type: String
+    PIN_121_FUNCTION_TYPE:
+      attributes:
+        id: PIN_121_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_121_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_121_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_121_PU:
+      attributes:
+        id: PIN_121_PU
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_200_FUNCTION_TYPE:
+      attributes:
+        id: PIN_200_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_200_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_200_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_200_PU:
+      attributes:
+        id: PIN_200_PU
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_277_LAT:
+      attributes:
+        id: PIN_277_LAT
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_277_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_277_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: LED_AH
+          type: User
+        type: Values
+      type: String
+    PIN_305_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_305_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: SWITCH_AL
+          type: User
+        type: Values
+      type: String
+    PIN_305_PU:
+      attributes:
+        id: PIN_305_PU
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_33_LAT:
+      attributes:
+        id: PIN_33_LAT
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_33_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_33_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: LED_AH
+          type: User
+        type: Values
+      type: String
+    PIN_66_LAT:
+      attributes:
+        id: PIN_66_LAT
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_66_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_66_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: LED_AH
+          type: User
+        type: Values
+      type: String
+    PIN_75_FUNCTION_TYPE:
+      attributes:
+        id: PIN_75_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: FLEXCOM8_IO0
+          type: User
+        type: Values
+      type: String
+    PIN_75_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_75_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: B
+          type: User
+        type: Values
+      type: String
+    PIO_CLOCK_ENABLE:
+      attributes:
+        id: PIO_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PIO_CLOCK_FREQUENCY:
+      attributes:
+        id: PIO_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PIO_MULTI_INSTANCE:
+      attributes:
+        id: PIO_MULTI_INSTANCE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PIT64B0_CLOCK_FREQUENCY:
+      attributes:
+        id: PIT64B0_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PIT64B0_GCLK_FREQUENCY:
+      attributes:
+        id: PIT64B0_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PIT64B1_CLOCK_FREQUENCY:
+      attributes:
+        id: PIT64B1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PIT64B1_GCLK_FREQUENCY:
+      attributes:
+        id: PIT64B1_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PIT64B2_CLOCK_FREQUENCY:
+      attributes:
+        id: PIT64B2_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PIT64B2_GCLK_FREQUENCY:
+      attributes:
+        id: PIT64B2_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PIT64B3_CLOCK_FREQUENCY:
+      attributes:
+        id: PIT64B3_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PIT64B3_GCLK_FREQUENCY:
+      attributes:
+        id: PIT64B3_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PIT64B4_CLOCK_FREQUENCY:
+      attributes:
+        id: PIT64B4_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PIT64B4_GCLK_FREQUENCY:
+      attributes:
+        id: PIT64B4_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PIT64B5_CLOCK_FREQUENCY:
+      attributes:
+        id: PIT64B5_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PIT64B5_GCLK_FREQUENCY:
+      attributes:
+        id: PIT64B5_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PORT_A_CFGR_Value12:
+      attributes:
+        id: PORT_A_CFGR_Value12
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_CFGR_Value13:
+      attributes:
+        id: PORT_A_CFGR_Value13
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x100'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_LATCH:
+      attributes:
+        id: PORT_A_LATCH
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueA:
+      attributes:
+        id: PORT_A_MSKR_ValueA
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueB:
+      attributes:
+        id: PORT_A_MSKR_ValueB
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueC:
+      attributes:
+        id: PORT_A_MSKR_ValueC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueD:
+      attributes:
+        id: PORT_A_MSKR_ValueD
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueE:
+      attributes:
+        id: PORT_A_MSKR_ValueE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueF:
+      attributes:
+        id: PORT_A_MSKR_ValueF
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueG:
+      attributes:
+        id: PORT_A_MSKR_ValueG
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_A_MSKR_ValueGPIO:
+      attributes:
+        id: PORT_A_MSKR_ValueGPIO
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x3000'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_CFGR_Value8:
+      attributes:
+        id: PORT_B_CFGR_Value8
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x100'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_LATCH:
+      attributes:
+        id: PORT_B_LATCH
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueA:
+      attributes:
+        id: PORT_B_MSKR_ValueA
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueB:
+      attributes:
+        id: PORT_B_MSKR_ValueB
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueC:
+      attributes:
+        id: PORT_B_MSKR_ValueC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueD:
+      attributes:
+        id: PORT_B_MSKR_ValueD
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueE:
+      attributes:
+        id: PORT_B_MSKR_ValueE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueF:
+      attributes:
+        id: PORT_B_MSKR_ValueF
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueG:
+      attributes:
+        id: PORT_B_MSKR_ValueG
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_B_MSKR_ValueGPIO:
+      attributes:
+        id: PORT_B_MSKR_ValueGPIO
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x100'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_CFGR_Value10:
+      attributes:
+        id: PORT_C_CFGR_Value10
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_CFGR_Value9:
+      attributes:
+        id: PORT_C_CFGR_Value9
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueA:
+      attributes:
+        id: PORT_C_MSKR_ValueA
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueB:
+      attributes:
+        id: PORT_C_MSKR_ValueB
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x6000'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueC:
+      attributes:
+        id: PORT_C_MSKR_ValueC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueD:
+      attributes:
+        id: PORT_C_MSKR_ValueD
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueE:
+      attributes:
+        id: PORT_C_MSKR_ValueE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueF:
+      attributes:
+        id: PORT_C_MSKR_ValueF
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueG:
+      attributes:
+        id: PORT_C_MSKR_ValueG
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_C_MSKR_ValueGPIO:
+      attributes:
+        id: PORT_C_MSKR_ValueGPIO
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_D_CFGR_Value20:
+      attributes:
+        id: PORT_D_CFGR_Value20
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x100'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_D_LATCH:
+      attributes:
+        id: PORT_D_LATCH
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_D_MSKR_ValueA:
+      attributes:
+        id: PORT_D_MSKR_ValueA
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_D_MSKR_ValueB:
+      attributes:
+        id: PORT_D_MSKR_ValueB
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_D_MSKR_ValueC:
+      attributes:
+        id: PORT_D_MSKR_ValueC
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_D_MSKR_ValueD:
+      attributes:
+        id: PORT_D_MSKR_ValueD
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_D_MSKR_ValueE:
+      attributes:
+        id: PORT_D_MSKR_ValueE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_D_MSKR_ValueF:
+      attributes:
+        id: PORT_D_MSKR_ValueF
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_D_MSKR_ValueG:
+      attributes:
+        id: PORT_D_MSKR_ValueG
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_D_MSKR_ValueGPIO:
+      attributes:
+        id: PORT_D_MSKR_ValueGPIO
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x100000'
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_CLOCK_FREQUENCY:
+      attributes:
+        id: PWM_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    QSPI0_CLOCK_FREQUENCY:
+      attributes:
+        id: QSPI0_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    QSPI0_GCLK_FREQUENCY:
+      attributes:
+        id: QSPI0_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    QSPI1_CLOCK_FREQUENCY:
+      attributes:
+        id: QSPI1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    QSPI1_GCLK_FREQUENCY:
+      attributes:
+        id: QSPI1_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC0_BASECLK_FREQUENCY:
+      attributes:
+        id: SDMMC0_BASECLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC0_CLOCK_FREQUENCY:
+      attributes:
+        id: SDMMC0_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC0_GCLK_FREQUENCY:
+      attributes:
+        id: SDMMC0_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC0_MULTCLK_FREQUENCY:
+      attributes:
+        id: SDMMC0_MULTCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC1_BASECLK_FREQUENCY:
+      attributes:
+        id: SDMMC1_BASECLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC1_CLOCK_FREQUENCY:
+      attributes:
+        id: SDMMC1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC1_GCLK_FREQUENCY:
+      attributes:
+        id: SDMMC1_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC1_MULTCLK_FREQUENCY:
+      attributes:
+        id: SDMMC1_MULTCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC2_BASECLK_FREQUENCY:
+      attributes:
+        id: SDMMC2_BASECLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC2_CLOCK_FREQUENCY:
+      attributes:
+        id: SDMMC2_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC2_GCLK_FREQUENCY:
+      attributes:
+        id: SDMMC2_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SDMMC2_MULTCLK_FREQUENCY:
+      attributes:
+        id: SDMMC2_MULTCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SFR_CLOCK_FREQUENCY:
+      attributes:
+        id: SFR_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SHA_CLOCK_FREQUENCY:
+      attributes:
+        id: SHA_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SPDIFRX_CLOCK_FREQUENCY:
+      attributes:
+        id: SPDIFRX_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SPDIFRX_GCLK_FREQUENCY:
+      attributes:
+        id: SPDIFRX_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SPDIFTX_CLOCK_FREQUENCY:
+      attributes:
+        id: SPDIFTX_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SPDIFTX_GCLK_FREQUENCY:
+      attributes:
+        id: SPDIFTX_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SSC0_CLOCK_FREQUENCY:
+      attributes:
+        id: SSC0_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SSC1_CLOCK_FREQUENCY:
+      attributes:
+        id: SSC1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SYSPLL_CORE_FREQUENCY:
+      attributes:
+        id: SYSPLL_CORE_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SYSPLL_FREQUENCY:
+      attributes:
+        id: SYSPLL_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '400000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SYSTEM_COUNTER_FREQUENCY:
+      attributes:
+        id: SYSTEM_COUNTER_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '24000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TC0_GCLK_FREQUENCY:
+      attributes:
+        id: TC0_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TC1_GCLK_FREQUENCY:
+      attributes:
+        id: TC1_GCLK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TCPCA_CLOCK_FREQUENCY:
+      attributes:
+        id: TCPCA_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TCPCB_CLOCK_FREQUENCY:
+      attributes:
+        id: TCPCB_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TDES_CLOCK_FREQUENCY:
+      attributes:
+        id: TDES_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TD_SLOW_CLOCK_FREQUENCY:
+      attributes:
+        id: TD_SLOW_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '32768'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TRNG_CLOCK_FREQUENCY:
+      attributes:
+        id: TRNG_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TZAESBASC_CLOCK_FREQUENCY:
+      attributes:
+        id: TZAESBASC_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TZAESB_CLOCK_FREQUENCY:
+      attributes:
+        id: TZAESB_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    UDPHSA_CLOCK_FREQUENCY:
+      attributes:
+        id: UDPHSA_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    UDPHSB_CLOCK_FREQUENCY:
+      attributes:
+        id: UDPHSB_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    UHPHS_CLOCK_FREQUENCY:
+      attributes:
+        id: UHPHS_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XDMAC0_CLOCK_FREQUENCY:
+      attributes:
+        id: XDMAC0_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XDMAC1_CLOCK_FREQUENCY:
+      attributes:
+        id: XDMAC1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    XDMAC2_CLOCK_FREQUENCY:
+      attributes:
+        id: XDMAC2_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '200000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData:
+    children:
+    - attributes:
+        canvasHeight: '170'
+        canvasWidth: '757'
+      type: GraphSettings
+    - children:
+      - attributes:
+          id: profile0
+          name: Main
+        type: Profile
+      type: PowerProfiles
+    type: UserData
