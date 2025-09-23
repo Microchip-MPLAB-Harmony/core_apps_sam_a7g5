@@ -72,8 +72,8 @@
 #define FLEXCOM3_USART_WRITE_BUFFER_SIZE            512U
 #define FLEXCOM3_USART_9BIT_WRITE_BUFFER_SIZE       (512U >> 1U)
 
-volatile static uint8_t FLEXCOM3_USART_ReadBuffer[FLEXCOM3_USART_READ_BUFFER_SIZE];
-volatile static uint8_t FLEXCOM3_USART_WriteBuffer[FLEXCOM3_USART_WRITE_BUFFER_SIZE];
+static volatile uint8_t FLEXCOM3_USART_ReadBuffer[FLEXCOM3_USART_READ_BUFFER_SIZE];
+static volatile uint8_t FLEXCOM3_USART_WriteBuffer[FLEXCOM3_USART_WRITE_BUFFER_SIZE];
 
 // *****************************************************************************
 // *****************************************************************************
@@ -81,7 +81,7 @@ volatile static uint8_t FLEXCOM3_USART_WriteBuffer[FLEXCOM3_USART_WRITE_BUFFER_S
 // *****************************************************************************
 // *****************************************************************************
 
-volatile static FLEXCOM_USART_RING_BUFFER_OBJECT flexcom3UsartObj;
+static volatile FLEXCOM_USART_RING_BUFFER_OBJECT flexcom3UsartObj;
 
 void FLEXCOM3_USART_Initialize( void )
 {
@@ -91,7 +91,7 @@ void FLEXCOM3_USART_Initialize( void )
     /* Reset FLEXCOM3 USART */
     FLEXCOM3_REGS->FLEX_US_CR = (FLEX_US_CR_RSTRX_Msk | FLEX_US_CR_RSTTX_Msk | FLEX_US_CR_RSTSTA_Msk);
 
-
+    /* Setup transmitter timeguard register */
     FLEXCOM3_REGS->FLEX_US_TTGR = 0;
 
     /* Enable FLEXCOM3 USART */
@@ -130,10 +130,11 @@ void FLEXCOM3_USART_Initialize( void )
         flexcom3UsartObj.wrBufferSize = FLEXCOM3_USART_WRITE_BUFFER_SIZE;
     }
 
+    /* Enable Read, Overrun, Parity and Framing error interrupts */
     FLEXCOM3_USART_RX_INT_ENABLE();
 }
 
-void static FLEXCOM3_USART_ErrorClear( void )
+static void FLEXCOM3_USART_ErrorClear( void )
 {
     /* Clear the error flags */
     FLEXCOM3_REGS->FLEX_US_CR = FLEX_US_CR_RSTSTA_Msk;
@@ -677,7 +678,7 @@ void FLEXCOM3_USART_ReadCallbackRegister( FLEXCOM_USART_RING_BUFFER_CALLBACK cal
     flexcom3UsartObj.rdContext = context;
 }
 
-void static __attribute__((used)) FLEXCOM3_USART_ISR_RX_Handler( void )
+static void __attribute__((used)) FLEXCOM3_USART_ISR_RX_Handler( void )
 {
     uint16_t rdData = 0;
 
@@ -706,7 +707,7 @@ void static __attribute__((used)) FLEXCOM3_USART_ISR_RX_Handler( void )
 
 }
 
-void static __attribute__((used)) FLEXCOM3_USART_ISR_TX_Handler( void )
+static void __attribute__((used)) FLEXCOM3_USART_ISR_TX_Handler( void )
 {
     uint16_t wrByte;
 
@@ -729,7 +730,7 @@ void static __attribute__((used)) FLEXCOM3_USART_ISR_TX_Handler( void )
         }
         else
         {
-            /* Nothing to transmit. Disable the data register empty/fifo Threshold interrupt. */
+            /* Nothing to transmit. Disable the data register empty interrupt. */
             FLEXCOM3_USART_TX_INT_DISABLE();
             break;
         }
