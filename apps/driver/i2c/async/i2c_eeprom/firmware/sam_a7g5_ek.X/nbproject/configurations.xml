@@ -272,7 +272,6 @@
         <itemPath>driver_i2c_async_i2c_eeprom_sam_a7g5_ek_sam_a7g5_ek/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_a7g5_ek/harmony-manifest-success.yml</itemPath>
       <itemPath>../src/config/sam_a7g5_ek/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"

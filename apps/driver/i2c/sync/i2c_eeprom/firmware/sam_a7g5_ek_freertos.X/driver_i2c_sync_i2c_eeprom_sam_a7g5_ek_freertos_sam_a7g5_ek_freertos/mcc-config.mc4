@@ -32,7 +32,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_a7g5_ek_freertos\ddr.ld
   hash: c6454caab96febd03c6d9b487b502898fc4b492529c39a8441137c7b5feb4118
 - file: ..\src\config\sam_a7g5_ek_freertos\definitions.h
-  hash: 437e7b7b9eb6b7c8b6ccebae678577b08dfd41680eea6fdaceeacd93c6c99e2c
+  hash: 8297e7c73108b2e2af9b9c882192634976b5b0767075341578ca499af1714a12
 - file: ..\src\config\sam_a7g5_ek_freertos\device.h
   hash: 3b42596011b4da93a267e700b316b20a8a04a9d02f56cf82a8745abcdd86def1
 - file: ..\src\config\sam_a7g5_ek_freertos\device_cache.h

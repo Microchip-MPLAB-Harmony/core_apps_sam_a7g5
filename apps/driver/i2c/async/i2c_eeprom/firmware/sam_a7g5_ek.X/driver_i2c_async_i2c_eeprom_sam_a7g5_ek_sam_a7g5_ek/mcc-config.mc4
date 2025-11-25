@@ -29,7 +29,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_a7g5_ek\ddr.ld
   hash: c6454caab96febd03c6d9b487b502898fc4b492529c39a8441137c7b5feb4118
 - file: ..\src\config\sam_a7g5_ek\definitions.h
-  hash: 2682f62c758e8d036ccb92a659a39449c46a323cd781cda483dd5bd901d5e7d4
+  hash: df2cd38053dde27914c1d18f8257ede9016f6d180ed73cdb041aa6984604c96e
 - file: ..\src\config\sam_a7g5_ek\device.h
   hash: 3b42596011b4da93a267e700b316b20a8a04a9d02f56cf82a8745abcdd86def1
 - file: ..\src\config\sam_a7g5_ek\device_cache.h

@@ -1073,14 +1073,6 @@ data:
       children:
       - children:
         - attributes:
-            id: readOnly
-          children:
-          - type: Value
-            value: 'false'
-          type: Boolean
-        type: Attributes
-      - children:
-        - attributes:
             id: FreeRTOS
             value: 'true'
           type: Dynamic

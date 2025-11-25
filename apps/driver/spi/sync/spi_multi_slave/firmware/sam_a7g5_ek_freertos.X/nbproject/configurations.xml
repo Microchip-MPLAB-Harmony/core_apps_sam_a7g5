@@ -315,7 +315,6 @@
         <itemPath>driver_spi_sync_spi_multi_slave_sam_a7g5_ek_freertos_sam_a7g5_ek_freertos/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_a7g5_ek_freertos/harmony-manifest-success.yml</itemPath>
       <itemPath>../src/config/sam_a7g5_ek_freertos/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
